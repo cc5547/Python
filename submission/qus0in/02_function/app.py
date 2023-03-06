@@ -21,7 +21,8 @@ st.write(f"내가 고른 번호 : {number}")
 prize = st.slider(
   "당첨 시의 상금을 입력해주세요",
   1000,
-  10000
+  10000,
+  step=100,
 )
 st.write(f"당첨 시의 상금 : {prize}")
 
