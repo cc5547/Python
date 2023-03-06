@@ -13,10 +13,15 @@ st.write(f"내가 고른 번호 : {number}")
 
 # 상금 -> 상금을 내가 입력하게 함
 
-prize = st.number_input(
+# prize = st.number_input(
+#   "당첨 시의 상금을 입력해주세요",
+#   min_value=1000,
+#   max_value=10000
+# )
+prize = st.slider(
   "당첨 시의 상금을 입력해주세요",
-  min_value=1000,
-  max_value=10000
+  1000,
+  10000
 )
 st.write(f"당첨 시의 상금 : {prize}")
 
