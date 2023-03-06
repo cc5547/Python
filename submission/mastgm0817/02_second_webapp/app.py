@@ -6,7 +6,7 @@ st.write(
     "두번째 시작"
 )
 
-prize = st.slider('당첨 상금을 지정해주세요', 10000, 10000000, 5000)
+prize = st.slider('당첨 상금을 지정해주세요', min_value=10000, max_value=10000000, step=5000)
 
 
 
