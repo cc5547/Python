@@ -8,7 +8,8 @@ st.write("# 행운 뽑기")
 
 # 0~9까지의 번호를 고르면
 
-st.selectbox("번호를 골라주세요", list(range(10)))
+number = st.selectbox("번호를 골라주세요", list(range(10)))
+st.write(f"내가 고른 번호 : {number}")
 
 # 상금 -> 상금을 내가 입력하게 함
 # button -> 당첨입니다! / 떨어졌습니다
