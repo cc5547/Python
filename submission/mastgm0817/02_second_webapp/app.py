@@ -6,6 +6,9 @@ st.write(
     "두번째 시작"
 )
 
+prize = st.slider('당첨 상금을 지정해주세요', 10000, 10000000, 5000)
+
+
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
