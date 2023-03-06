@@ -3,6 +3,10 @@ import streamlit as st
 import time
 
 
+def timer_fun():
+    with st.spinner('Wait for it...'):
+        time.sleep(5)
+
 guess = st.slider('번호를 고르세요', min_value=1, max_value=10, step=1)
 print(f" 당신이 선택한 번호는 {guess} 입니다.")
 st.write(f" 당신이 선택한 번호는 {guess} 입니다.")
@@ -24,7 +28,3 @@ with st.sidebar:
         ("Standard (5-15 days)", "Express (2-5 days)")
     )
 
-
-def timer_fun():
-    with st.spinner('Wait for it...'):
-        time.sleep(5)
