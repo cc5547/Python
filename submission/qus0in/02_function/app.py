@@ -30,12 +30,14 @@ st.write(f"당첨 시의 상금 : {prize}")
 def my_fun():
   # random.choice? -> 추첨 로직
   st.balloons()
-  result = random.choice(range(10))
-  # 결과를 -> 팝업
-  pass
 
 # button -> 당첨입니다! / 떨어졌습니다
 pushed = st.button("당첨 알아보기", on_click=my_fun)
 
 if pushed:
-  st.write("버튼이 눌렸습니다")
+  # st.write("버튼이 눌렸습니다")
+  result = random.choice(range(10))
+  if result == number:
+    st.success(f"축하합니다! 당첨입니다. 상금 {prize}원을 받으세요!")
+  else:
+    st.error(f"아쉽습니다! 낙첨입니다. 상금 {prize}원은 없던일로 ㅠㅠ")
