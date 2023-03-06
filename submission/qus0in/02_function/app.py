@@ -1,6 +1,7 @@
 # streamlit 라이브러리 호출
 # 상대경로 복사 : submission/qus0in/02_function/app.py
 import streamlit as st
+import random
 
 # st.write("함수를 응용해서 페이지 만들어보기")
 
@@ -28,8 +29,13 @@ st.write(f"당첨 시의 상금 : {prize}")
 
 def my_fun():
   # random.choice? -> 추첨 로직
+  st.balloons()
+  result = random.choice(range(10))
   # 결과를 -> 팝업
   pass
 
 # button -> 당첨입니다! / 떨어졌습니다
-st.button("당첨 알아보기", on_click=my_fun)
+pushed = st.button("당첨 알아보기", on_click=my_fun)
+
+if pushed:
+  st.write("버튼이 눌렸습니다")
