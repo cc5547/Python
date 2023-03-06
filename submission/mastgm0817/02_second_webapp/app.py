@@ -5,7 +5,7 @@ import random
 
 def timer_fun():
     with st.spinner('Wait for it...'):
-        time.sleep(5)
+        time.sleep(3)
 
 guess = st.slider('번호를 고르세요', min_value=1, max_value=10, step=1)
 print(f" 당신이 선택한 번호는 {guess} 입니다.")
