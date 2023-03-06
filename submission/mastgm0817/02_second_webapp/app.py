@@ -1,7 +1,7 @@
 # streamlit 라이브러리 호출
 import streamlit as st
 import time
-
+import random
 
 def timer_fun():
     with st.spinner('Wait for it...'):
@@ -27,4 +27,11 @@ with st.sidebar:
         "Choose a shipping method",
         ("Standard (5-15 days)", "Express (2-5 days)")
     )
+
+if pushed:
+    random_num = random.randint(1,10)
+    if random_num == guess:
+        st.write(f"당첨")
+    else:
+        st.write(f"낙첨")
 
