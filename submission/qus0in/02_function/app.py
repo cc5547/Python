@@ -26,4 +26,10 @@ prize = st.slider(
 )
 st.write(f"당첨 시의 상금 : {prize}")
 
+def my_fun():
+  # random.choice? -> 추첨 로직
+  # 결과를 -> 팝업
+  pass
+
 # button -> 당첨입니다! / 떨어졌습니다
+st.button("당첨 알아보기", on_click=my_fun)
