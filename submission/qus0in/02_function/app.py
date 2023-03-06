@@ -37,6 +37,7 @@ pushed = st.button("당첨 알아보기", on_click=my_fun)
 if pushed:
   # st.write("버튼이 눌렸습니다")
   result = random.choice(range(10))
+  st.info(f"뽑힌 번호는... {result}번!")
   if result == number:
     st.success(f"축하합니다! 당첨입니다. 상금 {prize}원을 받으세요!")
   else:
