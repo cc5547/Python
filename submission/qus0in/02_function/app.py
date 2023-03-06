@@ -12,4 +12,12 @@ number = st.selectbox("번호를 골라주세요", list(range(10)))
 st.write(f"내가 고른 번호 : {number}")
 
 # 상금 -> 상금을 내가 입력하게 함
+
+prize = st.number_input(
+  "당첨 시의 상금을 입력해주세요",
+  min_value=1000,
+  max_value=10000
+)
+st.write(f"당첨 시의 상금 : {prize}")
+
 # button -> 당첨입니다! / 떨어졌습니다
