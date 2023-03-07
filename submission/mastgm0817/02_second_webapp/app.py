@@ -32,7 +32,8 @@ if pushed:
     random_num = random.randint(1,10)
     st.write(f"{random_num}")
     if random_num == guess:
-        st.write(f"당첨")
+        # st.write(f"당첨")
+        st.markdown("<h1 style='text-align: center; color: grey;'>당첨</h1>", unsafe_allow_html=True)
     else:
-        st.write(f"낙첨")
+        st.markdown("<h1 style='text-align: center; color: grey;'>낙첨</h1>", unsafe_allow_html=True)
 
