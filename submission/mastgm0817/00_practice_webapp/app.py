@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import io
 
-df = pd.read_csv("국비지원반.CSV")
-
-fig, ax = plt.subplots()
-ax.pie(df, autopct='%1.1f%%')
-ax.axis('equal')
-
-st.pyplot(fig)
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    data = uploaded_file.read().decode("utf-8")
+    df = pd.read_csv(io.StringIO(data))
+    st.dataframe(df)
