@@ -13,7 +13,8 @@ st.write(f" 당신이 선택한 번호는 {guess} 입니다.")
 prize = st.slider('당첨 상금을 지정해주세요', min_value=10000, max_value=10000000, step=5000)
 st.write(f" 당첨금액은  {prize}원 입니다.")
 
-pushed = st.button("번호 추첨", on_click=timer_fun)
+with st.container():
+    pushed = st.button("번호 추첨", on_click=timer_fun)
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
