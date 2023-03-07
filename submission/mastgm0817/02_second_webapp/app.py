@@ -34,8 +34,8 @@ if pushed:
     if random_num == guess:
         # st.write(f"당첨")
         st.markdown("<h1 style='text-align: center; color: grey;'>당첨</h1>", unsafe_allow_html=True)
-        st.markdown("<h2 style='text-align: center; color: black;'>당첨번호는 {random_num} </h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: black;'>당첨번호는 {{random_num}} </h2>", unsafe_allow_html=True)
     else:
         st.markdown("<h1 style='text-align: center; color: grey;'>낙첨</h1>", unsafe_allow_html=True)
-        st.markdown("<h2 style='text-align: center; color: black;'>당첨번호는 {random_num} </h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: black;'>당첨번호는 {{random_num}} </h2>", unsafe_allow_html=True)
 
