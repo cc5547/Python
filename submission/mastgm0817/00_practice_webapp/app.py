@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("국비지원반.CSV")
-df.plot()
+
+fig, ax = plt.subplots()
+ax.pie(df, autopct='%1.1f%%')
+ax.axis('equal')
+
+st.pyplot(fig)
