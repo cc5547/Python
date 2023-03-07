@@ -32,7 +32,7 @@ if pushed:
     random_num = random.randint(1,10)
     st.write(f"{random_num}")
     if random_num == guess:
-        st.write(f"당첨")
+        <p align="center"> st.write(f"당첨") </p>
     else:
         st.write(f"낙첨")
 
