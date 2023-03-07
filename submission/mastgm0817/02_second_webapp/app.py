@@ -16,18 +16,6 @@ st.write(f" 당첨금액은  {prize}원 입니다.")
 with st.container():
     pushed = st.button("번호 추첨", on_click=timer_fun)
 
-# Using object notation
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
-
-# Using "with" notation
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
 
 if pushed:
     random_num = random.randint(1,10)
