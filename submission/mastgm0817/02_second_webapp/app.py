@@ -39,8 +39,8 @@ if pushed:
         # st.write(f"{random_num}")
         st.write(f"<h2 style='text-align: center; color: black;'>당첨번호는 </h2> {random_num}", unsafe_allow_html=True)
     else:
-        st.markdown("<h1 style='text-align: center; color: grey;'>낙첨</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: grey; display: inline;'>낙첨</h1>", unsafe_allow_html=True)
         # st.markdown("<h2 style='text-align: center; color: black;'>당첨번호는 :[random_num]</h2>", unsafe_allow_html=True)
-        st.write(f"<h2 style='text-align: center; color: black;'>당첨번호는 </h2> {random_num}", unsafe_allow_html=True)
+        st.write(f"<h2 style='text-align: center; color: black; display: inline;'>당첨번호는 </h2> {random_num}", unsafe_allow_html=True)
         # st.write(f"{random_num}")
 
