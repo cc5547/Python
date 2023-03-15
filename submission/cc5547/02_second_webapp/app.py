@@ -22,7 +22,6 @@ with col1 :
   # picture_URL = "https://i.imgur.com/D7uu8FN.jpg" 
   # st.image(picture_URL, use_column_width = True)
 
-with s_bar:
   s_bar.title('여기가 사이드바입니다.')
   s_bar.checkbox('체크박스에 표시될 문구')
 
