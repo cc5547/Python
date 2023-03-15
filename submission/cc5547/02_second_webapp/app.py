@@ -46,7 +46,7 @@ def side_bar(s) :
 
 def main():
   side_bar(s_bar)
-
+  upload()
   with col1 :
     # column 에 담을 내용
     st.title('#지도')
