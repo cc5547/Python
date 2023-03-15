@@ -13,15 +13,14 @@ col = st.columns(1)
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 
-# 사이드바 생성 : 사이드 바를 생성합니다.
+# 사이드바 생성 : 사이드 바를 s_bar 로 생성.
 s_bar = st.sidebar
-# s_bar.title('여기가 사이드바입니다.')
-# s_bar.checkbox('체크박스에 표시될 문구')
+
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
 def main():
-  
+
   # 사이드바
   s_bar.title('여기가 사이드바 입니다.')
   s_bar.checkbox('체크박스에 표시될 문구입니다.')
