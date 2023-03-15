@@ -5,7 +5,7 @@ import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 
-uploaded_file = st.file_upload("한국산업인력공단_국가자격 CBT 시험장소 및 수험자 정보_20230308.csv", type="csv")
+# uploaded_file = st.file_upload("한국산업인력공단_국가자격 CBT 시험장소 및 수험자 정보_20230308.csv", type="csv")
 
 
  # 사진 URL
@@ -20,10 +20,10 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
 s_bar = st.sidebar
 
-def upload():
-  if uploaded_file is not None:
-      df = pd.read_csv(uploaded_file)
-      st.write(df)
+# def upload():
+#   if uploaded_file is not None:
+#       df = pd.read_csv(uploaded_file)
+#       st.write(df)
 
 def side_bar(s) :
   # 사이드바
@@ -47,7 +47,7 @@ def side_bar(s) :
 
 def main():
   side_bar(s_bar)
-  upload()
+  # upload()
   with col1 :
     # column 에 담을 내용
     st.title('#지도')
