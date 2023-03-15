@@ -21,9 +21,10 @@ s_bar = st.sidebar
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
 def main():
-  with s_bar:
-    title('여기가 사이드바 입니다.')
-    checkbox('페크박스에 표시될 문구')
+  
+  # 사이드바
+  s_bar.title('여기가 사이드바 입니다.')
+  s_bar.checkbox('체크박스에 표시될 문구입니다.')
 
   with col[0] :
     # column 에 담을 내용
