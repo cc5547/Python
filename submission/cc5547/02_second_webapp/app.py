@@ -5,7 +5,8 @@ import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 
-uploaded_file = st.file_uploader("한국산업인력공단_국가자격 CBT 시험장소 및 수험자 정보_20230308.csv", type="csv")
+uploaded_file = st.file_upload("한국산업인력공단_국가자격 CBT 시험장소 및 수험자 정보_20230308.csv", type="csv")
+
 
  # 사진 URL
 picture_URL = "https://i.imgur.com/JHLVene.png"
