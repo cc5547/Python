@@ -1,3 +1,4 @@
+import streamlit as st
 # 컬럼 생성 : 공간을 2:1 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
 col1, col2 = st.columns([2, 1])
 
