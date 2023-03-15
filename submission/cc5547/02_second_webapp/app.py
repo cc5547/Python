@@ -1,5 +1,5 @@
-# 컬럼 생성 : 공간을 10 으로 분할하여 col1 이름을 가진 컬럼을 생성합니다.  
-col1 = st.columns(1)
+# 컬럼 생성 : 공간을 8:2 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
+col1, col2 = st.columns([8, 2])
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
@@ -15,8 +15,13 @@ def main():
   with col1 :
     # column 1 에 담을 내용
     st.title('컬럼1')
-    st.checkbox('체크박스 컬럼1')
-    # st.image(picture_URL)
+    st.image(picture_URL)
+
+  with col1 :
+    # column 1 에 담을 내용
+    st.title('컬럼2')
+    st.checkbox('체크박스 컬럼2')
+    
 
   with tab1 :
     #tab A 를 누르면 표시될 내용
