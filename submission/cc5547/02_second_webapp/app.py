@@ -1,4 +1,8 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+from google.colab import files
+
 st.set_page_config(layout="wide")
 
 # 단일 컬럼 생성
@@ -17,14 +21,18 @@ def side_bar(s) :
   # 사이드바
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   # s.checkbox('체크박스에 표시될 문구입니다.')
-  language = ['서울특별시', '인천광역시', '경기도']
-  my_choice = s.selectbox('지역 선택', language)
+  # language = ['서울특별시', '인천광역시', '경기도']
 
-  if my_choice == language[0] :
+  # 특별시, 광역시, 시, 경기도 등등으로 인덱스 슬라이싱이필요합니다. 
+  
+  choice = s.selectbox('지역 선택', language)
+  st.write(f"{choice}를 선택하였습니다.")
+
+  if choice == language[0] :
     st.write('서울을 선택하셨습니다.')
-  elif my_choice == language[1] :
+  elif choice == language[1] :
     st.write('인천광역시를 선택하셨습니다.')
-  elif my_choice == language[2] :
+  elif choice == language[2] :
     st.write('경기도를 선택하셨습니다.')
   else : pass     
   
