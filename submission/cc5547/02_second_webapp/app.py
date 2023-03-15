@@ -18,7 +18,7 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 s_bar = st.sidebar
 
  # 사진 URL
-picture_URL = "https://i.imgur.com/TT1ordb.png"
+picture_URL = "https://i.imgur.com/JHLVene.png"
 
 def side_bar(s) :
   # 사이드바
