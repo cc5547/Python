@@ -19,7 +19,7 @@ with col1 :
   # column 1 에 담을 내용
   st.title('컬럼1')
   st.checkbox('체크박스 컬럼1')
-  col1.image(picture_URL)
+  st.image(picture_URL)
   
   # picture_URL = "https://i.imgur.com/D7uu8FN.jpg" 
   # st.image(picture_URL, use_column_width = True)
