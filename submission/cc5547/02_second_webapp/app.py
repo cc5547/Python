@@ -13,7 +13,8 @@ s_bar.checkbox('체크박스에 표시될 문구')
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
-with col1 :
+def main():
+  with col1 :
   # column 1 에 담을 내용
   st.title('컬럼1')
   st.checkbox('체크박스 컬럼1')
@@ -26,6 +27,11 @@ with tab1 :
 with tab2 :
   #tab B를 누르면 표시될 내용
   st.write('안녕')
+
+if __name__ == main():
+  main()
+
+
 
 
 
