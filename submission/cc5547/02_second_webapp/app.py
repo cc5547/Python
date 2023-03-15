@@ -1,13 +1,6 @@
 import streamlit as st
 st.set_page_config(layout="wide")
 
-# 컬럼 생성 : 공간을 8:2 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
-# col1, col2 = st.columns([8, 2])
- # with col2 :
-  #   # column 2 에 담을 내용
-  #   st.title('컬럼2')
-  #   st.checkbox('컬럼2의 체크박스')
-
 # 단일 컬럼 생성
 col = st.columns(1)
 
@@ -22,9 +15,18 @@ picture_URL = "https://i.imgur.com/JHLVene.png"
 
 def side_bar(s) :
   # 사이드바
-  s.title('여기가 사이드바 입니다.')
-  s.checkbox('체크박스에 표시될 문구입니다.')
+  s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
+  # s.checkbox('체크박스에 표시될 문구입니다.')
+  language = ['서울특별시', '인천광역시', '경기도']
+    my_choice = st.selectbox('지역 선택', language)
 
+    if my_choice == language[0] :
+        st.write('파이썬을 선택하셨습니다.')
+    elif my_choice == language[1] :
+        st.write('C언어를 선택하셨습니다.')
+    elif my_choice == language[2] :
+        st.write('자바를 선택하셨습니다')
+    else : pass     
 
 def main():
   side_bar(s_bar)
@@ -54,7 +56,12 @@ if __name__ == '__main__':
 # col2.checkbox('this is checkbox2 in col2 ') 
 #=>위에 with col2: 안의 내용과 같은 기능을합니다
 
-
+# 컬럼 생성 : 공간을 8:2 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
+# col1, col2 = st.columns([8, 2])
+ # with col2 :
+  #   # column 2 에 담을 내용
+  #   st.title('컬럼2')
+  #   st.checkbox('컬럼2의 체크박스')
 
 
 
