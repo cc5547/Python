@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 
