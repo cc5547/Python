@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 컬럼 생성 : 공간을 10 으로 분할하여 col1 이름을 가진 컬럼을 생성합니다.  
-col1 = st.columns([10])
+col1 = st.columns(10)
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
