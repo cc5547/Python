@@ -18,7 +18,7 @@ def side_bar(s) :
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   # s.checkbox('체크박스에 표시될 문구입니다.')
   language = ['서울특별시', '인천광역시', '경기도']
-  my_choice = st.selectbox('지역 선택', language)
+  my_choice = s.selectbox('지역 선택', language)
 
   if my_choice == language[0] :
     st.write('파이썬을 선택하셨습니다.')
