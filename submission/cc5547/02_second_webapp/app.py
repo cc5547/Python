@@ -27,6 +27,7 @@ def side_bar(s) :
   elif my_choice == language[2] :
     st.write('경기도를 선택하셨습니다.')
   else : pass     
+  
 
 def main():
   side_bar(s_bar)
@@ -38,11 +39,13 @@ def main():
 
   with tab1 :
     #tab_1 를 누르면 표시될 내용
-    st.write('asd')
+    # st.write('')
+    pass
 
   with tab2 :
     #tab_2 를 누르면 표시될 내용
-    st.write('안녕')
+    # st.write('안녕')
+    pass
 
 if __name__ == '__main__':
   main()
