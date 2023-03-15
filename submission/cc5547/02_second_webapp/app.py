@@ -27,7 +27,7 @@ def main():
 
   with col[0] :
     # column 에 담을 내용
-    st.title('컬럼1')
+    st.title('# 지도')
     st.image(picture_URL)
 
   # with col2 :
