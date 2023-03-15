@@ -1,12 +1,14 @@
 import streamlit as st
 
-# 공간을 2:3 으로 분할하여 col1과 col2라는 이름을 가진 컬럼을 생성합니다.  
+# 컬럼 생성 : 공간을 10 으로 분할하여 col1 이름을 가진 컬럼을 생성합니다.  
 col1 = st.columns([10])
 
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
-s_bar = st.sidebar(['사이드바'])
+
+# 사이드바 생성 : 사이드 바를 생성합니다.
+s_bar = st.sidebar
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
@@ -29,8 +31,8 @@ with tab2:
   st.write('안녕')
 
 with s_bar:
-  st.title('여기가 사이드바입니다.')
-  st.checkbox('체크박스에 표시될 문구')
+  s_bar.title('여기가 사이드바입니다.')
+  s_bar.checkbox('체크박스에 표시될 문구')
 
 
 # with 구문 말고 다르게 사용 가능 
