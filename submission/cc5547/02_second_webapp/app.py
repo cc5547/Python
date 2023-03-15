@@ -1,6 +1,10 @@
 import streamlit as st
+
+st.set_page_config(layout="wide")
+
+
 # 컬럼 생성 : 공간을 2:1 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
-col1= st.columns()
+col1, col2 = st.columns([8, 2])
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
@@ -18,11 +22,11 @@ def main():
     st.title('컬럼1')
     st.image(picture_URL)
 
-  # with col2 :
-  #   # column 2 에 담을 내용
-  #   # st.title('컬럼2')
-  #   # st.checkbox('체크박스 컬럼2')
-  #   pass
+  with col2 :
+    column 2 에 담을 내용
+    st.title('컬럼2')
+    st.checkbox('컬럼2의 체크박스')
+    pass
     
 
   with tab1 :
