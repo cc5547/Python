@@ -14,18 +14,18 @@ s_bar.checkbox('체크박스에 표시될 문구')
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
 with col1:
-    # column 1 에 담을 내용
-    st.title('컬럼1')
-    st.checkbox('체크박스 컬럼1')
-    st.image(picture_URL)
+  # column 1 에 담을 내용
+  st.title('컬럼1')
+  st.checkbox('체크박스 컬럼1')
+  st.image(picture_URL)
 
 with tab1:
-    #tab A 를 누르면 표시될 내용
-    st.write('안녕하다')
+  #tab A 를 누르면 표시될 내용
+  st.write('안녕하다')
 
 with tab2:
-    #tab B를 누르면 표시될 내용 
-    st.write('안녕')
+  #tab B를 누르면 표시될 내용
+  st.write('안녕')
 
 
 
