@@ -34,9 +34,6 @@ with tab2:
   #tab B를 누르면 표시될 내용 
   st.write('안녕')
 
-
-
-
 # with 구문 말고 다르게 사용 가능 
 # col1.subheader(' i am column1  subheader !! ')
 # col2.checkbox('this is checkbox2 in col2 ') 
