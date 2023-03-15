@@ -36,8 +36,10 @@ def main():
     # column 에 담을 내용
     st.title('#지도')
     st.image(picture_URL)
-  with col2 : 
-    pass
+
+  with col2 :
+    st.write("여기가 컬럼 2입니다.")
+  
   with tab1 :
     #tab_1 를 누르면 표시될 내용
     # st.write('')
