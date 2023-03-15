@@ -6,7 +6,7 @@ col1 = st.columns([10])
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
-sidebar = st.sidebar(['사이드바'])
+s_bar = st.sidebar(['사이드바'])
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
@@ -28,9 +28,9 @@ with tab2:
   #tab B를 누르면 표시될 내용 
   st.write('안녕')
 
-with sidebar:
+with s_bar:
   st.title('여기가 사이드바입니다.')
-  st.sidebar.checkbox('체크박스에 표시될 문구')
+  st.checkbox('체크박스에 표시될 문구')
 
 
 # with 구문 말고 다르게 사용 가능 
