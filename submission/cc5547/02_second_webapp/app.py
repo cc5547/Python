@@ -21,11 +21,11 @@ def side_bar(s) :
   my_choice = s.selectbox('지역 선택', language)
 
   if my_choice == language[0] :
-    st.write('파이썬을 선택하셨습니다.')
+    st.write('서울을 선택하셨습니다.')
   elif my_choice == language[1] :
-    st.write('C언어를 선택하셨습니다.')
+    st.write('인천광역시를 선택하셨습니다.')
   elif my_choice == language[2] :
-    st.write('자바를 선택하셨습니다')
+    st.write('경기도를 선택하셨습니다.')
   else : pass     
 
 def main():
@@ -37,11 +37,11 @@ def main():
     st.image(picture_URL)
 
   with tab1 :
-    #tab A 를 누르면 표시될 내용
-    st.write('안녕하다')
+    #tab_1 를 누르면 표시될 내용
+    st.write('asd')
 
   with tab2 :
-    #tab B를 누르면 표시될 내용
+    #tab_2 를 누르면 표시될 내용
     st.write('안녕')
 
 if __name__ == '__main__':
