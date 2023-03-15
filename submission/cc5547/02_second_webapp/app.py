@@ -28,7 +28,7 @@ def main():
     #tab B를 누르면 표시될 내용
     st.write('안녕')
 
-if __name__ == main():
+if __name__ == '__main__':
   main()
 
 
