@@ -3,7 +3,6 @@ import streamlit as st
 # 컬럼 생성 : 공간을 10 으로 분할하여 col1 이름을 가진 컬럼을 생성합니다.  
 col1 = st.columns([10])
 
-
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
 
@@ -14,26 +13,22 @@ s_bar.checkbox('체크박스에 표시될 문구')
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
-
 with col1 :
-  # column 1 에 담을 내용
-  st.title('컬럼1')
-  st.checkbox('체크박스 컬럼1')
-  st.image(picture_URL)
-  
-  # picture_URL = "https://i.imgur.com/D7uu8FN.jpg" 
-  # st.image(picture_URL, use_column_width = True)
-
-  
+    # column 1 에 담을 내용
+    st.title('컬럼1')
+    st.checkbox('체크박스 컬럼1')
+    st.image(picture_URL)
 
 with tab1:
-  #tab A 를 누르면 표시될 내용
-  st.write('안녕하다')
+    #tab A 를 누르면 표시될 내용
+    st.write('안녕하다')
 
 with tab2:
-  #tab B를 누르면 표시될 내용 
-  st.write('안녕')
+    #tab B를 누르면 표시될 내용 
+    st.write('안녕')
 
+
+    
 # with 구문 말고 다르게 사용 가능 
 # col1.subheader(' i am column1  subheader !! ')
 # col2.checkbox('this is checkbox2 in col2 ') 
