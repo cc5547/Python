@@ -27,7 +27,7 @@ def side_bar(s) :
 
 
 def main():
-  def side_bar(s_bar)
+  side_bar(s_bar)
 
   with col[0] :
     # column 에 담을 내용
