@@ -18,11 +18,11 @@ def main():
     st.title('컬럼1')
     st.image(picture_URL)
 
-  with col2 :
-    # column 2 에 담을 내용
-    # st.title('컬럼2')
-    # st.checkbox('체크박스 컬럼2')
-    pass
+  # with col2 :
+  #   # column 2 에 담을 내용
+  #   # st.title('컬럼2')
+  #   # st.checkbox('체크박스 컬럼2')
+  #   pass
     
 
   with tab1 :
