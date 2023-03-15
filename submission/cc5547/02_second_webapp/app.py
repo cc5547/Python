@@ -20,7 +20,7 @@ s_bar = st.sidebar
  # 사진 URL
 picture_URL = "https://i.imgur.com/TT1ordb.png"
 
-def side_bar(s_bar):
+def side_bar(s_bar) :
   # 사이드바
   s_bar.title('여기가 사이드바 입니다.')
   s_bar.checkbox('체크박스에 표시될 문구입니다.')
