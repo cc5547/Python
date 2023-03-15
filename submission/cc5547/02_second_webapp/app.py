@@ -9,6 +9,8 @@ tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
 
 # 사이드바 생성 : 사이드 바를 생성합니다.
 s_bar = st.sidebar
+s_bar.title('여기가 사이드바입니다.')
+s_bar.checkbox('체크박스에 표시될 문구')
 
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
@@ -22,8 +24,7 @@ with col1 :
   # picture_URL = "https://i.imgur.com/D7uu8FN.jpg" 
   # st.image(picture_URL, use_column_width = True)
 
-  s_bar.title('여기가 사이드바입니다.')
-  s_bar.checkbox('체크박스에 표시될 문구')
+  
 
 with tab1:
   #tab A 를 누르면 표시될 내용
