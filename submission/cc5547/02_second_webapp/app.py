@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from google.colab import files
+# 중앙 정렬
+st.set_page_config(layout="wide") 
 
-st.set_page_config(layout="wide")
+uploaded_file = st.file_uploader("CSV 파일 업로드", type="csv")
+
+ # 사진 URL
+picture_URL = "https://i.imgur.com/JHLVene.png"
+
+
 
 # 단일 컬럼 생성
 col1, col2 = st.columns([7.0, 3.0])
@@ -14,8 +20,7 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
 s_bar = st.sidebar
 
- # 사진 URL
-picture_URL = "https://i.imgur.com/JHLVene.png"
+
 
 def side_bar(s) :
   # 사이드바
@@ -49,9 +54,9 @@ def main():
     st.write("여기가 컬럼 2입니다.")
   
   with tab1 :
-    #tab_1 를 누르면 표시될 내용
-    # st.write('')
-    pass
+    if uploaded_file is not None:
+      df = pd.read_csv(uploaded_file)
+      st.write(df)
 
   with tab2 :
     #tab_2 를 누르면 표시될 내용
