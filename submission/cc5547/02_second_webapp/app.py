@@ -5,7 +5,7 @@ st.set_page_config(layout="wide")
 
 # 컬럼 생성 : 공간을 2:1 으로 분할하여 col1, col2 이름을 가진 컬럼을 생성합니다.  
 # col1, col2 = st.columns([8, 2])
-col1 = st.columns(10)
+col = st.columns(1)
 
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
@@ -19,7 +19,7 @@ s_bar.checkbox('체크박스에 표시될 문구')
 picture_URL = "https://i.imgur.com/D7uu8FN.jpg" # 잠시 전역변수
 
 def main():
-  with col1 :
+  with col[0] :
     # column 1 에 담을 내용
     st.title('컬럼1')
     st.image(picture_URL)
