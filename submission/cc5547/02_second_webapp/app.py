@@ -23,10 +23,10 @@ def main():
     st.image(picture_URL)
 
   with col2 :
-    column 2 에 담을 내용
+    # column 2 에 담을 내용
     st.title('컬럼2')
     st.checkbox('컬럼2의 체크박스')
-    pass
+    
     
 
   with tab1 :
