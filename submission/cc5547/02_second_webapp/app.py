@@ -2,7 +2,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 # 단일 컬럼 생성
-col = st.columns(1)
+col1, col2 = st.columns([8, 2])
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
@@ -32,11 +32,12 @@ def side_bar(s) :
 def main():
   side_bar(s_bar)
 
-  with col[0] :
+  with col1 :
     # column 에 담을 내용
     st.title('#지도')
     st.image(picture_URL)
-
+  with col2 : 
+    pass
   with tab1 :
     #tab_1 를 누르면 표시될 내용
     # st.write('')
