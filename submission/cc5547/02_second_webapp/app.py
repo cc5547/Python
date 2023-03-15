@@ -56,7 +56,7 @@ def main():
     st.write("여기가 컬럼 2입니다.")
   
   with tab1 :
-    
+    pass
 
   with tab2 :
     #tab_2 를 누르면 표시될 내용
