@@ -2,9 +2,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
-import plotly.express as px
-import matplotlib.pyplot as plt 
+
+# import plotly.graph_objects as go
+# import plotly.express as px
+# import matplotlib.pyplot as plt 
 
 # 중앙 정렬
 st.set_page_config(layout="wide") 
@@ -66,8 +67,7 @@ def side_bar() :
 
 def create_graph(df_g_1):
   df_g_1 = df.groupby(['category'])['price'].sum().reset_index()
-    fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
-    return fig
+  fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
 
   return fig
 
