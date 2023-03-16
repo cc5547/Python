@@ -43,7 +43,7 @@ def main():
   df, result = side_bar()
   with col :
     # column 에 담을 내용
-    st.title('ㅎㅇ 시험장소를 안내해드립니다 :smile:')
+    st.title(':smile: 시험장소를 안내해드립니다 :smile:')
     st.dataframe(result, width=1000, height=500)
   with tab1 :
     # tab1 에 담을 내용
