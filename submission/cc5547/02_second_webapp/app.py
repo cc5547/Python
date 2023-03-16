@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
+import matplotlib.pyplot as plt 
+
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 # 단일 컬럼 생성
@@ -45,7 +49,8 @@ def side_bar() :
 
   # 위 area 리스트의 크기 만큼 반복 그냥 if문을 area의 리스트 크기만큼 작성
   for i in range(len(area)):
-    if choice == area[i]: # 초이스 셀렉트바에서 선택한 값이 area의 인덱스 값과 일치한다면
+    # 초이스 셀렉트바에서 선택한 값이 area의 인덱스 값과 일치한다면
+    if choice == area[i]: 
       result = df[df['지사명'] == area[i]] # result에 지사명이 지역을 선택한 값들의 데이터들은 저장
     else : pass
    
