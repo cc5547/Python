@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(layout="wide") 
 
  # df_URL
-DF_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
+# DF_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
 
 # 단일 컬럼 생성
 col = st.columns(1)
