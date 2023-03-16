@@ -39,7 +39,6 @@ def side_bar() :
       result.index = np.arange(1, len(result) + 1) # result 데이터프레임의 인덱스를 1부터 시작하도록 변경
   return df, result # 데이터프레임과 지역선택의 값을 return 
   
-
 def main():
   df, result = side_bar()
   with col :
