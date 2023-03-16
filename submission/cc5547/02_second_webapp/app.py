@@ -1,14 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 # 단일 컬럼 생성
 col = st.columns(1)[0]
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
+
 
 
 def create_df():
@@ -20,29 +19,24 @@ def create_df():
   df.index += 1
   return df
 
-
 # 사이드바
 def side_bar() :
   # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
   s_bar = st.sidebar
-
-  s_bar.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
-  area = ['서울특별시', '인천광역시', '경기도']
+  # df 생성 및 함수 호출
+  df = create_df()
+  s_bar.title('지역을 선택해주세요.')
+  area = df['지사명'].drop_duplicates().tolist()
 
   choice = s_bar.selectbox('지역 선택', area)
+  if choice == area[0]:
+    result = df[df['지사명'] == area[0]]
 
-  if choice == area[0] :
-    st.write('서울을 선택하셨습니다.')
-  elif choice == area[1] :
-    st.write('인천광역시를 선택하셨습니다.')
-  elif choice == area[2] :
-    st.write('경기도를 선택하셨습니다.')
-  else : pass
+  return df, result
   
 
 def main():
-  df = create_df()
-  side_bar()
+  df, result = side_bar()
 
   with col :
     # column 에 담을 내용
