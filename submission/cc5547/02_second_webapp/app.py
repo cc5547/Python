@@ -38,12 +38,12 @@ def side_bar() :
   for i in range(len(area)):
     if choice == area[i]: # 초이스 셀렉트바에서 선택한 값이 area의 인덱스 값과 일치한다면
       result = df[df['지사명'] == area[i]] # result에 지사명이 지역을 선택한 값들의 데이터들은 저장
-      result.index = np.arange(1, len(result) + 1) # result 데이터프레임의 인덱스를 1부터 시작하도록 변경
     else : pass
    
   # 검색바 만들기
   search = s_bar.text_input('검색어 입력')
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
+  result.index = np.arange(1, len(result) + 1)# result 데이터프레임의 인덱스를 1부터 시작하도록 변경
   return df, result # 데이터프레임과 지역선택의 값을 return 
   
 def main():
