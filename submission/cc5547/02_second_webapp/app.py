@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-def create_set():
-  # 중앙 정렬
-  st.set_page_config(layout="wide") 
-  # 단일 컬럼 생성
-  col = st.columns(1)[0]
-  # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
-  tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
-  return col, tab1, tab2
+
+# 중앙 정렬
+st.set_page_config(layout="wide") 
+# 단일 컬럼 생성
+col = st.columns(1)[0]
+# 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
+tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
+
 
 def create_df():
   # DF_URL
@@ -23,7 +23,10 @@ def create_df():
 
 # 사이드바
 def side_bar() :
+<<<<<<< HEAD
+=======
   col, tab1, tab2 = create_set()
+>>>>>>> 6a078eeb42fe1112c2c0662420fee3fab65762f4
   # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
   s_bar = st.sidebar
 
@@ -42,7 +45,6 @@ def side_bar() :
   
 
 def main():
-  col, tab1, tab2 = create_set()
   df = create_df()
   side_bar()
 
