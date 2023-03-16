@@ -51,11 +51,12 @@ def side_bar() :
   
 def main():
   df, result = side_bar() # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
+  
   with col :
     # column 에 담을 내용
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
     # 데이터프레임 출력 및 사이즈 조절
-    st.dataframe(result.style.set_properties(**{'text-align': 'center'}), width=1000, height=500) # table로도 작성해볼것
+    st.dataframe(result.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '150px')]}])) # table로도 작성해볼것, width=1000, height=500
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
     
   with tab1 :
