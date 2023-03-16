@@ -45,7 +45,7 @@ def main():
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    st.dataframe(result, width=1000, height=500)
+    st.dataframe(result.style.set_properties(**{'text-align': 'center'}), width=1000, height=500)
   with tab1 :
     # tab1 에 담을 내용
     pass
