@@ -102,12 +102,12 @@ def main():
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
     image_url = "https://i.imgur.com/wOY7lUx.png"
-    st.image(create_graph(image_url), caption='example image', use_column_width=True)
+    st.image(create_graph(image_url), use_column_width=True)
     
   with tab2 :
     # tab2 에 담을 내용
     image_url = "https://i.imgur.com/C9nrLkC.png"
-    st.image(create_graph(image_url), caption='example image', use_column_width=True)
+    st.image(create_graph(image_url), use_column_width=True)
     
 if __name__ == '__main__':
   main()
