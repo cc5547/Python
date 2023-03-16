@@ -25,10 +25,10 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 def side_bar() :
   s_bar = st.sidebar
 
-  s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
+  s_bar.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   area = ['서울특별시', '인천광역시', '경기도']
 
-  choice = s.selectbox('지역 선택', area)
+  choice = s_bar.selectbox('지역 선택', area)
 
   if choice == area[0] :
     st.write('서울을 선택하셨습니다.')
