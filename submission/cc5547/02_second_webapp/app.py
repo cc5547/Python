@@ -25,10 +25,6 @@ def create_df():
   # df 반환
   return df, df_g_1
 
-def create_graph():
-  pass
-
-
 
 # 사이드바
 def side_bar() :
@@ -61,10 +57,15 @@ def side_bar() :
   result.index = np.arange(1, len(result) + 1) 
 
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
+
+def create_graph(dg_1):
   
+  pass
+
+
 def main():
   df_g_1, df, result = side_bar() # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
-  result.style.set_properties(**{'font-size': '15px', 'font-family': 'Arial'})
+  # result.style.set_properties(**{'font-size': '15px', 'font-family': 'Arial'})
 
   with col :
     # column 에 담을 내용
