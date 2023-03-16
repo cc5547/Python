@@ -64,7 +64,7 @@ def side_bar(df) :
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
   result.index = np.arange(1, len(result) + 1) 
 
-  return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
+  return df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(image_url):
   # df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
@@ -80,7 +80,7 @@ def main():
   # df 생성 및 함수 호출
   df, df_g_1 = create_df() 
   # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
-  df_g_1, df, result = side_bar(df) 
+  df, result = side_bar(df) 
   
 
   with col :
