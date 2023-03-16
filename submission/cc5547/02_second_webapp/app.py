@@ -22,7 +22,7 @@ def create_df():
 
 # 사이드바
 def side_bar() :
-  # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
+  # 사이드바 생성 : st.sidebar를 s_bar 로 간추리기
   s_bar = st.sidebar
   # df 생성 및 함수 호출
   df = create_df()
@@ -32,19 +32,28 @@ def side_bar() :
   area = df['지사명'].drop_duplicates().tolist()
   # choice라는 변수에 셀렉트박스의 값에서 선택된 값들을 저장
   choice = s_bar.selectbox('지역 선택', area, index = 10)
+ 
+
   # 위 area 리스트의 크기 만큼 반복 그냥 if문을 area의 리스트 크기만큼 작성
   for i in range(len(area)):
     if choice == area[i]: # 초이스 셀렉트바에서 선택한 값이 area의 인덱스 값과 일치한다면
       result = df[df['지사명'] == area[i]] # result에 지사명이 지역을 선택한 값들의 데이터들은 저장
       result.index = np.arange(1, len(result) + 1) # result 데이터프레임의 인덱스를 1부터 시작하도록 변경
+    else : pass
+   
+  # 검색바 만들기
+  search = s_bar.text_input('검색어 입력')
+  result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   return df, result # 데이터프레임과 지역선택의 값을 return 
   
 def main():
-  df, result = side_bar()
+  df, result = side_bar() # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
   with col :
     # column 에 담을 내용
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
-    st.dataframe(result, width=1000, height=500)
+    # 데이터프레임 출력 및 사이즈 조절
+    st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
+    
   with tab1 :
     # tab1 에 담을 내용
     pass
