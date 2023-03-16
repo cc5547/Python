@@ -45,7 +45,7 @@ def main():
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    st.write(df.head(40), width = 5000)
+    st.write(result, width = 5000)
   
   with tab1 :
     # tab1 에 담을 내용
