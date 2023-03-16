@@ -93,7 +93,7 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.image(create_graph(df_g_1))
+    st.image(create_graph(df_g_1), caption='example image', use_column_width=True)
     
   with tab2 :
     # tab2 에 담을 내용
