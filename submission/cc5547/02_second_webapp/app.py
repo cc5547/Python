@@ -45,7 +45,8 @@ def main():
     # column 에 담을 내용
     df = pd.read_csv(df_URL).iloc[:, 1:]
     st.title('# 프레임 결과')
-    st.write(df.head(50).reset_index(drop=False))
+    df_display = df.head(50).reset_index(drop=False)
+    st.write(df_display['index'] += 1, index = False)
   
   with tab1 :
     # tab1 에 담을 내용
