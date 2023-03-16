@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
 # import plotly.graph_objects as go
 # import plotly.express as px
 # import matplotlib.pyplot as plt 
@@ -64,6 +66,9 @@ def side_bar() :
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(dg_1):
+  
+
+
   return dg_1
 
 
