@@ -1,9 +1,9 @@
-!pip install plotly
+# !pip install plotly
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
-import plotly.express as px
+# import plotly.graph_objects as go
+# import plotly.express as px
 # import plotly.graph_objects as go
 # import plotly.express as px
 # import matplotlib.pyplot as plt 
@@ -66,11 +66,19 @@ def side_bar() :
 
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
-def create_graph(dg_1):
-  
+def create_graph(df_g_1):
+  for col in df_g_1.columns[1:]:
+    df_g_1[col] = df_g_1[col].apply(lambda x: float(x[:-1]))
 
+  fig = df_g_1.plot(kind='bar', x='Unnamed: 0', y=df_g_1.columns[1:], color=px.colors.qualitative.Set3)
 
-  return dg_1
+  fig.set_title('필기시험 합격률')
+  fig.set_xlabel('시험 분류')
+  fig.set_ylabel('합격률%')
+  fig.set_ylim([0, 100])
+  fig.set_facecolor('#E2F3EA')
+
+  return fig
 
 
 def main():
@@ -90,8 +98,8 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용
-    st.dataframe(create_graph(df_g_1))
-
+    # st.dataframe(create_graph(df_g_1))
+    st.pyplot(create_graph(df_g_1).figure)
   with tab2 :
     # tab2 에 담을 내용
     pass
