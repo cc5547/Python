@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(layout="wide") 
 
 # DF_URL
-# df_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
+# df_URL = "https://github.com/cc5547/Python/tree/main/submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
 
 # 단일 컬럼 생성
 col = st.columns(1)[0]
@@ -40,11 +40,14 @@ def side_bar(s) :
 
 
 def main():
+  df = pd.read_csv(url)
+  
   side_bar(s_bar)
   
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
+    st.write(df.head())
   
   with tab1 :
     pass
