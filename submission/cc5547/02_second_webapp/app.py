@@ -9,7 +9,7 @@ col = st.columns(1)[0]
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 
 
-
+# 데이터 프레임 생
 def create_df():
   # DF_URL
   df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
@@ -17,6 +17,7 @@ def create_df():
   df = pd.read_csv(df_URL).iloc[:, 1:]
   # df인덱스 올림
   df.index += 1
+  # df 반환
   return df
 
 # 사이드바
@@ -31,28 +32,25 @@ def side_bar() :
   area = df['지사명'].drop_duplicates().tolist()
   # choice라는 변수에 셀렉트박스의 값에서 선택된 값들을 저장
   choice = s_bar.selectbox('지역 선택', area)
-
+  # 위 area 리스트의 크기 만큼 반복 그냥 if문을 area의 리스트 크기만큼 작성
   for i in range(len(area)):
-    if choice == area[i]:
-      result = df[df['지사명'] == area[i]]
-
-  return df, result
+    if choice == area[i]: # 초이스 셀렉트바에서 선택한 값이 area의 인덱스 값과 일치한다면
+      result = df[df['지사명'] == area[i]] # result에 지사명이 지역을 선택한 값들의 데이터들은 저장
+      result.index = np.arange(1, len(result) + 1)
+  return df, result # 데이터프레임과 지역선택의 값을 return 
   
 
 def main():
   df, result = side_bar()
-
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
     st.write(result, width = 5000)
-  
   with tab1 :
     # tab1 에 담을 내용
     pass
   with tab2 :
     # tab2 에 담을 내용
     pass
-
 if __name__ == '__main__':
   main()
