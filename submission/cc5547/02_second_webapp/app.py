@@ -82,9 +82,10 @@ def main():
 
   with col :
     # column 에 담을 내용
-    
+    # 지도 아이콘 하이퍼링크 네이버 
+    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
     # 제목
-    st.title(':smile: 시험장소를 안내해드립니다 :smile:') st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
+    st.title(':smile: 시험장소를 안내해드립니다 :smile:') 
     
     # 데이터프레임 출력 및 사이즈 조절
     st.dataframe(result, width=800, height=500)
