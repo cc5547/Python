@@ -16,38 +16,42 @@ col = st.columns(1)[0]
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 
 # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
-s_bar = st.sidebar
+
 
 # 사이드바
-def side_bar(s) :
-  
+def side_bar() :
+  s_bar = st.sidebar
+
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
-  language = ['서울특별시', '인천광역시', '경기도']
+  area = ['서울특별시', '인천광역시', '경기도']
 
-  choice = s.selectbox('지역 선택', language)
+  choice = s.selectbox('지역 선택', area)
 
-  if choice == language[0] :
+  if choice == area[0] :
     st.write('서울을 선택하셨습니다.')
-  elif choice == language[1] :
+  elif choice == area[1] :
     st.write('인천광역시를 선택하셨습니다.')
-  elif choice == language[2] :
+  elif choice == area[2] :
     st.write('경기도를 선택하셨습니다.')
   else : pass
   
 
 def main():
-  df = pd.read_csv(df_URL).iloc[:, 1:]
   
-  side_bar(s_bar)
+  
+  side_bar()
   
   with col :
     # column 에 담을 내용
+    df = pd.read_csv(df_URL).iloc[:, 1:]
     st.title('# 프레임 결과')
-    st.write(df.head(40), width=500)
+    st.write(df.head(50).reset_index(drop=False))
   
   with tab1 :
+    # tab1 에 담을 내용
     pass
   with tab2 :
+    # tab2 에 담을 내용
     pass
 
 if __name__ == '__main__':
