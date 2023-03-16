@@ -66,7 +66,7 @@ def side_bar() :
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(df_g_1):
-  df_g_1 = df.groupby(['category'])['price'].sum().reset_index()
+  df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
   fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
 
   return fig
