@@ -4,9 +4,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-import plotly.graph_objects as go
-import plotly.express as px
-import matplotlib.pyplot as plt 
+# import plotly.graph_objects as go
+# import plotly.express as px
+# import matplotlib.pyplot as plt 
 
 # 중앙 정렬
 st.set_page_config(layout="wide") 
@@ -90,7 +90,7 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.write(create_graph(df_g_1))
+    st.dataframe(create_graph(df_g_1))
     
   with tab2 :
     # tab2 에 담을 내용
