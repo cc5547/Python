@@ -47,8 +47,6 @@ def side_bar() :
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
   result.index = np.arange(1, len(result) + 1) 
 
-  if (df['지사명'] == choice) & (df['시험장소'].str.contains(search)):
-    result = "일치하는 항목이 없습니다."
   else : pass
 
   return df, result # 데이터프레임과 지역선택의 값을 return 
