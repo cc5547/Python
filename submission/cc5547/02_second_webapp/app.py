@@ -34,12 +34,12 @@ def create_df():
 
 
 # 사이드바
-def side_bar() :
+def side_bar(df) :
   # 사이드바 생성 : st.sidebar를 s_bar 로 간추리기
   s_bar = st.sidebar
 
-  # df 생성 및 함수 호출
-  df, df_g_1 = create_df()
+  
+  
 
   # 지역 선택 멘트 타이틀
   s_bar.title('지역을 선택해주세요.')
@@ -77,8 +77,11 @@ def create_graph(image_url):
 
 
 def main():
-  df_g_1, df, result = side_bar() # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
-  # result.style.set_properties(**{'font-size': '15px', 'font-family': 'Arial'})
+  # df 생성 및 함수 호출
+  df, df_g_1 = create_df() 
+  # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
+  df_g_1, df, result = side_bar(df) 
+  
 
   with col :
     # column 에 담을 내용
