@@ -18,7 +18,7 @@ def create_df():
   # df인덱스 올림
   df.index += 1
   # df 반환
-  return df
+  return df  
 
 # 사이드바
 def side_bar() :
