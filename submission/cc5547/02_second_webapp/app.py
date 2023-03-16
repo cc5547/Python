@@ -59,8 +59,7 @@ def side_bar() :
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(dg_1):
-  
-  pass
+  return dg_1
 
 
 def main():
@@ -80,7 +79,7 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용
-    create_graph(df_g_1)
+    st.dataframe(create_graph(df_g_1))
 
   with tab2 :
     # tab2 에 담을 내용
