@@ -5,10 +5,8 @@ import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 
-# uploaded_file = st.file_upload("한국산업인력공단_국가자격 CBT 시험장소 및 수험자 정보_20230308.csv", type="csv")
-
- # 사진 URL
-picture_URL = "https://i.imgur.com/JHLVene.png"
+ # df_URL
+DF_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
 
 # 단일 컬럼 생성
 col1, col2 = st.columns([7.0, 3.0])
@@ -28,7 +26,7 @@ def side_bar(s) :
   # 사이드바
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   # s.checkbox('체크박스에 표시될 문구입니다.')
-  # language = ['서울특별시', '인천광역시', '경기도']
+  language = ['서울특별시', '인천광역시', '경기도']
 
   # 특별시, 광역시, 시, 경기도 등등으로 인덱스 슬라이싱이필요합니다. 
   
