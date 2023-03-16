@@ -38,9 +38,6 @@ def side_bar(df) :
   # 사이드바 생성 : st.sidebar를 s_bar 로 간추리기
   s_bar = st.sidebar
 
-  
-  
-
   # 지역 선택 멘트 타이틀
   s_bar.title('지역을 선택해주세요.')
 
@@ -67,11 +64,6 @@ def side_bar(df) :
   return df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(image_url):
-  # df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
-  # fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
-  # 그래프_링크_1 = "https://i.imgur.com/wOY7lUx.png"
-  # 그래프_링크_2 = "https://i.imgur.com/C9nrLkC.png"
-
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
