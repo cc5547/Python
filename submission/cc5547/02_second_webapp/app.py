@@ -23,10 +23,6 @@ def create_df():
 
 # 사이드바
 def side_bar() :
-<<<<<<< HEAD
-=======
-  col, tab1, tab2 = create_set()
->>>>>>> 6a078eeb42fe1112c2c0662420fee3fab65762f4
   # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
   s_bar = st.sidebar
 
