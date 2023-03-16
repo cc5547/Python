@@ -41,7 +41,7 @@ def side_bar() :
     else : pass
    
   # 검색바 만들기
-  search = s_bar.text_input('검색어 입력')
+  search = s_bar.text_input('상세 검색(시 혹은 동을 입력 하세요.)')
   # 지역선택한 값안에서 시험장소를 검색(입력)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
