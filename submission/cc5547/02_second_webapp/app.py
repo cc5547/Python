@@ -98,8 +98,8 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용
-    # st.dataframe(create_graph(df_g_1))
     st.pyplot(create_graph(df_g_1).figure)
+    # st.pyplot(create_graph(df_g_1).figure)
   with tab2 :
     # tab2 에 담을 내용
     pass
