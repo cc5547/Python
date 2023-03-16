@@ -9,7 +9,7 @@ st.set_page_config(layout="wide")
 DF_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
 
 # 단일 컬럼 생성
-col1, col2 = st.columns([7.0, 3.0])
+col = st.columns(1)
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
@@ -38,25 +38,24 @@ def side_bar(s) :
 
 def main():
   side_bar(s_bar)
-  # upload()
-  with col1 :
+  
+  with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    
-
-  with col2 :
-    st.write("여기가 컬럼 2입니다.")
   
   with tab1 :
     pass
 
   with tab2 :
-    #tab_2 를 누르면 표시될 내용
-    # st.write('안녕')
     pass
 
 if __name__ == '__main__':
   main()
+
+
+
+
+
 
 
 
@@ -73,24 +72,6 @@ if __name__ == '__main__':
   #   # column 2 에 담을 내용
   #   st.title('컬럼2')
   #   st.checkbox('컬럼2의 체크박스')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
