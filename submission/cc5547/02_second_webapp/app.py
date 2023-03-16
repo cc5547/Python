@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 # 단일 컬럼 생성
 col = st.columns(1)[0]
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
-tab1, tab2= st.tabs(['년도별 필기 합격률' , '탭_2'])
+tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
 
 
 # 데이터 프레임 생성
@@ -66,12 +66,12 @@ def side_bar() :
 
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
-def create_graph(df_g_1):
+def create_graph(image_url):
   # df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
   # fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
   # 그래프_링크_1 = "https://i.imgur.com/wOY7lUx.png"
   # 그래프_링크_2 = "https://i.imgur.com/C9nrLkC.png"
-  image_url = "https://i.imgur.com/wOY7lUx.png"
+
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
@@ -93,10 +93,13 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.image(create_graph(df_g_1), caption='example image', use_column_width=True)
+    image_url = "https://i.imgur.com/wOY7lUx.png"
+    st.image(create_graph(image_url), caption='example image', use_column_width=True)
     
   with tab2 :
     # tab2 에 담을 내용
-    pass
+    image_url = "https://i.imgur.com/C9nrLkC.png"
+    st.image(create_graph(image_url), caption='example image', use_column_width=True)
+    
 if __name__ == '__main__':
   main()
