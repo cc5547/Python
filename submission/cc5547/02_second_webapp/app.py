@@ -35,14 +35,14 @@ def side_bar(s) :
   
 
 def main():
-  df = pd.read_csv(df_URL, encoding='cp949')
+  # df = pd.read_csv(df_URL, encoding='cp949')
   
   side_bar(s_bar)
   
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    st.write(df.head())
+    # st.write(df.head())
   
   with tab1 :
     pass
