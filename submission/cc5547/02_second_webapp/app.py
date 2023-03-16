@@ -42,7 +42,7 @@ def main():
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    # st.write(df.head())
+    st.write(df.head())
   
   with tab1 :
     pass
