@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import altair as alt
+
 
 # 중앙 정렬
 st.set_page_config(layout="wide") 
@@ -43,7 +43,7 @@ def main():
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    st.write(df.head(40))
+    st.write(df.head(40), width=1000)
   
   with tab1 :
     pass
