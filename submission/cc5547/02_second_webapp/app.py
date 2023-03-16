@@ -25,12 +25,16 @@ def side_bar() :
   s_bar = st.sidebar
   # df 생성 및 함수 호출
   df = create_df()
+  # 지역 선택 멘트 타이틀
   s_bar.title('지역을 선택해주세요.')
+  # area에 df에서 열 중에서 지사명인 열에 값들을 중복을 제거하고 리스트로 변환
   area = df['지사명'].drop_duplicates().tolist()
-
+  # choice라는 변수에 셀렉트박스의 값에서 선택된 값들을 저장
   choice = s_bar.selectbox('지역 선택', area)
-  if choice == area[0]:
-    result = df[df['지사명'] == area[0]]
+
+  for i in range(len(area)):
+    if choice == area[i]:
+      result = df[df['지사명'] == area[i]]
 
   return df, result
   
