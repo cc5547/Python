@@ -51,8 +51,13 @@ def main():
   with col :
     # column 에 담을 내용
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
-    # 데이터프레임 출력 및 사이즈 조절
-    st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
+    if result in not None:
+      # 데이터프레임 출력 및 사이즈 조절
+      st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
+    else : 
+      col.empty()
+      st.write("일치하는 항목이없습니다.")
+    
     
   with tab1 :
     # tab1 에 담을 내용
