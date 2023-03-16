@@ -1,5 +1,5 @@
 # !pip install plotly
-
+from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -69,8 +69,11 @@ def side_bar() :
 def create_graph(df_g_1):
   # df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
   # fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
-
-  return df_g_1
+  # 그래프_링크_1 = "https://i.imgur.com/wOY7lUx.png"
+  # 그래프_링크_2 = "https://i.imgur.com/C9nrLkC.png"
+  image_url = "https://i.imgur.com/wOY7lUx.png"
+  image = Image.open(requests.get(image_url, stream=True).raw)
+  return image
 
 
 def main():
@@ -90,7 +93,7 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.dataframe(create_graph(df_g_1))
+    st.image(create_graph(df_g_1))
     
   with tab2 :
     # tab2 에 담을 내용
