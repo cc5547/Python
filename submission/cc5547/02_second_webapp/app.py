@@ -5,7 +5,7 @@ import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 
- # df_URL
+# df_URL
 # DF_URL = "submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
 
 # 단일 컬럼 생성
@@ -20,7 +20,7 @@ s_bar = st.sidebar
 # 사이드바
 def side_bar(s) :
   
-  s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
+  s.title('여기가 사이드바 입니다. \n 지역(특별시, 광역시, 시 ...)')
   language = ['서울특별시', '인천광역시', '경기도']
 
   choice = s.selectbox('지역 선택', language, default='')
@@ -33,6 +33,11 @@ def side_bar(s) :
     st.write('경기도를 선택하셨습니다.')
   else : pass     
   
+
+
+
+
+
 
 def main():
   side_bar(s_bar)
