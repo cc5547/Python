@@ -17,14 +17,12 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
 s_bar = st.sidebar
 
-
+# 사이드바
 def side_bar(s) :
-  # 사이드바
+  
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
-  # s.checkbox('체크박스에 표시될 문구입니다.')
-  # 특별시, 광역시, 시, 경기도 등등으로 인덱스 슬라이싱이필요합니다. 
   language = ['서울특별시', '인천광역시', '경기도']
-
+  
   choice = s.selectbox('지역 선택', language)
 
   if choice == language[0] :
