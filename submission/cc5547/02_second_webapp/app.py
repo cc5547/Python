@@ -1,4 +1,5 @@
 # !pip install plotly
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -66,10 +67,10 @@ def side_bar() :
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(df_g_1):
-  df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
-  fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
+  # df_g_1 = df_g_1.groupby(['category'])['price'].sum().reset_index()
+  # fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
 
-  return fig
+  return df_g_1
 
 
 def main():
@@ -89,7 +90,7 @@ def main():
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.pyplot(create_graph(df_g_1).figure)
+    st.write(create_graph(df_g_1))
     
   with tab2 :
     # tab2 에 담을 내용
