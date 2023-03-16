@@ -17,21 +17,15 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
 s_bar = st.sidebar
 
-# def upload():
-#   if uploaded_file is not None:
-#       df = pd.read_csv(uploaded_file)
-#       st.write(df)
 
 def side_bar(s) :
   # 사이드바
   s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   # s.checkbox('체크박스에 표시될 문구입니다.')
+  # 특별시, 광역시, 시, 경기도 등등으로 인덱스 슬라이싱이필요합니다. 
   language = ['서울특별시', '인천광역시', '경기도']
 
-  # 특별시, 광역시, 시, 경기도 등등으로 인덱스 슬라이싱이필요합니다. 
-  
   choice = s.selectbox('지역 선택', language)
-  st.write(f"{choice}를 선택하였습니다.")
 
   if choice == language[0] :
     st.write('서울을 선택하셨습니다.')
@@ -47,8 +41,8 @@ def main():
   # upload()
   with col1 :
     # column 에 담을 내용
-    st.title('#지도')
-    st.image(picture_URL)
+    st.title('# 프레임 결과')
+    
 
   with col2 :
     st.write("여기가 컬럼 2입니다.")
