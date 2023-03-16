@@ -42,15 +42,15 @@ def side_bar() :
    
   # 검색바 만들기
   search = s_bar.text_input('검색어 입력')
-  # if (choice is not None) and (search != ""):
-  #   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
-  #   result.index = np.arange(1, len(result) + 1)
-  # else : result = None
-
-  
+  # 지역선택한 값안에서 시험장소를 검색(입력)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
-  result.index = np.arange(1, len(result) + 1)# result 데이터프레임의 인덱스를 1부터 시작하도록 변경
-  
+  # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
+  result.index = np.arange(1, len(result) + 1) 
+
+  if (df['지사명'] == choice) & (df['시험장소'].str.contains(search)):
+    result = "일치하는 항목이 없습니다."
+  else : pass
+
   return df, result # 데이터프레임과 지역선택의 값을 return 
   
 def main():
@@ -58,13 +58,8 @@ def main():
   with col :
     # column 에 담을 내용
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
-    if result is not None:
-      # 데이터프레임 출력 및 사이즈 조절
-      st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
-    else : 
-      
-      st.write("일치하는 항목이없습니다.")
-    
+    # 데이터프레임 출력 및 사이즈 조절
+    st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
     
   with tab1 :
     # tab1 에 담을 내용
