@@ -26,11 +26,7 @@ def create_df():
   return df, df_g_1
 
 def create_graph():
-
-
-
-
-
+  pass
 
 
 
