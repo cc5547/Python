@@ -35,7 +35,7 @@ def side_bar(s) :
   
 
 def main():
-  df = pd.read_csv(df_URL)
+  df = pd.read_csv(df_URL, encoding='cp949')
   
   side_bar(s_bar)
   
