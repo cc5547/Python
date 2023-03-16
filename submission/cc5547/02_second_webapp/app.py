@@ -67,16 +67,9 @@ def side_bar() :
   return df_g_1, df, result # 데이터프레임과 지역선택의 값을 return 
 
 def create_graph(df_g_1):
-  for col in df_g_1.columns[1:]:
-    df_g_1[col] = df_g_1[col].apply(lambda x: float(x[:-1]))
-
-  fig = df_g_1.plot(kind='bar', x='Unnamed: 0', y=df_g_1.columns[1:], color=px.colors.qualitative.Set3)
-
-  fig.set_title('필기시험 합격률')
-  fig.set_xlabel('시험 분류')
-  fig.set_ylabel('합격률%')
-  fig.set_ylim([0, 100])
-  fig.set_facecolor('#E2F3EA')
+  df_g_1 = df.groupby(['category'])['price'].sum().reset_index()
+    fig = df_g_1.plot(kind='bar', x='category', y='price', color=colors.qualitative.Set3)
+    return fig
 
   return fig
 
@@ -97,9 +90,9 @@ def main():
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
 
   with tab1 :
-    # tab1 에 담을 내용
+    # tab1 에 담을 내용 // 그래프 1
     st.pyplot(create_graph(df_g_1).figure)
-    # st.pyplot(create_graph(df_g_1).figure)
+    
   with tab2 :
     # tab2 에 담을 내용
     pass
