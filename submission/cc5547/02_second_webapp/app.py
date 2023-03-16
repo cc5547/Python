@@ -13,7 +13,7 @@ tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 def create_df():
   # DF_URL
   df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
-  # df언네임 삭제
+  # df을 읽어 오면서 df언네임 삭제
   df = pd.read_csv(df_URL).iloc[:, 1:]
   # df인덱스 올림       
   df.index += 1
@@ -51,14 +51,14 @@ def side_bar() :
   
 def main():
   df, result = side_bar() # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
-  
   with col :
     # column 에 담을 내용
+    # 제목
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
     # 데이터프레임 출력 및 사이즈 조절
-    st.dataframe(result.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '500px')]}])) # table로도 작성해볼것, width=1000, height=500
+    st.dataframe(result.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '1000px')]}])) # table로도 작성해볼것, width=1000, height=500
+    # 부제목
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
-    
   with tab1 :
     # tab1 에 담을 내용
     pass
