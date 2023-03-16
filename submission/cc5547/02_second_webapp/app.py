@@ -6,7 +6,7 @@ import numpy as np
 st.set_page_config(layout="wide") 
 
 # DF_URL
-df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/한국산업인력공단_시험장소.csv"
+df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%B8%EB%A0%A5%EA%B3%B5%EB%8B%A8_%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C.csv"
 
 # 단일 컬럼 생성
 col = st.columns(1)[0]
@@ -35,7 +35,7 @@ def side_bar(s) :
   
 
 def main():
-  # df = pd.read_csv(df_URL, encoding='cp949')
+  df = pd.read_csv(df_URL)
   
   side_bar(s_bar)
   
