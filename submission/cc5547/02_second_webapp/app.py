@@ -20,10 +20,10 @@ s_bar = st.sidebar
 # 사이드바
 def side_bar(s) :
   
-  s.title('여기가 사이드바 입니다. \n 지역(특별시, 광역시, 시 ...)')
+  s.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
   language = ['서울특별시', '인천광역시', '경기도']
 
-  choice = s.selectbox('지역 선택', language)
+  choice = s.selectbox('지역 선택', language, default=language[0])
 
   if choice == language[0] :
     st.write('서울을 선택하셨습니다.')
@@ -31,7 +31,7 @@ def side_bar(s) :
     st.write('인천광역시를 선택하셨습니다.')
   elif choice == language[2] :
     st.write('경기도를 선택하셨습니다.')
-  else : pass     
+  else : pass
   
 
 
