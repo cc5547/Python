@@ -11,7 +11,7 @@ import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
 # 단일 컬럼 생성
-col = st.columns(1)[0]
+col1, col2 = st.columns([8, 2])
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다.... 
 tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
 
@@ -83,10 +83,9 @@ def main():
   df, result = side_bar(df) 
   
 
-  with col :
+  with col1 :
     # column 에 담을 내용
-    # 지도 아이콘 하이퍼링크 네이버 
-    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
+    
     # 제목
     st.title(':smile: 시험장소를 안내해드립니다 :smile:') 
     
@@ -95,6 +94,10 @@ def main():
 
     # 부제목
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
+
+  with col2 :
+    # 지도 아이콘 하이퍼링크 네이버 
+    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
