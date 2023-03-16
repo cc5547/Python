@@ -7,7 +7,8 @@ import numpy as np
 st.set_page_config(layout="wide") 
 
 # DF_URL
-df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%B8%EB%A0%A5%EA%B3%B5%EB%8B%A8_%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C.csv"
+df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
+# df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%B8%EB%A0%A5%EA%B3%B5%EB%8B%A8_%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C.csv"
 # df언네임 삭제 
 df = pd.read_csv(df_URL).iloc[:, 1:]
 # df인덱스 올림
@@ -45,7 +46,6 @@ def main():
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
-    
     st.write(df.head(40), width = 5000)
   
   with tab1 :
