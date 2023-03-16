@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 # 단일 컬럼 생성
 col = st.columns(1)[0]
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
-tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
+tab1, tab2= st.tabs(['탭_1' , '탭_2'])
 
 
 # 데이터 프레임 생성
