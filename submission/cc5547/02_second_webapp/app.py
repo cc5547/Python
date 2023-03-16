@@ -11,18 +11,19 @@ df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547
 # df언네임 삭제 
 df = pd.read_csv(df_URL).iloc[:, 1:]
 # df인덱스 올림
-df.index += 1
+# df.index += 1
 # 단일 컬럼 생성
 col = st.columns(1)[0]
 
 # 탭 생성 : 첫번째 탭의 이름은 Tab A 로, Tab B로 표시합니다. 
 tab1, tab2= st.tabs(['Tab_1' , 'Tab_2'])
 
-# 사이드바 생성 : 사이드 바를 s_bar 로 생성.
+
 
 
 # 사이드바
 def side_bar() :
+  # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
   s_bar = st.sidebar
 
   s_bar.title('여기가 사이드바 입니다.\n 지역(특별시, 광역시, 시 ...)')
