@@ -55,8 +55,8 @@ def main():
     # column 에 담을 내용
     st.title(':smile: 시험장소를 안내해드립니다 :smile:')
     # 데이터프레임 출력 및 사이즈 조절
-    st.dataframe(result, width=1000, height=500) # table로도 작성해볼것
-    st.subheader(":smile: 귀하의 시험을 응원합니다! :smile:")
+    st.dataframe(result.style.set_properties(**{'text-align': 'center'}), width=1000, height=500) # table로도 작성해볼것
+    st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
     
   with tab1 :
     # tab1 에 담을 내용
