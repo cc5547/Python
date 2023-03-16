@@ -21,6 +21,7 @@ def create_df():
 
 # 사이드바
 def side_bar() :
+  s = create_set()
   # 사이드바 생성 : 사이드 바를 s_bar 로 생성.
   s_bar = st.sidebar
 
@@ -40,8 +41,11 @@ def side_bar() :
 
 def main():
   create_set()
-  create_df()
+
+  df = create_df()
+
   side_bar()
+
   with col :
     # column 에 담을 내용
     st.title('# 프레임 결과')
