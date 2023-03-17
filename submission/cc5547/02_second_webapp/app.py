@@ -54,7 +54,7 @@ def main():
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
 
   with col2 : 
-    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)"
+    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
   with tab1 : 
     image_url = "https://i.imgur.com/wOY7lUx.png"
