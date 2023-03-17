@@ -63,7 +63,8 @@ def side_bar(df) :
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
   result.index = np.arange(1, len(result) + 1) 
 
-  return df, result # 데이터프레임과 지역선택의 값을 return 
+  # 데이터프레임과 지역선택의 값을 return 
+  return df, result 
 
 def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
