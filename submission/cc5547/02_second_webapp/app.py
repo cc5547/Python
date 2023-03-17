@@ -53,12 +53,15 @@ def main():
     st.dataframe(result, width=800, height=500)
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
 
-  with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)"
+  with col2 : 
+    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)"
 
-  with tab1 : image_url = "https://i.imgur.com/wOY7lUx.png"
+  with tab1 : 
+    image_url = "https://i.imgur.com/wOY7lUx.png"
     st.image(create_graph(image_url), use_column_width=True)
     
-  with tab2 : image_url = "https://i.imgur.com/C9nrLkC.png"
+  with tab2 : 
+    image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
     
 if __name__ == '__main__':
