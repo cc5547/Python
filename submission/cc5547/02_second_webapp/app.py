@@ -85,7 +85,7 @@ def main():
     st.dataframe(result, width=800, height=500)
 
     # 부제목
-    st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
+    st.subheader(":smile: 귀하의 합격을 기원합니다! :smile::good:")
 
   with col2 :
     # 지도 아이콘 하이퍼링크 네이버 
