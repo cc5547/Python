@@ -19,16 +19,13 @@ def side_bar(df) :
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
 
-  for i in range(len(area)):
-    if choice == area[i]: 
-      result = df[df['지사명'] == area[i]]
-    else : pass 
-   
+  result = df[df['지사명'] == choice]
   search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
-  result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
-  result.index = np.arange(1, len(result) + 1) 
+  if search:
+    result = result[result['시험장소'].str.contains(search)]
+  result.index = np.arange(1, len(result) + 1)
 
-  return df, result
+  return result
 
 # 그래프 생성
 def create_graph(image_url):
@@ -37,10 +34,12 @@ def create_graph(image_url):
 
 # main 시작점
 def main():
-  df, result = side_bar(create_df()) 
-
+  # df, result = side_bar(create_df()) 
+  df = load_data()
+  result = side_bar(df)
   
   col1, col2 = st.columns([8, 2])   
+
   with col1 :
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(result, width=800, height=500)
