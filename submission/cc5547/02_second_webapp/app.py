@@ -45,7 +45,7 @@ def side_bar(df) :
   area = df['지사명'].drop_duplicates().tolist()
 
   # choice라는 변수에 셀렉트박스의 값에서 선택된 값들을 저장
-  choice = s_bar.selectbox('지역 선택(지역 재검색시 상세 검색을 지워 주세요) :smile:', area, index = 10)
+  choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요) :smile:', area, index = 10)
 
   # 위 area 리스트의 크기 만큼 반복 그냥 if문을 area의 리스트 크기만큼 작성
   for i in range(len(area)):
