@@ -55,7 +55,7 @@ def side_bar(df) :
     else : pass
    
   # 검색바 만들기
-  search = s_bar.text_input('상세 검색(시, 교명등의 키워드를 입력해보세요 :smile:.)')
+  search = s_bar.text_input('상세 검색(시, 교명등의 키워드를 입력해보세요 :smile:)')
 
   # 지역선택한 값안에서 시험장소를 검색(입력)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
