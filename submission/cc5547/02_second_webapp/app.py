@@ -39,7 +39,7 @@ def side_bar(df) :
   s_bar = st.sidebar
 
   # 지역 선택 멘트 타이틀
-  s_bar.title('지역을 선택해주세요. 지역 재 검색시 상세 검색을 지워 주세요 :smile:')
+  s_bar.title('지역을 선택해주세요. 지역 재검색시 상세 검색을 지워 주세요 :smile:')
 
   # area에 df에서 열 중에서 지사명인 열에 값들을 중복을 제거하고 리스트로 변환
   area = df['지사명'].drop_duplicates().tolist()
