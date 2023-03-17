@@ -41,6 +41,7 @@ def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
+# main 시작점
 def main():
   df, result = side_bar(create_df()) 
 
