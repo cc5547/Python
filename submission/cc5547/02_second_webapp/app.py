@@ -5,11 +5,11 @@ import pandas as pd
 import numpy as np
 
 # 중앙 정렬
-  st.set_page_config(layout="wide") 
-  # 8:2 비율의 컬럼 생성
-  col1, col2 = st.columns([8, 2])
-  # 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
-  tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
+st.set_page_config(layout="wide") 
+# 8:2 비율의 컬럼 생성
+col1, col2 = st.columns([8, 2])
+# 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
+tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
 
 # 데이터 프레임 생성
 def create_df():
