@@ -3,6 +3,7 @@ from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
+st.set_page_config(layout="wide")
 
 # 데이터 프레임 생성
 def create_df():
@@ -38,7 +39,7 @@ def create_graph(image_url):
 def main():
   df, result = side_bar(create_df()) 
 
-  st.set_page_config(layout="wide")
+  
   col1, col2 = st.columns([8, 2])   
   with col1 :
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
@@ -47,7 +48,7 @@ def main():
 
   with col2 : 
     st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
-    
+
   tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
     image_url = "https://i.imgur.com/wOY7lUx.png"
