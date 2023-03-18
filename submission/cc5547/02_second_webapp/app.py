@@ -3,8 +3,7 @@ from PIL import Image
 import requests
 import pandas as pd
 import numpy as np
-!pip install statsmodels
-import statsmodels.api as sm
+
 import plotly.express as px
 import plotly.graph_objects as go
 
