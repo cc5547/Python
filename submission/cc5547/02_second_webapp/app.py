@@ -38,9 +38,9 @@ def side_bar(df) :
   result.index = np.arange(1, len(result) + 1) 
  
 
- # 이전 선택지를 저장합니다.
-    s_bar.session_state['prev_choice'] = choice
-    
+  # 이전 선택지를 저장합니다.
+  s_bar.session_state['prev_choice'] = choice
+
   return result
 
 # 그래프 생성
