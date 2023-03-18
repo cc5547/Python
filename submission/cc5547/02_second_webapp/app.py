@@ -66,7 +66,7 @@ def main():
     "y": [2, 3, 1, 4, 2]
     }) 
     fig = px.scatter(dfs, x="x", y="y", trendline="ols")
-    fig.show()
+    st.write(fig)
     
 if __name__ == '__main__':
   main()
