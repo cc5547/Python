@@ -92,7 +92,7 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    st.pyplot(load_graph(df_g1))
+    st.plotly_chart(load_graph(df_g1))
     
 if __name__ == '__main__':
   main()
