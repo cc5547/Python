@@ -66,7 +66,7 @@ def load_graph(df_g1, df_g2):
         height = 700,
     )
 
-  elif df_g2 not None:
+  elif df_g2 is not None:
     fig = go.Figure()
     df_g2 = df_g2.drop(df_g2.columns[1], axis=1)
     years = df_g2.columns[1:]
