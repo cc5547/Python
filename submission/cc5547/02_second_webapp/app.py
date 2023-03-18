@@ -1,5 +1,4 @@
 import streamlit as st
-from sessionstate import SessionState
 import requests
 from PIL import Image
 import pandas as pd
@@ -15,16 +14,9 @@ def create_df():
 
 # 사이드바
 def side_bar(df) :
-  if s_bar.session_state.get('prev_choice') != choice:
-    s_bar.session_state['prev_choice'] = choice
-    s_bar.session_state['search'] = ''
-  else:
-      choice = s_bar.session_state['prev_choice']
-      search = s_bar.session_state.get('search', '')
-  result = None
   s_bar = st.sidebar
-
   s_bar.title('지역을 선택해주세요.')
+  
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
 
