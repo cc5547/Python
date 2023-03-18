@@ -40,7 +40,7 @@ def side_bar(df) :
   return result
 
 # 그래프 로드
-def load_graph(df_g1):
+def load_graph(df_g1, df_g2):
   # 문자열에서 % 기호 제거 및 실수 타입으로 변환
   for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
 
@@ -62,6 +62,7 @@ def load_graph(df_g1):
       height = 700,
   )
   return fig
+
 
 # main 시작점
 def main():
