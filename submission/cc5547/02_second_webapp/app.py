@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit import SessionState
+from sessionstate import SessionState
 import requests
 from PIL import Image
 import pandas as pd
