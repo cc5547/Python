@@ -26,11 +26,11 @@ def side_bar(df) :
       result = df[df['지사명'] == area[i]]
     else : pass
 
-  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', key='search')
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
   if s_bar.button('초기화'):
-    search.value = ''
+    search = ''
   return result
 
 # 그래프 생성
