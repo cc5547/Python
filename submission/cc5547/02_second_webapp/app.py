@@ -105,7 +105,6 @@ def main():
     st.plotly_chart(load_graph(df_g1, None))
   with tab2 : 
     st.plotly_chart(load_graph(None, df_g2))
-    pass
     
 if __name__ == '__main__':
   main()
