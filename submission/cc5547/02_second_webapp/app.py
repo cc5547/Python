@@ -39,11 +39,7 @@ def side_bar(df) :
 
   return result
 
-# 그래프 생성
-def create_graph(image_url):
-  image = Image.open(requests.get(image_url, stream=True).raw)
-  return image
-
+# 그래프 로드
 def load_graph(df_g1):
   # 문자열에서 % 기호 제거 및 실수 타입으로 변환
   for col in df_g1.columns[1:]:
@@ -84,14 +80,10 @@ def main():
   with col2 : 
     st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
-  tab1, tab2, tab3= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수', 'test'])
+  tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
-    image_url = "https://i.imgur.com/wOY7lUx.png"
-    st.image(create_graph(image_url), use_column_width=True)
+    st.plotly_chart(load_graph(df_g1))
   with tab2 : 
-    image_url = "https://i.imgur.com/C9nrLkC.png"
-    st.image(create_graph(image_url), use_column_width=True)
-  with tab3 :
     st.plotly_chart(load_graph(df_g1))
     
 if __name__ == '__main__':
