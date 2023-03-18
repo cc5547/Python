@@ -15,10 +15,10 @@ def create_df():
   df_URL_g = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
 
   df = pd.read_csv(df_URL).iloc[:, 1:]
-  df_g = pd.read_csv(df_URL_g)
+  df_g1 = pd.read_csv(df_URL_g)
 
   df.index += 1
-  return df, df_URL_g
+  return df, df_g1
 
 # 사이드바
 def side_bar(df) :
@@ -44,12 +44,12 @@ def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
-def load_graph(df_URL_g):
+def load_graph(df_g1):
   pass
 
 # main 시작점
 def main():
-  df, df_URL_g = create_df()
+  df, df_g1 = create_df()
   result = side_bar(df)
   
   col1, col2 = st.columns([8, 2])   
@@ -68,7 +68,7 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    fig = px.scatter(df_URL_g, x='x', y='y', trendline='ols')
+    fig = px.scatter(df_g1, x='x', y='y', trendline='ols')
     st.write(fig)
     
 if __name__ == '__main__':
