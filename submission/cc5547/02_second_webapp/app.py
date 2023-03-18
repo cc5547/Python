@@ -45,7 +45,29 @@ def create_graph(image_url):
   return image
 
 def load_graph(df_g1):
-  pass
+  # 문자열에서 % 기호 제거 및 실수 타입으로 변환
+  for col in df_g1.columns[1:]:
+      df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
+
+  fig = go.Figure()
+
+  # 연도별 색상 지정
+  colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
+
+  for i, col in enumerate(df.columns[1:]):
+      fig.add_trace(
+          go.Bar(x=df_g1['Unnamed: 0'], y=df_g1[col], name=col, marker_color=colors[i])
+          )
+
+  # 레이아웃 설정
+  fig.update_layout(
+      title='필기시험 합격률',
+      xaxis_title='시험 분류',
+      yaxis_title='합격률%',
+      yaxis=dict(range=[0, 100]),
+      plot_bgcolor='#e2f3ea' # 차트 배경색 지정
+  )
+  return fig
 
 # main 시작점
 def main():
