@@ -31,7 +31,7 @@ def side_bar(df) :
   return result
 
 def clear_search(search):
-  search = ""
+  return search = ""
 
 
 # 그래프 생성
