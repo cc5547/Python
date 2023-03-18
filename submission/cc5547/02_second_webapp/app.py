@@ -18,26 +18,9 @@ def side_bar(df) :
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
+  if choice == area[i] : result = df[df['지사명'] == area[i]]
 
-  for i in range(len(area)):
-    if choice == area[i]: 
-      result = df[df['지사명'] == area[i]]
-    else : pass
-
-  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value=search)
-  text_input = st.empty()
-  text_input.on_submit(clear_input)
-  
-  # on_submit 이벤트 핸들러 등록
-  def clear_input(sender):
-    nonlocal search
-    search = ''
-    text_input.value = ''
-  
-  # text_input 위젯 생성
-  text_input = s_bar.text_input('', value=search)
-  text_input.on_submit(clear_input)
-
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
  
