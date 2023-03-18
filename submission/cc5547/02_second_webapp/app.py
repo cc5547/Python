@@ -44,7 +44,7 @@ def side_bar(df) :
 
 # 그래프 로드_1
 def load_graph1(df_g1, df_g2):
-  if df_g1:
+  if df_g1 is df_g1:
     # 문자열에서 % 기호 제거 및 실수 타입으로 변환
     for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
 
