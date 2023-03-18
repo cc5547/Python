@@ -12,14 +12,12 @@ def create_df():
   df.index += 1
   return df
 
-
-
 # 사이드바
 def side_bar(df) :
   s_bar = st.sidebar
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
-  choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10, on_change = search = "")
+  choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10, on_change = clear_search(search))
   
   for i in range(len(area)):
     if choice == area[i]: 
@@ -31,6 +29,10 @@ def side_bar(df) :
   result.index = np.arange(1, len(result) + 1) 
 
   return result
+
+def clear_search(search):
+  search = ""
+
 
 # 그래프 생성
 def create_graph(image_url):
