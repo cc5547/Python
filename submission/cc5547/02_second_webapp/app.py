@@ -27,9 +27,6 @@ def side_bar(df) :
   search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value=search)
   text_input = st.empty()
   text_input.on_submit(clear_input)
-
-  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
-
   
   # on_submit 이벤트 핸들러 등록
   def clear_input(sender):
