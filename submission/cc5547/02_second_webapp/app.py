@@ -68,8 +68,7 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    fig = px.scatter(df_g1, x='x', y='y', trendline='ols')
-    st.write(fig)
+    st.write(load_graph(df_g1))
     
 if __name__ == '__main__':
   main()
