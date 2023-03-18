@@ -12,13 +12,16 @@ st.set_page_config(layout="wide")
 # 데이터 프레임 생성
 def create_df():
   df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
-  df_URL_g = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
+  df_URL_g1 = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
+  df_URL_g2 = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
 
   df = pd.read_csv(df_URL).iloc[:, 1:]
-  df_g1 = pd.read_csv(df_URL_g)
+  df_g1 = pd.read_csv(df_URL_g1)
+  df_g2 = pd.read_csv(df_URL_g2)
 
   df.index += 1
-  return df, df_g1
+
+  return df, df_g1, df_g2
 
 # 사이드바
 def side_bar(df) :
@@ -44,7 +47,7 @@ def load_graph1(df_g1):
   # 문자열에서 % 기호 제거 및 실수 타입으로 변환
   for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
 
-  fig = go.Figure()
+  # fig = go.Figure()
 
   # 연도별 색상 지정
   colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
@@ -64,33 +67,13 @@ def load_graph1(df_g1):
   return fig
 
 # 그래프 로드_2
-def load_graph2(df_g1):
-  # 문자열에서 % 기호 제거 및 실수 타입으로 변환
-  for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
-
-  fig = go.Figure()
-
-  # 연도별 색상 지정
-  colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
-
-  for i, col in enumerate(df_g1.columns[1:]) : fig.add_trace(go.Bar(x=df_g1['Unnamed: 0'], y=df_g1[col], name=col, marker_color=colors[i]))
-
-  # 레이아웃 설정
-  fig.update_layout(
-      title='필기시험 합격률',
-      xaxis_title='시험 분류',
-      yaxis_title='합격률%',
-      yaxis=dict(range=[0, 100]),
-      plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-      width = 1500,
-      height = 700,
-  )
-  return fig
+def load_graph2(df_g2):
+  pass
 
 
 # main 시작점
 def main():
-  df, df_g1 = create_df()
+  df, df_g1, df_g2 = create_df()
   result = side_bar(df)
   
   col1, col2 = st.columns([8, 2])   
@@ -105,8 +88,8 @@ def main():
   with tab1 : 
     st.plotly_chart(load_graph1(df_g1))
   with tab2 : 
-    st.plotly_chart(load_graph2(df_g1))
-    # pass
+    # st.plotly_chart(load_graph2(df_g2))
+    pass
     
 if __name__ == '__main__':
   main()
