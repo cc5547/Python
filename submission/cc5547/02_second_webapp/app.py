@@ -65,9 +65,9 @@ def load_graph(df_g1):
       xaxis_title='시험 분류',
       yaxis_title='합격률%',
       yaxis=dict(range=[0, 100]),
-      plot_bgcolor='#e2f3ea' # 차트 배경색 지정
-      width = 1000
-      height = 500
+      plot_bgcolor='#e2f3ea', # 차트 배경색 지정
+      width = 1000,
+      height = 500,
   )
   return fig
 
