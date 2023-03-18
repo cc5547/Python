@@ -14,7 +14,7 @@ def create_df():
 
 # 사이드바
 def side_bar(df) :
-  result = ""
+  # result = ""
   s_bar = st.sidebar
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
