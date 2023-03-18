@@ -44,6 +44,9 @@ def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
+def load_graph(df_URL_g):
+  pass
+
 # main 시작점
 def main():
   df, df_URL_g = create_df()
