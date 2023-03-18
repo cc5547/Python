@@ -61,11 +61,9 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    dfs = pd.DataFrame({
-    "x": [1, 2, 3, 4, 5],
-    "y": [2, 3, 1, 4, 2]
-    }) 
-    fig = px.scatter(dfs, x="x", y="y", trendline="ols")
+    dfs = pd.DataFrame({'x': [1, 2, 3, 4, 5],
+                   'y': [1, 3, 2, 4, 5]})
+    fig = px.scatter(dfs, x='x', y='y', trendline='ols')
     st.write(fig)
     
 if __name__ == '__main__':
