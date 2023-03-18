@@ -13,30 +13,24 @@ def create_df():
   return df
 
 # 사이드바
-def side_bar(df, choice = None, search = None) :
+def side_bar(df) :
   s_bar = st.sidebar
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
-
-  if choice is None:
-    choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
-  else:
-    choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index=area.index(choice))
-
+  choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
+  
   for i in range(len(area)):
     if choice == area[i]: 
       result = df[df['지사명'] == area[i]]
     else : pass
 
-  if search is None:
-    search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
-  else:
-    s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value=search)
-    
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
+  if s_bar.button('Enter'):
+    search = ''
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
 
-  return result, choice, search
+  return result
 
 # 그래프 생성
 def create_graph(image_url):
@@ -47,7 +41,7 @@ def create_graph(image_url):
 def main():
   # df, result = side_bar(create_df()) 
   df = create_df()
-  result, choice, search = side_bar(df)
+  result = side_bar(df)
   
   col1, col2 = st.columns([8, 2])   
   
