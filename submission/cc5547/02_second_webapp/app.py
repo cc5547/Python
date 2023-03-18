@@ -66,8 +66,8 @@ def load_graph(df_g1):
       yaxis_title='합격률%',
       yaxis=dict(range=[0, 100]),
       plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-      width = 1500,
-      height = 1000,
+      # width = 1500,
+      # height = 1000,
   )
   return fig
 
@@ -92,7 +92,7 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    st.write(load_graph(df_g1))
+    st.write(load_graph(df_g1), use_column_width = True)
     
 if __name__ == '__main__':
   main()
