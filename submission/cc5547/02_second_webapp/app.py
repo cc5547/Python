@@ -80,7 +80,8 @@ def main():
   with tab1 : 
     st.plotly_chart(load_graph(df_g1))
   with tab2 : 
-    st.plotly_chart(load_graph(df_g1))
+    # st.plotly_chart(load_graph(df_g1))
+    pass
     
 if __name__ == '__main__':
   main()
