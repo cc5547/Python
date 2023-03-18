@@ -12,9 +12,13 @@ st.set_page_config(layout="wide")
 # 데이터 프레임 생성
 def create_df():
   df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
+  df_URL_g = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
+
   df = pd.read_csv(df_URL).iloc[:, 1:]
+  df_g = pd.read_csv(df_URL_g)
+
   df.index += 1
-  return df
+  return df, df_URL_g
 
 # 사이드바
 def side_bar(df) :
@@ -42,7 +46,7 @@ def create_graph(image_url):
 
 # main 시작점
 def main():
-  df = create_df()
+  df, df_URL_g = create_df()
   result = side_bar(df)
   
   col1, col2 = st.columns([8, 2])   
@@ -61,9 +65,7 @@ def main():
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab3 :
-    dfs = pd.DataFrame({'x': [1, 2, 3, 4, 5],
-                   'y': [1, 3, 2, 4, 5]})
-    fig = px.scatter(dfs, x='x', y='y', trendline='ols')
+    fig = px.scatter(df_URL_g, x='x', y='y', trendline='ols')
     st.write(fig)
     
 if __name__ == '__main__':
