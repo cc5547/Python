@@ -43,27 +43,28 @@ def side_bar(df) :
   return result
 
 # 그래프 로드_1
-def load_graph1(df_g1):
-  # 문자열에서 % 기호 제거 및 실수 타입으로 변환
-  for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
+def load_graph1(df_g1, df_g2):
+  if df_g1:
+    # 문자열에서 % 기호 제거 및 실수 타입으로 변환
+    for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
 
-  fig = go.Figure()
+    fig = go.Figure()
 
-  # 연도별 색상 지정
-  colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
+    # 연도별 색상 지정
+    colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
 
-  for i, col in enumerate(df_g1.columns[1:]) : fig.add_trace(go.Bar(x=df_g1['Unnamed: 0'], y=df_g1[col], name=col, marker_color=colors[i]))
+    for i, col in enumerate(df_g1.columns[1:]) : fig.add_trace(go.Bar(x=df_g1['Unnamed: 0'], y=df_g1[col], name=col, marker_color=colors[i]))
 
-  # 레이아웃 설정
-  fig.update_layout(
-      title='필기시험 합격률',
-      xaxis_title='시험 분류',
-      yaxis_title='합격률%',
-      yaxis=dict(range=[0, 100]),
-      plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-      width = 1500,
-      height = 700,
-  )
+    # 레이아웃 설정
+    fig.update_layout(
+        title='필기시험 합격률',
+        xaxis_title='시험 분류',
+        yaxis_title='합격률%',
+        yaxis=dict(range=[0, 100]),
+        plot_bgcolor='#e2f3ea', # 차트 배경색 지정
+        width = 1500,
+        height = 700,
+    )
   return fig
 
 # 그래프 로드_2
@@ -103,9 +104,10 @@ def main():
 
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
-    st.plotly_chart(load_graph1(df_g1))
+    st.plotly_chart(load_graph1(df_g1, df_g2))
   with tab2 : 
-    st.plotly_chart(load_graph2(df_g2))
+    # st.plotly_chart(load_graph2(df_g2))
+    pass
     
 if __name__ == '__main__':
   main()
