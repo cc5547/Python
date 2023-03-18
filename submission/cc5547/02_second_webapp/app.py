@@ -46,6 +46,7 @@ def main():
   with col1 :
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(result, width=800, height=500)
+    result = ""
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
 
   with col2 : 
