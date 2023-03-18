@@ -1,6 +1,7 @@
+import streamlit as st
+from streamlit import SessionState
 import requests
 from PIL import Image
-import streamlit as st
 import pandas as pd
 import numpy as np
 st.set_page_config(layout="wide")
@@ -14,6 +15,12 @@ def create_df():
 
 # 사이드바
 def side_bar(df) :
+  if s_bar.session_state.get('prev_choice') != choice:
+    s_bar.session_state['prev_choice'] = choice
+    s_bar.session_state['search'] = ''
+  else:
+      choice = s_bar.session_state['prev_choice']
+      search = s_bar.session_state.get('search', '')
   result = None
   s_bar = st.sidebar
 
