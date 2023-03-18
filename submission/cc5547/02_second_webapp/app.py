@@ -24,12 +24,12 @@ def side_bar(df) :
     if choice == area[i]: 
       result = df[df['지사명'] == area[i]]
     else : pass
-    
+
   # selectbox 값이 변경될 때마다 text_input 값을 초기화
   if s_bar._legacy_state.last_values.get('choice', None) != choice:
       s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', key='search')
 
-  # search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value="")
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value="")
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
 
