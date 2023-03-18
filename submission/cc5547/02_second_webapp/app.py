@@ -23,7 +23,7 @@ def side_bar(df) :
   for i in range(len(area)):
     if choice == area[i]: 
       result = df[df['지사명'] == area[i]]
-    else : result = "" 
+    else : pass
 
   search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
