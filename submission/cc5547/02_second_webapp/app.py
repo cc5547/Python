@@ -53,13 +53,20 @@ def main():
   with col2 : 
     st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
-  tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
+  tab1, tab2, tab3= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수', 'test'])
   with tab1 : 
     image_url = "https://i.imgur.com/wOY7lUx.png"
     st.image(create_graph(image_url), use_column_width=True)
   with tab2 : 
     image_url = "https://i.imgur.com/C9nrLkC.png"
     st.image(create_graph(image_url), use_column_width=True)
+  with tab3 :
+    df = pd.DataFrame({
+    "x": [1, 2, 3, 4, 5],
+    "y": [2, 3, 1, 4, 2]
+    })
+    fig = px.scatter(df, x="x", y="y", trendline="ols")
+    fig.show()
     
 if __name__ == '__main__':
   main()
