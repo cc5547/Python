@@ -1,5 +1,4 @@
 import streamlit as st
-from sessionstate import SessionState
 import requirements
 from PIL import Image
 import pandas as pd
@@ -15,15 +14,6 @@ def create_df():
 
 # 사이드바
 def side_bar(df) :
-  if s_bar.session_state.get('prev_choice') != choice:
-    s_bar.session_state['prev_choice'] = choice
-    s_bar.session_state['search'] = ''
-  else:
-      choice = s_bar.session_state['prev_choice']
-      search = s_bar.session_state.get('search', '')
-  result = None
-  s_bar = st.sidebar
-
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
@@ -49,7 +39,8 @@ def main():
   df = create_df()
   result = side_bar(df)
   
-  col1, col2 = st.columns([8, 2])   
+  col1, col2 = st.columns([8, 2])  
+
   with col1 :
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(result, width=1000, height=500)
@@ -57,7 +48,10 @@ def main():
   with col2 : 
     st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
+
+
   tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
+
   with tab1 : 
     image_url = "https://i.imgur.com/wOY7lUx.png"
     st.image(create_graph(image_url), use_column_width=True)
