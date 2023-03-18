@@ -47,7 +47,7 @@ def load_graph1(df_g1):
   # 문자열에서 % 기호 제거 및 실수 타입으로 변환
   for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
 
-  # fig = go.Figure()
+  fig = go.Figure()
 
   # 연도별 색상 지정
   colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
