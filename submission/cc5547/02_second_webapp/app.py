@@ -26,7 +26,7 @@ def side_bar(df) :
 
   search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value="")
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
-  s_bar.button("검색 초기화") : search = ""
+  if s_bar.button("검색 초기화") : search = ""
   result.index = np.arange(1, len(result) + 1) 
 
   return result
