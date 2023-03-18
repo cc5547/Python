@@ -19,14 +19,7 @@ def side_bar(df) :
 
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
-
-  prev_choice = s_bar.session_state.get('prev_choice', area[9])
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
-
-  if prev_choice != choice:
-        # 선택지가 변경되었으므로, 검색어를 초기화합니다.
-        s_bar.session_state['search_query'] = ''
-  search_query = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value=s_bar.session_state.get('search_query', ''))
 
   for i in range(len(area)):
     if choice == area[i] : 
@@ -37,10 +30,6 @@ def side_bar(df) :
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
  
-
-  # 이전 선택지를 저장합니다.
-  s_bar.session_state['prev_choice'] = choice
-
   return result
 
 # 그래프 생성
