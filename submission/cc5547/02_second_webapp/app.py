@@ -18,15 +18,15 @@ def side_bar(df) :
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
-  
+  if s_bar.selectbox:
+    search = ''
+
   for i in range(len(area)):
     if choice == area[i]: 
       result = df[df['지사명'] == area[i]]
     else : pass
 
-  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
-  if s_bar.button('Enter'):
-    search = ''
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value=search)
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
 
