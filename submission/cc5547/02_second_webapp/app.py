@@ -67,7 +67,7 @@ def load_graph(df_g1):
       yaxis=dict(range=[0, 100]),
       plot_bgcolor='#e2f3ea', # 차트 배경색 지정
       width = 1500,
-      height = 500,
+      height = 700,
   )
   return fig
 
