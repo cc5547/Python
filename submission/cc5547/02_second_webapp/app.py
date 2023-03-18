@@ -54,7 +54,7 @@ def load_graph(df_g1):
   # 연도별 색상 지정
   colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
 
-  for i, col in enumerate(df.columns[1:]):
+  for i, col in enumerate(df_g1.columns[1:]):
       fig.add_trace(
           go.Bar(x=df_g1['Unnamed: 0'], y=df_g1[col], name=col, marker_color=colors[i])
           )
