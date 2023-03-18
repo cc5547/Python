@@ -1,6 +1,6 @@
 import streamlit as st
 from sessionstate import SessionState
-import requests
+import requirements
 from PIL import Image
 import pandas as pd
 import numpy as np
