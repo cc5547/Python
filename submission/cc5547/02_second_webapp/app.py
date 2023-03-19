@@ -42,8 +42,8 @@ def side_bar(df) :
 
   return result
 
-# 그래프 로드
-def load_graph(df_g1, df_g2):
+# 그래프 생성
+def create_graph(df_g1, df_g2):
   fig = go.Figure()
 
   # 그래프_1
@@ -103,9 +103,9 @@ def main():
 
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
-    st.plotly_chart(load_graph(df_g1, None))
+    st.plotly_chart(create_graph(df_g1, None))
   with tab2 : 
-    st.plotly_chart(load_graph(None, df_g2))
+    st.plotly_chart(create_graph(None, df_g2))
     
 if __name__ == '__main__':
   main()
