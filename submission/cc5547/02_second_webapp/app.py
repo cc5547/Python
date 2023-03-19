@@ -46,6 +46,7 @@ def side_bar(df) :
 def load_graph(df_g1, df_g2):
   fig = go.Figure()
 
+  # 그래프_1
   if df_g1 is not None:
     # 문자열에서 % 기호 제거 및 실수 타입으로 변환
     df_g1.iloc[:, 1:] = df_g1.iloc[:, 1:].apply(lambda x: x.str.rstrip('%')).astype(float)
@@ -66,6 +67,7 @@ def load_graph(df_g1, df_g2):
         width=1500,
         height=700,
     )
+  # 그래프_2
   elif df_g2 is not None:
     df_g2 = df_g2.drop(df_g2.columns[1], axis=1)
     years = df_g2.columns[1:]
