@@ -67,6 +67,7 @@ def load_graph(df_g1, df_g2):
         width=1500,
         height=700,
     )
+    
   # 그래프_2
   elif df_g2 is not None:
     df_g2 = df_g2.drop(df_g2.columns[1], axis=1)
