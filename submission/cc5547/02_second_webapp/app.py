@@ -67,7 +67,7 @@ def load_graph(df_g1, df_g2):
         width=1500,
         height=700,
     )
-    
+
   # 그래프_2
   elif df_g2 is not None:
     df_g2 = df_g2.drop(df_g2.columns[1], axis=1)
@@ -99,8 +99,7 @@ def main():
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(result, width=1000, height=500)
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
-  with col2 : 
-    st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
+  with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
