@@ -97,7 +97,6 @@ def main():
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(side_bar(df), width=1000, height=500)
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
-
   with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
