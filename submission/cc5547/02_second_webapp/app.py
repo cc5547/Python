@@ -101,6 +101,17 @@ def main():
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
   with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
+    # 사용자로부터 입력받은 텍스트를 저장할 변수
+    text = st.text_input("Enter your text here")
+
+    # 엔터 키가 눌렸는지 확인하고, 눌렸으면 입력창을 공백으로 만듦
+    if st.button("Submit") or (text and st.session_state.last_key_pressed == "Enter"):
+      st.write("입력한 텍스트: ", text)
+      st.session_state.last_key_pressed = ""
+    else : st.session_state.last_key_pressed = st.session_state.last_key_pressed or ""
+
+
+
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
     st.plotly_chart(create_graph(df_g1, None))
