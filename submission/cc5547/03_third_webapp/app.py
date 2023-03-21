@@ -17,6 +17,6 @@ def handler():
     with col2 : 
         if st.button('종료'):
             st.write('이름 리스트: {}'.format(name_list))
-            st.write('점수 리스트: {}'.format(score_list))
+            st.write('점수 리스트: {}'.format(int(score_list)))
 
 handler()
