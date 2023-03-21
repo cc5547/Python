@@ -17,5 +17,5 @@ def handler():
     with col2 : 
         if st.button('종료'):
             st.write(f'이름: {name_list}, 점수: {score_list}')
-
+    st.stop()
 handler()
