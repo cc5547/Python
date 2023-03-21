@@ -1,9 +1,12 @@
-def create_df():
+def create_df() :
     pass
-def create_graph():
+
+def create_graph() :
     pass
-def handler():
+
+def handler() :
     create_df()
     create_graph()
     st.write("안녕")
+    
 handler()
