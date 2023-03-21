@@ -16,6 +16,6 @@ def handler():
             st.write('이름: {}, 점수: {}'.format(name, score))
     with col2 : 
         if st.button('종료'):
-            st.write(f'이름: {name_list}, 점수: {score_list}')
+            st.write(f'이름: {"".join(name_list)}, 점수: {"".join(score_list)}')
 
 handler()
