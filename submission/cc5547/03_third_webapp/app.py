@@ -5,6 +5,5 @@ def create_graph():
 def handler():
     create_df()
     create_graph()
-    return pass
 
 handler()
