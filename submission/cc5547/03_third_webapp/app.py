@@ -13,10 +13,9 @@ def handler():
         if st.button('추가') :
             name_list.append(name)
             score_list.append(score)
-            st.write('이름: {}, 점수: {}'.format(name_list, int(score_list)))
+            st.write('이름: {}, 점수: {}'.format(name, score))
     with col2 : 
         if st.button('종료'):
-            st.write('이름 리스트: {}'.format(name_list))
-            st.write('점수 리스트: {}'.format(str(score_list)))
+            st.write(f'이름: {name_list}, 점수: {score_list}')
 
 handler()
