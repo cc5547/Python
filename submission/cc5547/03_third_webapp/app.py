@@ -11,11 +11,11 @@ def handler():
         name = st.text_input('이름')
         score = st.number_input('점수')
         if st.button('추가') :
-            name_list[0] = name
-            score_list[0] = score
+            name_list.append(name)
+            score_list.append(score)
             st.write('이름: {}, 점수: {}'.format(name, score))
     with col2 : 
         if st.button('종료'):
-            st.write(f'이름: {name_list[0]}, 점수: {score_list[0]}')
+            st.write(f'이름: {name_list}, 점수: {score_list}')
 
 handler()
