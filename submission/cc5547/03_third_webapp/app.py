@@ -5,5 +5,5 @@ def create_graph():
 def handler():
     create_df()
     create_graph()
-    pass
+    st.write("안녕")
 handler()
