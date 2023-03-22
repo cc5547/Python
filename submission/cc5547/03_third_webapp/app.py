@@ -63,5 +63,5 @@ def main() :
                                     "Security Engineer"])
         st.write("당신의 직군은 ", occupation, " 입니다.")
 
-if __name__ == '__main__':
-  main()
+if __name__ == '__main__' : 
+    main()
