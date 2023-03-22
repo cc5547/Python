@@ -17,12 +17,12 @@ def main() :
     col1, col2 = ([8,2])
     with col1 :
         ## Title
-        st.title(‘Streamlit Tutorial’)
+        st.title("treamlit Tutorial")
         ## Header/Subheader
-        st.header(‘This is header’)
-        st.subheader(‘This is subheader’)
+        st.header("This is header")
+        st.subheader("This is subheader")
         ## Text
-        st.text(“Hello Streamlit! 이 글은 튜토리얼 입니다.”)
+        st.text("Hello Streamlit! 이 글은 튜토리얼 입니다.")
     with col2 :
         ## Markdown syntax
         st.markdown("# This is a Markdown title")
@@ -40,13 +40,10 @@ def main() :
                     "3. item 3")
     with col3 : 
         ## Latex
-        st.latex(r”Y = \alpha + \beta X_i”)
+        st.latex(r"Y = \alpha + \beta X_i")
         ## Latex-inline
         st.markdown(r”회귀분석에서 잔차식은 다음과 같습니다 $e_i = y_i — \hat{y}_i$”)
     with col4 :
-
-
-
 
 if __name__ == '__main__':
   main()
