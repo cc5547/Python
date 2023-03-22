@@ -14,7 +14,7 @@ def create_graph() :
     pass
 
 def main() :
-    col1, col2 = ([8,2])
+    col1, col2, col3, col4, col5 = ([2, 2, 2, 2, 2])
     with col1 :
         ## Title
         st.title("treamlit Tutorial")
@@ -40,8 +40,8 @@ def main() :
                     "3. item 3")
     with col3 : 
        ## Checkbox
-        if st.checkbox(“Show/Hide”):
-        st.write(“체크박스가 선택되었습니다.”)
+        if st.checkbox("Show/Hide"):
+        st.write("체크박스가 선택되었습니다.")
     with col4 :
         ## Radio button
         status = st.radio("Select status.", ("Active", "Inactive"))
@@ -49,6 +49,19 @@ def main() :
             st.success("활성화 되었습니다.")
         else:
             st.warning("비활성화 되었습니다.")
+
+    with col5 :
+        ## Select Box
+        occupation = st.selectbox("직군을 선택하세요.",
+                                    ["Backend Developer",
+                                    "Frontend Developer",
+                                    "ML Engineer",
+                                    "Data Engineer",
+                                    "Database Administrator",
+                                    "Data Scientist",
+                                    "Data Analyst",
+                                    "Security Engineer"])
+        st.write("당신의 직군은 ", occupation, " 입니다.")
 
 if __name__ == '__main__':
   main()
