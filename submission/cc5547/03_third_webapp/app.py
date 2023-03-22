@@ -41,7 +41,7 @@ def main() :
     with col3 : 
        ## Checkbox
         if st.checkbox("Show/Hide"):
-        st.write("체크박스가 선택되었습니다.")
+            st.write("체크박스가 선택되었습니다.")
     with col4 :
         ## Radio button
         status = st.radio("Select status.", ("Active", "Inactive"))
