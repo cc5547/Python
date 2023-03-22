@@ -39,11 +39,16 @@ def main() :
                     "2. item 2\n"
                     "3. item 3")
     with col3 : 
-        ## Latex
-        st.latex(r"Y = \alpha + \beta X_i")
-        ## Latex-inline
-        st.markdown(r”회귀분석에서 잔차식은 다음과 같습니다 $e_i = y_i — \hat{y}_i$”)
+       ## Checkbox
+        if st.checkbox(“Show/Hide”):
+        st.write(“체크박스가 선택되었습니다.”)
     with col4 :
+        ## Radio button
+        status = st.radio("Select status.", ("Active", "Inactive"))
+        if status == "Active":
+            st.success("활성화 되었습니다.")
+        else:
+            st.warning("비활성화 되었습니다.")
 
 if __name__ == '__main__':
   main()
