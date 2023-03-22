@@ -63,8 +63,7 @@ def create_graph(df_g1, df_g2):
         yaxis=dict(range=[0, 100]),
         plot_bgcolor='#e2f3ea', # 차트 배경색 지정
         width=1000,
-        height=700,
-    )
+        height=700,)
 
   # 그래프_2
   elif df_g2 is not None:
@@ -81,15 +80,14 @@ def create_graph(df_g1, df_g2):
         yaxis_title='인원수',
         plot_bgcolor='#e2f3ea', # 차트 배경색 지정
         width=1000,
-        height=700,
-    )
+        height=700,)
   else : pass
 
   return fig
 
 # main 시작점
 def main():
-  df, df_g1, df_g2 = create_df() 
+  df, df_g1, df_g2 = create_df()
   
   col1, col2 = st.columns([8, 2])   
   with col1 :
@@ -101,6 +99,6 @@ def main():
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : st.plotly_chart(create_graph(df_g1, None))
   with tab2 : st.plotly_chart(create_graph(None, df_g2))
-    
+
 if __name__ == '__main__':
   main()
