@@ -18,12 +18,12 @@ def main() :
 
     with col1 :
         # Title
-        st.title("treamlit Tutorial")
+        st.title("안녕")
         # Header/Subheader
-        st.header("This is header")
-        st.subheader("This is subheader")
+        st.header("나야")
+        st.subheader("하이")
         # Text
-        st.text("Hello Streamlit! 이 글은 튜토리얼 입니다.")
+        st.text("이건 그냥 글씨야")
 
     with col2 :
         # Markdown syntax
@@ -42,16 +42,17 @@ def main() :
                     "3. item 3")
     with col3 :
         # Checkbox
+        level = st.slider("레벨을 선택하세요.", 1, 5)
         if st.checkbox("Show/Hide"):
             st.write("체크박스가 선택되었습니다.")
 
     with col4 :
         # Radio button
         status = st.radio("Select status.", ("Active", "Inactive"))
-        if status == "Active":
-            st.success("활성화 되었습니다.")
-        else:
-            st.warning("비활성화 되었습니다.")
+        # if status == "Active":
+        #     st.success("활성화 되었습니다.")
+        # else:
+        #     st.warning("비활성화 되었습니다.")
 
     with col5 :
         # Select Box
