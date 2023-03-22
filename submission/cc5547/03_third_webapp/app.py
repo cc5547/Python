@@ -17,16 +17,16 @@ def main() :
     col1, col2, col3, col4, col5 = ([2, 2, 2, 2, 2])
 
     with col1 :
-        ## Title
+        # Title
         st.title("treamlit Tutorial")
-        ## Header/Subheader
+        # Header/Subheader
         st.header("This is header")
         st.subheader("This is subheader")
-        ## Text
+        # Text
         st.text("Hello Streamlit! 이 글은 튜토리얼 입니다.")
 
     with col2 :
-        ## Markdown syntax
+        # Markdown syntax
         st.markdown("# This is a Markdown title")
         st.markdown("## This is a Markdown header")
         st.markdown("### This is a Markdown subheader")
@@ -41,12 +41,12 @@ def main() :
                     "2. item 2\n"
                     "3. item 3")
     with col3 :
-        ## Checkbox
+        # Checkbox
         if st.checkbox("Show/Hide"):
             st.write("체크박스가 선택되었습니다.")
 
     with col4 :
-        ## Radio button
+        # Radio button
         status = st.radio("Select status.", ("Active", "Inactive"))
         if status == "Active":
             st.success("활성화 되었습니다.")
@@ -54,7 +54,7 @@ def main() :
             st.warning("비활성화 되었습니다.")
 
     with col5 :
-        ## Select Box
+        # Select Box
         occupation = st.selectbox("직군을 선택하세요.",
                                     ["Backend Developer",
                                     "Frontend Developer",
