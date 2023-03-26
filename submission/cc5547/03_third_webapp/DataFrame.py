@@ -21,6 +21,7 @@ class CreateDataFrame:
         if df is not None:
             df.iloc[:, 1:]
         else : df = pd.DataFrame("로드 실패")
+        
         return df
 
 # @st.cache
