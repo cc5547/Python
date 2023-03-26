@@ -21,5 +21,3 @@ class SideBar:
 
     def ment(self):
         return self.ment_str
-        
-
