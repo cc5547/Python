@@ -19,7 +19,6 @@ class CreateDataFrame:
         df = self.load_df()
         if df is not None:
             df.iloc[:, 1:]
-            # df.index += 1
         else : pass
         return df
 
