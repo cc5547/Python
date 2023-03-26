@@ -8,7 +8,7 @@ class CreateDataFrame:
     
     # read
     def load_df(self) :
-        df = pd.read_csv(self.df_URL).iloc[:, 1:]
+        df = pd.read_csv(self.df_URL, encoding='cp949').iloc[:, 1:]
         return df
 
     # df 전처리 해줄 거 작성 하기
