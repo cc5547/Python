@@ -1,7 +1,7 @@
 import streamlit as st
 from DataFrame import CreateDataFrame
 from Function import FuncTion
-from User_Interface import SideBar
+from SideBar import SideBar
 st.set_page_config(layout="wide")
 
 def main() :
