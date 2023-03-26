@@ -6,8 +6,9 @@ st.set_page_config(layout="wide")
 
 
 def side_bar(df) :
-    sidebar = SideBar(df)
-    return sidebar.show()
+    sb = SideBar(df)
+    choice = sb.sb_function()
+    return choice
 
 def main() :
     # 데이터프레임 생성

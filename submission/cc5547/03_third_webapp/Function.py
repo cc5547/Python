@@ -7,7 +7,7 @@ class SideBar:
         self.df = df
         self.ment = "마싯는 머신러닝"
     
-    def show(self):
+    def sb_function(self):
         s = st.sidebar
         s.title('여기가 타이틀')
         area = df['지사명'].unique().tolist()
