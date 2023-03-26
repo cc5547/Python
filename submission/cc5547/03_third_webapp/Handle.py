@@ -122,6 +122,7 @@ def main() :
             st.code(code, language='python')
         if st.button('메인 코드 보기'):
             show_code()
+        else : st.empty()
             
         
 if __name__ == '__main__' :
