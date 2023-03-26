@@ -18,8 +18,6 @@ def side_bar(df) :
     s = st.sidebar
     s.title('여기가 타이틀')
 
-
-
 def main() :
     df = create_df()
 
@@ -39,13 +37,13 @@ def main() :
 
     with col1 :
         # Title
-        st.title("hi")
+        st.title("Hi")
         # Header/Subheader
         st.header("나야")
         st.subheader("하이")
         # Text
         st.text("여기가 output되는 값 예정")
-        st.dataframe(side_bar(df).head(), width = 1000, height = 500)
+        st.dataframe(side_bar(df), width = 1000, height = 500)
 
     with col2 :
         # Select Box
