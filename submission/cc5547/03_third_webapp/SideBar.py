@@ -11,7 +11,7 @@ class Sidebar:
     def create_sidebar(self):
         self.s.title('여기가 타이틀')
 
-        area = self.df['지사명'].unique().tolist()
+        area = self.df['지사명'].drop_duplicates().tolist()
         choice = self.s.selectbox('선택', area)
         return choice
 
@@ -19,7 +19,7 @@ class Sidebar:
     def select_choice(self):
         choice = self.create_sidebar()
         result = self.df[self.df['지사명'] == choice]
-        result.index = np.arange(1, len(result) + 1)
+        result.reset_index(drop=True, inplace=True)
         return result
 
     # 추 후 다른 함수 선언시 한번에 return 하는 용으로 만듬

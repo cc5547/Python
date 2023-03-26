@@ -25,6 +25,7 @@ def get_function():
 
 # main 시작점 최대한 간단하게 짜기. 
 def main() :
+    # 객체 return 받기
     df = get_data()
     result = get_sidebar(df)
     ment = get_function()
