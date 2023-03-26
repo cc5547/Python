@@ -28,7 +28,7 @@ def side_bar(df) :
 
 def main() :
     df = create_df()
-
+    st.title("마싯는 머신러닝")
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
 
