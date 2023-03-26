@@ -3,7 +3,7 @@ from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
 st.set_page_config(
-    page_title="My Streamlit App",
+    page_title="마싯는 머신러닝",
     # page_icon=":guardsman:",
     layout="wide",
     # initial_sidebar_state="auto",
