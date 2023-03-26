@@ -5,7 +5,7 @@ import pandas as pd
 class SideBar:
     def __init__(self, df) -> None:
         self.df = df
-        self.ment = "마싯는 머신러닝"
+        self.ment_str = "마싯는 머신러닝"
     
     def sb_function(self):
         s = st.sidebar
@@ -20,6 +20,6 @@ class SideBar:
         return result
 
     def ment(self):
-        return self.ment
+        return self.ment_str
         
 
