@@ -1,4 +1,4 @@
-# import streamlit as st
+import streamlit as st
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
