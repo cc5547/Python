@@ -17,3 +17,4 @@ class Sidebar:
         result.index = np.arange(1, len(result) + 1)
 
         return result
+

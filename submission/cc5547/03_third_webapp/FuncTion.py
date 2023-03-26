@@ -9,3 +9,4 @@ class Function:
 
     def ment(self):
         return self.ment_str
+
