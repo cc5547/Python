@@ -17,7 +17,7 @@ def main() :
     result = sb.sb_function()
 
     # ment 받아 오기 
-    ment = sb.printf()
+    ment = sb.ment()
 
     st.title(ment)
 
