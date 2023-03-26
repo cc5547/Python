@@ -23,7 +23,7 @@ def side_bar(df) :
     area = df['지사명'].unique().tolist()
     choice = s.selectbox('선택', area, index = 10)
     result = df[df['지사명'] == choice]
-    result = index.np.arange(1, len(result) + 1)
+    result.index = np.arange(1, len(result) + 1)
     return result
 
 def main() :
