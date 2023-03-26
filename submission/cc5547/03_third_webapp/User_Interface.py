@@ -13,6 +13,7 @@ def main() :
     result = sb.sb_function()
 
     # ment 받아 오기 
+    ment = Ment()
     get_ment = sb.ment()
 
     st.title(get_ment)
