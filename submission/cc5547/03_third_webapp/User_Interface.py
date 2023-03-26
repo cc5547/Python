@@ -16,7 +16,7 @@ def side_bar(df) :
 
 def main() :
     df_loader = DataFrameLoader()
-    df = df_loader.df_index()
+    df = df_loader.create_df()
     st.title("마싯는 머신러닝")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
