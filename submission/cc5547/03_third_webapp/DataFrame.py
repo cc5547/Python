@@ -19,7 +19,7 @@ class CreateDataFrame:
         df = self.load_df()
         if df is not None:
             df.iloc[:, 1:]
-        else : pass
+        else : df = pd.DataFrame("로드 실패")
         return df
 
 # @st.cache
