@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from DataFrameLoad import DataFrameLoader
+from DataFrame import CreateDataFrame
 
 st.set_page_config(layout="wide")
 
@@ -15,7 +15,7 @@ def side_bar(df) :
     return result
 
 def main() :
-    df_loader = DataFrameLoader()
+    df_loader = CreateDataFrame()
     df = df_loader.create_df()
     st.title("마싯는 머신러닝")
 
