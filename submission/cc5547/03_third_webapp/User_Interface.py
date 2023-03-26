@@ -1,18 +1,13 @@
 import streamlit as st
 import numpy as np
 from DataFrame import CreateDataFrame
-from Function import Ment
+from Function import SideBar
 st.set_page_config(layout="wide")
 
 
 def side_bar(df) :
-    s = st.sidebar
-    s.title('여기가 타이틀')
-    area = df['지사명'].unique().tolist()
-    choice = s.selectbox('선택', area, index = 10)
-    result = df[df['지사명'] == choice]
-    result.index = np.arange(1, len(result) + 1)
-    return result
+    sidebar = SideBar(df)
+    return sidebar.show()
 
 def main() :
     # 데이터프레임 생성
@@ -20,8 +15,8 @@ def main() :
     df = df_loader.create_df()
 
     # 멘트생성 / 추후 기능부로 수정하기
-    ment = Ment()
-    ment = ment.printf()
+    sb = SideBar()
+    ment = sb.printf()
 
     st.title(ment)
 
