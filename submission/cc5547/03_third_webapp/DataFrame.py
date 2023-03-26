@@ -11,14 +11,16 @@ class CreateDataFrame:
         try:
             df = pd.read_csv(self.df_URL)
         except pd.errors.ParserError:
-            df = pd.DataFrame("로드 실패")
+            df = pd.DataFrame(None)
         return df
 
     # df 전처리 해줄 거 작성 하기
     def create_df(self) :
         df = self.load_df()
-        df.iloc[:, 1:]
-        df.index += 1
+        if df is not None:
+            df.iloc[:, 1:]
+            df.index += 1
+        else : pass
         return df
 
 # @st.cache
