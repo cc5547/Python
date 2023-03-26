@@ -119,7 +119,8 @@ def main() :
             if __name__ == '__main__' :
                 main()
             """
-        if st.button('코드 보기'):
+            st.code(code, language='python')
+        if st.button('메인 코드 보기'):
             show_code()
             
         
