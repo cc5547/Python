@@ -16,12 +16,12 @@ class Sidebar:
         return choice
 
     def select_choice(self):
-        self.create_sidebar(self)
+        choice = self.create_sidebar(self)
         result = self.df[self.df['지사명'] == choice]
         result.index = np.arange(1, len(result) + 1)
         return result
-        
+
     def result_sidebar(self):
-        result = select_choice()
+        result = self.select_choice()
         return result
 
