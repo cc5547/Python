@@ -15,11 +15,13 @@ def main() :
     # ment 받아 오기 
     get_ment = fc.ment()
 
-    st.title(get_ment)
+    
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
 
+    st.title(get_ment)
+    
     with tab1 :
         st.write("여기가 머신러닝 시각화_1")
     with tab2 :
