@@ -2,7 +2,16 @@ import streamlit as st
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="My Streamlit App",
+    page_icon=":guardsman:",
+    layout="wide",
+    initial_sidebar_state="auto",
+    menu_items={
+        "Get Help": "/help",
+        "Report a bug": "https://github.com/streamlit/streamlit/issues/new/choose"
+    }
+)
 
 @st.cache
 def get_data():
@@ -54,7 +63,6 @@ def main() :
     with col2 :
         # Select Box
         st.title("컬럼2")
-
         
 if __name__ == '__main__' :
     main()
