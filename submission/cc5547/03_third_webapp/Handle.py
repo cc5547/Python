@@ -11,12 +11,15 @@ def get_data():
     df = df_loader.create_df()
     return df
 
-def main() :
-    df = get_data()
-
+def get_sidebar(df):
     # SideBar.py의 Sidebar 클래스의 sidebar()를 sb로 접근 
     sb = Sidebar(df) # 객체 생성
     result = sb.sidebar()
+
+def main() :
+    df = get_data()
+    result = get_sidebar(df)
+    
 
     # FuncTion.py의 ment 받아 오기 // 추후 기능부로 수정하기
     fc = Function() # 객체 생성
