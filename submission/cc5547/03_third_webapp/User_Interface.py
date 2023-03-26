@@ -12,6 +12,7 @@ def main() :
     # Function.py의 SideBar 클래스를 sb로 접근 // 추후 기능부로 수정하기
     sb = SideBar(df)
     result = sb.sb_function()
+    
     # ment 받아 오기 
     get_ment = sb.ment()
 
