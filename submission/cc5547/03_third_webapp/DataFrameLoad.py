@@ -1,3 +1,4 @@
+import pandas as pd
 
 # df생성
 def create_df() :
