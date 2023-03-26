@@ -19,7 +19,7 @@ class Sidebar:
     def select_choice(self):
         choice = self.create_sidebar()
         result = self.df[self.df['지사명'] == choice]
-        result.reset_index(drop=True, inplace=True)
+        result.index = np.arange(1, len(result) + 1)
         return result
 
     # 추 후 다른 함수 선언시 한번에 return 하는 용으로 만듬
