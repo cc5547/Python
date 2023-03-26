@@ -9,7 +9,7 @@ def sidebar(df):
     # 초이스한 결과 값 받아오기
     result = sb.sb_function()
     return result
-    
+
 def main() :
     # 데이터프레임 생성
     df_loader = CreateDataFrame()
@@ -18,9 +18,9 @@ def main() :
     # Function.py의 SideBar 클래스를 sb로 접근 // 추후 기능부로 수정하기
     sb = SideBar(df)
     # ment 받아 오기 
-    ment = sb.ment()
+    get_ment = sb.ment()
 
-    st.title(ment)
+    st.title(get_ment)
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
