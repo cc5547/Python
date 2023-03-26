@@ -43,7 +43,7 @@ def main() :
 
     with col1 :
         # Title
-        st.title("Hi")
+        st.title("안녕")
         # Header/Subheader
         st.header("나야")
         st.subheader("하이")
