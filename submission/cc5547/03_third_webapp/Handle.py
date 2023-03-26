@@ -46,8 +46,9 @@ def main() :
     with col1 :
         # Title
         st.title("컬럼1")
-        # Header/Subheader
+        # Header
         st.header("안녕")
+        # Subheader
         st.subheader("하이")
         # Text
         st.text("여기가 output되는 값 예정")
