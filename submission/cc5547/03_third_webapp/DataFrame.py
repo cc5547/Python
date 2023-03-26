@@ -18,7 +18,5 @@ class CreateDataFrame:
         df.index += 1
         return df
 
-    
-
 # @st.cache
 
