@@ -9,10 +9,9 @@ class Sidebar:
 
     def create_sidebar(self):
         self.s.title('여기가 타이틀')
-        
-        area = self.df['지사명'].unique().tolist()
-        choice = self.s.selectbox('선택', area, index=10)
 
+        area = self.df['지사명'].unique().tolist()
+        choice = self.s.selectbox('선택', area)
         return choice
 
     def select_choice(self):
