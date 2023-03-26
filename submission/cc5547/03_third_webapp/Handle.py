@@ -43,9 +43,9 @@ def main() :
 
     with col1 :
         # Title
-        st.title("안녕")
+        st.title("컬럼1")
         # Header/Subheader
-        st.header("나야")
+        st.header("안녕")
         st.subheader("하이")
         # Text
         st.text("여기가 output되는 값 예정")
@@ -53,7 +53,7 @@ def main() :
 
     with col2 :
         # Select Box
-        st.subheader("컬럼2")
+        st.title("컬럼2")
 
         
 if __name__ == '__main__' :
