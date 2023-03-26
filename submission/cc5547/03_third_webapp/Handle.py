@@ -123,7 +123,7 @@ def main() :
         if st.button('메인 코드 보기'):
             show_code()
         else : st.empty()
-            
-        
+
+# 메인 실행   
 if __name__ == '__main__' :
     main()
