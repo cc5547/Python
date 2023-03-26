@@ -1,7 +1,7 @@
 import streamlit as st
 from DataFrame import CreateDataFrame
-from Function import FuncTion
-from SideBar import SideBar
+from FuncTion import Function
+from SideBar import Sidebar
 st.set_page_config(layout="wide")
 
 def main() :
@@ -10,11 +10,11 @@ def main() :
     df = df_loader.create_df()
 
     # SideBar.py의 SideBar 클래스를 sb로 접근 
-    sb = SideBar(df)
+    sb = Sidebar(df)
     result = sb.sidebar()
 
-    # Function.py의 ment 받아 오기 // 추후 기능부로 수정하기
-    fc = FuncTion(df)
+    # FuncTion.py의 ment 받아 오기 // 추후 기능부로 수정하기
+    fc = Function(df)
     st.title(fc.ment())
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
