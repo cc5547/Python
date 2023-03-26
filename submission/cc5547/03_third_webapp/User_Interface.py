@@ -19,7 +19,7 @@ def main() :
     df_loader = CreateDataFrame()
     df = df_loader.create_df()
 
-    # GG생성
+    # 멘트생성 / 추후 기능부로 수정하기
     ment = Ment()
     ment = ment.printf()
 
