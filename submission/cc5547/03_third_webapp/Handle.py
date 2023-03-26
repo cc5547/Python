@@ -32,13 +32,13 @@ def main() :
     num = list(range(1,6))
 
     st.title("제목 자리....................")
-
+    
+    # tab크기 px 설정
+    st.set_tab_width(1200)
     # tab, column 생성 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
-
-    # tab크기 px 설정
-    st.set_tab_width(1200)
+    
     with tab1 : st.write(ment, num[0])
     with tab2 : st.write(ment, num[1])
     with tab3 : st.write(ment, num[2])
