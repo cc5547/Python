@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from DataFrame import CreateDataFrame
-from Function import GG
+from Function import Ment
 st.set_page_config(layout="wide")
 
 
@@ -20,10 +20,10 @@ def main() :
     df = df_loader.create_df()
 
     # GG생성
-    gg = GG()
-    gg = gg.printf()
+    ment = Ment()
+    ment = ment.printf()
 
-    st.title(gg)
+    st.title(ment)
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
