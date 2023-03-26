@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
-        "Get Help": "/help",
+        "Get Help": "/help"
         # "Report a bug": "https://github.com/streamlit/streamlit/issues/new/choose"
     }
 )
