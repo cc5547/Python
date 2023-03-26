@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from DataFrame import CreateDataFrame
-
+from Function import GG
 st.set_page_config(layout="wide")
 
 
@@ -15,9 +15,15 @@ def side_bar(df) :
     return result
 
 def main() :
+    # 데이터프레임 생성
     df_loader = CreateDataFrame()
     df = df_loader.create_df()
-    st.title("마싯는 머신러닝")
+
+    # GG생성
+    gg = GG()
+    gg = gg.printf()
+
+    st.title(gg)
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
