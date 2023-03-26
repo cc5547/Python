@@ -21,7 +21,7 @@ def side_bar(df) :
     s = st.sidebar
     s.title('여기가 타이틀')
     area = df['지사명'].unique().tolist()
-    choice = st.selectbox('선택', area, index = 10)
+    choice = s.selectbox('선택', area, index = 10)
     result = df[df['지사명'] == choice]
     return result
 
