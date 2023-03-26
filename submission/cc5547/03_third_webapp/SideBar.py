@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-# import pandas as pd
+import pandas as pd
 
 class Sidebar:
     def __init__(self, df) -> None:
@@ -18,8 +18,7 @@ class Sidebar:
     def select_choice(self):
         choice = self.create_sidebar()
         result = self.df[self.df['지사명'] == choice]
-        if not result.empty:
-            result.index = np.arange(1, len(result) + 1)
+        result.index = np.arange(1, len(result) + 1)
         return result
 
     def result_sidebar(self):
