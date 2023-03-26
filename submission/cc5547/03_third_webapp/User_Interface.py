@@ -5,11 +5,6 @@ from Function import SideBar
 st.set_page_config(layout="wide")
 
 
-def side_bar(df) :
-    sb = SideBar(df)
-    
-    return choice
-
 def main() :
     # 데이터프레임 생성
     df_loader = CreateDataFrame()
@@ -19,7 +14,7 @@ def main() :
     sb = SideBar(df)
     
     # 초이스한 결과 값 받아오기
-    choice = sb.sb_function()
+    result = sb.sb_function()
 
     # ment 받아 오기 
     ment = sb.printf()
@@ -48,7 +43,7 @@ def main() :
         st.subheader("하이")
         # Text
         st.text("여기가 output되는 값 예정")
-        st.dataframe(choice, width = 1000, height = 500)
+        st.dataframe(result, width = 1000, height = 500)
 
     with col2 :
         # Select Box

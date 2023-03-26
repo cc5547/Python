@@ -10,10 +10,13 @@ class SideBar:
     def sb_function(self):
         s = st.sidebar
         s.title('여기가 타이틀')
+
         area = self.df['지사명'].unique().tolist()
         choice = s.selectbox('선택', area, index = 10)
+
         result = self.df[df['지사명'] == choice]
         result.index = np.arange(1, len(result) + 1)
+        
         return result
 
     def ment(self):
