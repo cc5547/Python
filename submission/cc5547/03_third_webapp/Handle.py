@@ -27,7 +27,7 @@ def main() :
     df = get_data()
     result = get_sidebar(df)
     ment = get_function()
-    num = list(arange(1,6))
+    num = list(range(1,6))
 
     st.title("마싯는 머신러닝")
 
