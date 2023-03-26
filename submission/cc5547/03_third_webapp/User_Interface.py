@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from DataFrameLoad import create_df
+from DataFrameLoad import DataFrameLoader
 
 st.set_page_config(layout="wide")
 
@@ -15,7 +15,8 @@ def side_bar(df) :
     return result
 
 def main() :
-    df = create_df()
+    df_loader = DataFrameLoader()
+    df = df_loader.load_df()
     st.title("마싯는 머신러닝")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
