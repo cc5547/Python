@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-class SideBar:
+class FuncTion:
     def __init__(self, df) -> None:
         self.df = df
         self.ment_str = "마싯는 머신러닝"
@@ -18,13 +18,6 @@ class SideBar:
         result.index = np.arange(1, len(result) + 1)
 
         return result
-
-
-
-class Ment(SideBar):
-    def __init__(self, df) -> None:
-        super().__init__(df)
-
 
     def ment(self):
         return self.ment_str

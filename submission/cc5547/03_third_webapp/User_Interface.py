@@ -1,6 +1,6 @@
 import streamlit as st
 from DataFrame import CreateDataFrame
-from Function import SideBar, Ment
+from Function import FuncTion
 st.set_page_config(layout="wide")
 
 def main() :
@@ -9,12 +9,11 @@ def main() :
     df = df_loader.create_df()
 
     # Function.py의 SideBar 클래스를 sb로 접근 // 추후 기능부로 수정하기
-    sb = SideBar(df)
-    result = sb.sb_function()
+    fc = FuncTion(df)
+    result = fc.sb_function()
 
     # ment 받아 오기 
-    ment = Ment()
-    get_ment = sb.ment()
+    get_ment = fc.ment()
 
     st.title(get_ment)
 
