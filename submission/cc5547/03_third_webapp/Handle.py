@@ -15,6 +15,7 @@ def get_sidebar(df):
     # SideBar.py의 Sidebar 클래스의 sidebar()를 sb로 접근 
     sb = Sidebar(df) # 객체 생성
     result = sb.create_sidebar()
+    return result
 
 def main() :
     df = get_data()
