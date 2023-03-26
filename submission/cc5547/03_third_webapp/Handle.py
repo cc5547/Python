@@ -20,30 +20,26 @@ def get_sidebar(df):
 def get_function():
     # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
     fc = Function() # 객체 생성
-    title = fc.ment()
-    return title
+    ment = fc.ment()
+    return ment
 
 def main() :
     df = get_data()
     result = get_sidebar(df)
-    title = get_function()
+    ment = get_function()
+    num = list(arange(1,6))
 
-    st.title(title)
+    st.title("마싯는 머신러닝")
+
     # tab, column 생성 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
 
-
-    with tab1 :
-        st.write("여기가 머신러닝 시각화_1")
-    with tab2 :
-        st.write("여기가 머신러닝 시각화_2")
-    with tab3 :
-        st.write("여기가 머신러닝 시각화_3")
-    with tab4 :
-        st.write("여기가 머신러닝 시각화_4")
-    with tab5 :
-        st.write("여기가 머신러닝 시각화_5")
+    with tab1 : st.write(ment + num[0])
+    with tab2 : st.write(ment + num[1])
+    with tab3 : st.write(ment + num[2])
+    with tab4 : st.write(ment + num[3])
+    with tab5 : st.write(ment + num[4])
 
     with col1 :
         # Title
