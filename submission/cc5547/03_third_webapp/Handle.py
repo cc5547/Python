@@ -35,14 +35,11 @@ def main() :
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
 
-    for i in range(len(num)):
-        with tab+int(i) : 
-            st.write(ment, int(num[i]))
-    # with tab1 : st.write(ment, int(num[0]))
-    # with tab2 : st.write(ment, int(num[1]))
-    # with tab3 : st.write(ment, int(num[2]))
-    # with tab4 : st.write(ment, int(num[3]))
-    # with tab5 : st.write(ment, int(num[4]))
+    with tab1 : st.write(ment, int(num[0]))
+    with tab2 : st.write(ment, int(num[1]))
+    with tab3 : st.write(ment, int(num[2]))
+    with tab4 : st.write(ment, int(num[3]))
+    with tab5 : st.write(ment, int(num[4]))
 
     with col1 :
         # Title
