@@ -7,6 +7,8 @@ class DataFrameLoader:
     
     def create_df(self) :
         df = pd.read_csv(self.df_URL).iloc[:, 1:]
+        return df
+    def df_index(self) :
         df.index += 1
         return df
 

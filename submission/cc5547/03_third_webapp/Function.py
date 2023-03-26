@@ -1,9 +1,6 @@
 import streamlit as st
 
 
-class gg():
-    ():
-        sw.write("안녕")
-
-g = gg()
-g.print()
+class GG:
+    def __init__(self) -> None:
+        pass
