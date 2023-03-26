@@ -7,22 +7,22 @@ st.set_page_config(layout="wide")
 @st.cache
 def get_data():
     # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
-    df_loader = CreateDataFrame() # 객체 생성
-    df = df_loader.create_df()
+    df = CreateDataFrame() # 객체 생성
+    df = df.create_df()
     return df
 
 def get_sidebar(df):
-    # SideBar.py의 Sidebar 클래스의 sidebar()를 sb로 접근 
+    # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
     sb = Sidebar(df) # 객체 생성
     result = sb.create_sidebar()
     return result
 
 def get_function():
-    # FuncTion.py의 ment 받아 오기 // 추후 기능부로 수정하기
+    # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
     fc = Function() # 객체 생성
     title = fc.ment()
     return title
-    
+
 def main() :
     df = get_data()
     result = get_sidebar(df)
