@@ -6,7 +6,7 @@ class Sidebar:
     def __init__(self, df) -> None:
         self.df = df
 
-    def sidebar(self):
+    def create_sidebar(self):
         s = st.sidebar
         s.title('여기가 타이틀')
         
