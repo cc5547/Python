@@ -20,5 +20,8 @@ class SideBar:
         return result
 
 class Ment(SideBar):
+    def __init__(self, df) -> None:
+        super().__init__(df)
+        
     def ment(self):
         return self.ment_str
