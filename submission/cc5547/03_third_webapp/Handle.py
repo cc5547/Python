@@ -36,7 +36,8 @@ def main() :
     col1, col2 = st.columns([8, 2])
 
     for i in range(len(num)):
-        with tab+int([i]) : st.write(ment, int(num[i]))
+        with tab+int(i+1) : 
+            st.write(ment, int(num[i]))
     # with tab1 : st.write(ment, int(num[0]))
     # with tab2 : st.write(ment, int(num[1]))
     # with tab3 : st.write(ment, int(num[2]))
