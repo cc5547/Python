@@ -4,13 +4,9 @@ from FuncTion import Function
 from SideBar import Sidebar
 st.set_page_config(
     page_title="My Streamlit App",
-    page_icon=":guardsman:",
+    # page_icon=":guardsman:",
     layout="wide",
-    initial_sidebar_state="auto",
-    menu_items={
-        "Get Help": "/help"
-        # "Report a bug": "https://github.com/streamlit/streamlit/issues/new/choose"
-    }
+    # initial_sidebar_state="auto",
 )
 
 @st.cache
