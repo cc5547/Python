@@ -17,7 +17,7 @@ def create_df():
   df = pd.read_csv(df_URL).iloc[:, 1:]
   df_g1 = pd.read_csv(df_URL_g1)
   df_g2 = pd.read_csv(df_URL_g2)
-
+  
   df.index += 1
 
   return df, df_g1, df_g2
