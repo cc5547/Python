@@ -29,9 +29,9 @@ def main() :
     col1, col2 = st.columns([8, 2])
 
     with tab1 :
-        st.write("여기가 머신러닝 시각화")
+        st.write("여기가 머신러닝 시각화_1")
     with tab2 :
-        st.write("여기가 머신러닝 시각화")
+        st.write("여기가 머신러닝 시각화_2")
     with tab3 :
         st.write("여기가 머신러닝 시각화")
     with tab4 :
