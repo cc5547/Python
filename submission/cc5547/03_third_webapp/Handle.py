@@ -4,7 +4,7 @@ from FuncTion import Function
 from SideBar import Sidebar
 st.set_page_config(layout="wide")
 
-@st.cache
+
 def get_data():
     # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
     df_loader = CreateDataFrame() # 객체 생성
