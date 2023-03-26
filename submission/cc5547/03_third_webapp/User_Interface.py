@@ -19,6 +19,8 @@ def create_df() :
 def side_bar(df) :
     s = st.sidebar
     s.title('여기가 타이틀')
+    df = df.head()
+    return df
 
 def main() :
     df = create_df()
