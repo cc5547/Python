@@ -12,7 +12,7 @@ class Sidebar:
         self.s.title('여기가 타이틀')
 
         area = self.df['지사명'].drop_duplicates().tolist()
-        choice = self.s.selectbox('선택', area, index = area.index('서울특별시'))
+        choice = self.s.selectbox('선택', area, index = area[10])
         return choice
 
     # 셀렉트 박스 선택 결과 처리 
