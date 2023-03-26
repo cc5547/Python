@@ -10,6 +10,7 @@ class DataFrameLoader:
         return df
 
     def df_index(self) :
+        create_df(df_URL)
         df.index += 1
         return df
 
