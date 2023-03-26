@@ -3,7 +3,7 @@ from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
-
+st.set_tab_width(1200) # tab크기 px 설정
 @st.cache
  # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
 def get_data():
@@ -33,8 +33,6 @@ def main() :
 
     st.title("제목 자리....................")
     
-    # tab크기 px 설정
-    st.set_tab_width(1200)
     # tab, column 생성 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
