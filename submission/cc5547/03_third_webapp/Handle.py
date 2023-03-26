@@ -53,16 +53,7 @@ def main() :
 
     with col2 :
         # Select Box
-        job = st.selectbox("직군을 선택하세요.",
-                                    ["Backend Developer",
-                                    "Frontend Developer",
-                                    "ML Engineer",
-                                    "Data Engineer",
-                                    "Database Administrator",
-                                    "Data Scientist",
-                                    "Data Analyst",
-                                    "Security Engineer"])
-        st.write(f"당신의 직군은 {job}입니다.")
+        st.subheader("컬럼2")
 
         
 if __name__ == '__main__' :
