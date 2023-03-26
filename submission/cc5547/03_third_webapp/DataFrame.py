@@ -11,7 +11,7 @@ class CreateDataFrame:
         df = pd.read_csv(self.df_URL).iloc[:, 1:]
         return df
 
-    
+    @st.cache
     # df 전처리 해줄 거 작성 하기
     def create_df(self) :
         df = self.load_df()
