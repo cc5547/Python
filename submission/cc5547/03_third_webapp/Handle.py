@@ -9,13 +9,13 @@ def main() :
     df_loader = CreateDataFrame()
     df = df_loader.create_df()
 
-    # Function.py의 SideBar 클래스를 sb로 접근 // 추후 기능부로 수정하기
-    fc = FuncTion(df)
-    result = fc.sb_function()
+    # SideBar.py의 SideBar 클래스를 sb로 접근 
+    sb = SideBar(df)
+    result = sb.sidebar()
 
-    # ment 받아 오기 
-    get_ment = fc.ment()
-    st.title(get_ment)
+    # Function.py의 ment 받아 오기 // 추후 기능부로 수정하기
+    fc = FuncTion(df)
+    st.title(fc.ment())
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
     col1, col2 = st.columns([8, 2])
