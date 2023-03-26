@@ -21,7 +21,7 @@ class Sidebar:
         result.index = np.arange(1, len(result) + 1)
         return result
 
-    # 추 후 다른 함수 선언시 한번에 return 하는 용으로 만듬
+    # 후에 유지보수시 한번에 return 하는 용으로 만듬
     def result_sidebar(self):
         choice = self.create_sidebar()
         result = self.select_choice(choice)
