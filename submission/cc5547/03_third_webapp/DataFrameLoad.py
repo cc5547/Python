@@ -6,3 +6,6 @@ def create_df() :
     df = pd.read_csv(df_URL).iloc[:, 1:]
     df.index += 1
     return df
+
+# @st.cache
+# @st.cache(suppress_st_warning=True)
