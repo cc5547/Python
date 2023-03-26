@@ -14,7 +14,7 @@ def main() :
     result = sb.sidebar()
 
     # FuncTion.py의 ment 받아 오기 // 추후 기능부로 수정하기
-    fc = Function(df)
+    fc = Function()
     st.title(fc.ment())
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
