@@ -52,6 +52,7 @@ def main() :
         st.subheader("하이")
         # Text
         st.text("여기가 output되는 값 예정")
+        # DF
         st.dataframe(result, width = 1000, height = 500)
 
     with col2 :
