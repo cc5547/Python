@@ -10,13 +10,13 @@ class CreateDataFrame:
     # read / df 전처리 해줄 거 작성 하기
     def load_df(self):
         df = pd.read_csv(df_URL).iloc[:, 1:]
-        df.index += 1
         return df
 
     # 메인에서 호출 한번에 처리할 것 
     def create_df(self) :
         df = self.load_df()
         
+        df.index += 1
         
         return df
 
