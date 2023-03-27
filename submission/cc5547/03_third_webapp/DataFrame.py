@@ -9,7 +9,7 @@ class CreateDataFrame:
     
     # read
     def load_df(self):
-        df = pd.read_csv(self.df_URL).iloc[:, 1:]
+        df = pd.read_csv(df_URL).iloc[:, 1:]
         df.index += 1
         return df
 
