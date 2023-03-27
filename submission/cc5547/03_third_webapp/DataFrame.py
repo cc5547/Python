@@ -9,7 +9,7 @@ class CreateDataFrame:
     
     # read
     def load_df(self):
-        df = pd.read_csv(df_URL, , usecols=lambda column: column != 0)
+        df = pd.read_csv(df_URL, usecols=lambda column: column != 0)
         
         return df
 
