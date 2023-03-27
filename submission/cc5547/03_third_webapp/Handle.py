@@ -53,7 +53,7 @@ def main() :
         # Text
         st.text("여기가 output되는 값 예정")
         # DF
-        st.dataframe(result, width = 1000, height = 500)
+        st.dataframe(result, width = 1200, height = 600)
 
     with col2 :
         # 코드 버튼
