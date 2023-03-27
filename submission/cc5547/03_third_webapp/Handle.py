@@ -4,8 +4,9 @@ from FuncTion import Function
 from SideBar import Sidebar
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
-@st.cache
+
  # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
+@st.cache_
 def get_data():
     df = CreateDataFrame() # 객체 생성
     df = df.create_df()
