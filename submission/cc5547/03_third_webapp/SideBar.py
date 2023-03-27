@@ -14,20 +14,12 @@ class Sidebar:
         area1 = self.df['지사명'].drop_duplicates().tolist()
         choice1 = self.s.selectbox('선택', area)
 
-        area2 = df[(df['지사명'] == choice1) & df['시험장소']].drop_duplicates.tolist
-        choice2 = self.s.selectbox('선택', area2)
-
-        area3 = df[(df['지사명'] == choice1) & df['시험장소']].drop_duplicates.tolist
-        choice3 = self.s.selectbox('선택', area)
-
         return choice1, choice2, choice3
 
     # 셀렉트 박스 선택 결과 처리 
     def select_choice(self, choice):
         result = self.df[self.df['지사명'] == choice1]
-        result = self.df[self.df['시험장소'] == choice2]
-        result = self.df[self.df['시험장소'] == choice3]
-
+   
         result.index = np.arange(1, len(result) + 1)
 
         return result
