@@ -21,7 +21,7 @@ class CreateDataFrame:
         df = self.load_df()
         
         if df is not None:
-            pass
+            df = df.iloc[:, 1:]
         else : df = pd.DataFrame("로드 실패")
         
         return df
