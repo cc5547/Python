@@ -10,6 +10,7 @@ class CreateDataFrame:
     def load_df(self):
         try:
             df = pd.read_csv(self.df_URL).iloc[:, 1:]
+            df.index += 1
         except pd.errors.ParserError:
             df = pd.DataFrame(None)
         return df
@@ -19,7 +20,7 @@ class CreateDataFrame:
         df = self.load_df()
         
         if df is not None:
-            df.index += 1
+            pass
         else : df = pd.DataFrame("로드 실패")
         
         return df
