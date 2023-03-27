@@ -12,9 +12,9 @@ class Sidebar:
         self.s.title('여기가 타이틀')
 
         area1 = self.df['지사명'].drop_duplicates().tolist()
-        choice1 = self.s.selectbox('선택', area)
+        choice1 = self.s.selectbox('선택', area1)
 
-        return choice1, choice2, choice3
+        return choice1
 
     # 셀렉트 박스 선택 결과 처리 
     def select_choice(self, choice):
