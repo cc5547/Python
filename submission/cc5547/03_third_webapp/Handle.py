@@ -124,6 +124,6 @@ def main() :
             show_code()
         else : st.empty()
 
-# 메인 실행   
+# 메인 실행
 if __name__ == '__main__' :
     main()
