@@ -9,8 +9,9 @@ class CreateDataFrame:
     
     # read / df 전처리 해줄 거 작성 하기
     def load_df(self):
-        df = pd.read_csv(self.df_URL).iloc[:, 1:]
-        df.index += 1
+        # df = pd.read_csv(self.df_URL).iloc[:, 1:]
+        df = pd.read_csv(self.df_URL, usecols=lambda column: column != 0)
+        # df.index += 1
         return df
 
     # 메인에서 호출 한번에 처리할 것 
