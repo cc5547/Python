@@ -56,6 +56,7 @@ def main() :
         st.dataframe(result, width = 1200, height = 600)
 
     with col2 :
+        st.write("컬럼2")
         # 코드 버튼
         def show_code():
             code = """
