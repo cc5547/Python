@@ -17,7 +17,7 @@ class Sidebar:
         return choice1
 
     # 셀렉트 박스 선택 결과 처리 
-    def select_choice(self, choice):
+    def select_choice(self, choice1):
         result = self.df[self.df['지사명'] == choice1]
    
         result.index = np.arange(1, len(result) + 1)
