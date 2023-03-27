@@ -1,5 +1,6 @@
 import pandas as pd
 
+@st.cache
 # df 생성
 class CreateDataFrame:
     # df URL
@@ -24,6 +25,4 @@ class CreateDataFrame:
         else : df = pd.DataFrame("로드 실패")
         
         return df
-
-# @st.cache
 
