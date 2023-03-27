@@ -31,7 +31,7 @@ def main() :
     ment = get_function()
     num = list(range(1,6))
 
-    st.title("제목 자리....................")
+    st.title("신도시에서 살아남기............")
     
     # tab, column 생성 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
