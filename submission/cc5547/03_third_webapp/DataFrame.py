@@ -19,10 +19,7 @@ class CreateDataFrame:
     # df 전처리 해줄 거 작성 하기
     def create_df(self) :
         df = self.load_df()
-        
-        if df is not None:
-            df = df.drop(df.columns[1], axis=1)
-        else : df = pd.DataFrame("로드 실패")
+        df = df.drop(df.columns[1], axis=1)
         
         return df
 
