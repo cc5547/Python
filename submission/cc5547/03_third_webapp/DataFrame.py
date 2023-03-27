@@ -1,6 +1,6 @@
 import pandas as pd
 
-@st.cache
+# @st.cache
 # df 생성
 class CreateDataFrame:
     # df URL
