@@ -25,7 +25,6 @@ class Sidebar:
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
-        choice = self.create_sidebar()
-        result = self.select_choice(choice)
+        result = self.select_choice(self.create_sidebar())
 
         return result
