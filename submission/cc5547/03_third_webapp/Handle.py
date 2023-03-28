@@ -19,15 +19,14 @@ def get_sidebar():
     result = sb.result_sidebar()
     return result
 
-
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
-def get_function(data, blood, hbit, gender, heart, age):
-    fc = Function(data, blood, hbit, gender, heart, age)  # 객체 생성
+def get_function(data, blood, clst, hbit, gender, heart, age):
+    fc = Function(data, blood, clst, hbit, gender, heart, age)  # 객체 생성
     result = fc.create_model()
     return result
 
 
-def user_interface(blood, clst, hbit, gender, heart, age, result):
+def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
 
@@ -42,18 +41,24 @@ def user_interface(blood, clst, hbit, gender, heart, age, result):
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
-        st.write(result)
+        
+        if tf == True:
+            st.write("당신 죽어 조심해")
+        elif tf == False:
+            st.write("당신 죽진 않아")
+
+        st.write(f"당신 죽을 확률{tf_p}")
+        
     with col2:
         st.write("컬럼2")
-
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
     data = get_data()
     blood, clst, hbit, gender, heart, age = get_sidebar()
-    result = get_function(data, blood, hbit, gender, heart, age)
+    tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
-    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, result)
+    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p)
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
