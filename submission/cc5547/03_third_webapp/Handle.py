@@ -9,9 +9,9 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
 # @st.cache_data
 def get_data():
-    df = CreateData()  # 객체 생성
-    df = df.create_data()
-    return df
+    dt = CreateData()  # 객체 생성
+    data = dt.create_data()
+    return data
 
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
 def get_sidebar():
@@ -50,7 +50,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 # main 시작점 최대한 간단하게 짜기.
 def main():
     data = get_data()
-    st.write(type(data))
+    st.write(data)
 
     blood, clst, hbit, gender, heart, age = get_sidebar()
     ment = get_function()
