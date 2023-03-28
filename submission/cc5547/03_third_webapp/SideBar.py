@@ -17,8 +17,7 @@ class Sidebar:
     # 성별 받기
     def gender_choice(self):
         gender = self.s.selectbox('성별을 선택해주세요.', self.gender_c)
-        if gender == gender_c[0] : return 1
-        else return 0
+        return gender
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):

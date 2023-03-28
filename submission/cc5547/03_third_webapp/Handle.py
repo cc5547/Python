@@ -29,14 +29,15 @@ def get_function():
     ment = fc.ment()
     return ment
 
-def user_interface(age, sex):
+def user_interface(age, gender):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
     col1, col2 = st.columns([5, 5])
-
+    if gender == 1 : gender = "남자" 
+    else : gender = "여자"
     with col1 :
         # Title
         st.write(f"나이는 {age}세 입니다.")
-        st.write(f"성별은 {sex} 입니다.")
+        st.write(f"성별은 {gender} 입니다.")
 
     with col2 :
         st.write("컬럼2")
@@ -52,7 +53,7 @@ def main() :
     ment = get_function()
 
     if age == "" : st.write("대기중...........")
-    else : user_interface(age, sex)
+    else : user_interface(age, gender)
 
     # if on_off is True :
     #     user_interface(name, age)
