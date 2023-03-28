@@ -59,9 +59,10 @@ def main() :
         user_interface(result)
     else : 
         gif_path = 'https://i.imgur.com/MsodAa1.gif'
+        
         with st.spinner('Loading GIF...'):
-        gif_bytes = imageio.imread(gif_path)
-        st.image(gif_bytes, width=700)
+            gif_bytes = imageio.imread(gif_path)
+            st.image(gif_bytes, width=700)
         
         
 
