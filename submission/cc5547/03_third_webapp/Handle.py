@@ -57,7 +57,8 @@ def main() :
     
     ment = get_function()
 
-    user_interface(age, sex)
+    if age == "" : st.write("대기중")
+    else : user_interface(age, sex)
 
     # if on_off is True :
     #     user_interface(name, age)
