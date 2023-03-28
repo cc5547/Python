@@ -22,24 +22,24 @@ class Sidebar:
         return clst
 
     # 심박수 int 
-    def heart_beat(self) :
+    def heart_beat(self, clst) :
         hbit = self.s.slider('심박수를 입력하세요', 0, 200, 1)
         return hbit
 
     # 성별 받기 float
-    def gender_choice(self):
+    def gender_choice(self, hbit):
         gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
         if gender == "남자" : return 1
         else : return 0
 
     # 심장병 유무
-    def heart_sick(self):
+    def heart_sick(self, gender):
         heart = self.s.radio('심장병이 있습니까?', self.y_n)
         if heart == "예" : return True 
         else : return False
 
     # 나이 받기 float
-    def account_age(self):
+    def account_age(self, heart):
         age = self.s.text_input('나이를 입력해 주세요.', self.space)
         return age
 
@@ -47,9 +47,9 @@ class Sidebar:
     def result_sidebar(self):
         blood = self.blood_pressure()
         clst = self.cholesterol(blood)
-        hbit = self.heart_beat()
-        gender = self.gender_choice()
-        heart = self.heart_sick()
-        age = self.account_age()
+        hbit = self.heart_beat(clst)
+        gender = self.gender_choice(hbit)
+        heart = self.heart_sick(gender)
+        age = self.account_age(heart)
 
         return blood, clst, hbit, gender, heart, age
