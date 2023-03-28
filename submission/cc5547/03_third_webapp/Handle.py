@@ -57,7 +57,7 @@ def main() :
     if on_off is True :
         user_interface(result)
     else : 
-        response = requests.get('https://i.imgur.com/MsodAa1.gif', type=["gif"])
+        response = requests.get('https://i.imgur.com/MsodAa1.gif')
         img = Image.open(BytesIO(response.content))
         st.image(img, width=1200)
         
