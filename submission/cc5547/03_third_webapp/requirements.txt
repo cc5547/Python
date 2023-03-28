@@ -6,5 +6,5 @@ statsmodels
 plotly
 matplotlib
 
-mlextend
+mlxtend
 joblib
