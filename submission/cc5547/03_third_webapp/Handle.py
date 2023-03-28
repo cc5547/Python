@@ -22,7 +22,7 @@ def get_sidebar():
 
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
 def get_function(data, blood, hbit, gender, heart, age):
-    fc = Function()  # 객체 생성
+    fc = Function(data, blood, hbit, gender, heart, age)  # 객체 생성
     result = fc.into_xgb_model()
     return result
 
