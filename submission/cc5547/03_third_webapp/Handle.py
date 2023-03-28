@@ -36,15 +36,13 @@ def user_interface(age, sex):
 
     with col1 :
         # Title
-        st.title("컬럼1")
+        st.title(age)
         # Header
         st.header("안녕")
         # Subheader
-        st.subheader("하이")
+        st.subheader(sex)
         # Text
         st.text("여기가 output되는 값 예정")
-        # DF
-        st.write(name)
 
     with col2 :
         st.write("컬럼2")
