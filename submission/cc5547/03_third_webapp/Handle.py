@@ -1,8 +1,8 @@
 import streamlit as st
-import imageio
-import requests
+# import imageio
+# import requests
+# from io import BytesIO
 from PIL import Image
-from io import BytesIO
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
