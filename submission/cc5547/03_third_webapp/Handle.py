@@ -14,14 +14,14 @@ def get_data():
     return data
 
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
-def get_sidebar(data, blood, hbit, gender, heart, age):
+def get_sidebar():
     sb = Sidebar()  # 객체 생성
     result = sb.result_sidebar()
     return result
 
 
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
-def get_function():
+def get_function(data, blood, hbit, gender, heart, age):
     fc = Function()  # 객체 생성
     result = fc.into_xgb_model()
     return result
