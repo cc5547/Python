@@ -11,7 +11,7 @@ class Function:
         self.gender = gender
         self.heart = heart
         self.age = age
-``
+
         # self.data = data
         # self.blood = int(blood)
         # self.clst = int(clst)
