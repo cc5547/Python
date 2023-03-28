@@ -8,17 +8,17 @@ class Sidebar:
         self.s = st.sidebar
         self.on = True
         self.off = False
-        self.name = None
+        self.name = ""
     # 셀렉트 박스 생성
     def account_name(self):
         self.s.title('문진표를 작성해 주세요👇')
         
-        self.name = self.s.text_input('이름을 입력해 주세요.')
+        self.name = self.s.text_input('이름을 입력해 주세요.', self.name)
         return self.name
 
     # 셀렉트 박스 선택 결과 처리 
     def first_choice(self, name):
-        if name is None:
+        if name is "":
             return None, self.off
 
         else : return name, self.on
