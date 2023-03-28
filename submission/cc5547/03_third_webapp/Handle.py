@@ -28,7 +28,7 @@ def get_function():
 
 
 def user_interface(blood, clst, hbit, gender, heart, age):
-    st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
+    st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
 
     gender = "남자" if gender == 1 else "여자"
