@@ -21,7 +21,7 @@ class Sidebar:
     # 성별 받기
     def sex_choice(self, age):
         if age is "":
-            
+            pass
         else : 
             sex = ['남자', '여자']
             sex = self.s.selectbox('성별을 선택해주세요.', sex)
