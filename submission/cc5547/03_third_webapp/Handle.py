@@ -54,7 +54,7 @@ def main() :
         # Text
         st.text("여기가 output되는 값 예정")
         # DF
-        st.dataframe(result, width = 1200, height = 600)
+        st.write(result)
 
     with col2 :
         st.write("컬럼2")
