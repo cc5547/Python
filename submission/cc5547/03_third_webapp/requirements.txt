@@ -5,6 +5,4 @@ numpy
 statsmodels
 plotly
 matplotlib
-
 mlxtend
-joblib
