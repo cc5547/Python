@@ -8,29 +8,30 @@ class Sidebar:
         self.s = st.sidebar
         self.on = True
         self.off = False
-        self.name = ""
-        self.age = 0
+        self.age = ""
 
 
     # 셀렉트 박스 생성
-    def account_name(self):
+    def account_age(self):
         self.s.title('문진표를 작성해 주세요👇')
 
-        self.name = self.s.text_input('이름을 입력해 주세요.', self.name)
-        return self.name
+        self.age = self.s.text_input('나이를 입력해 주세요.', self.name)
+        return self.age
 
     # 셀렉트 박스 선택 결과 처리 
-    def first_choice(self, name):
-        if name is "":
+    def first_choice(self, age):
+        if age is "":
             return None, None, self.off
         else : 
-            age = list(range(1, 100))
-            age_choice = self.s.selectbox('나이를 입력해주세요.', age, , default = "")
-
-            return name, age_choice, self.on
+            sex = ['남자', '여자']
+            sex_choice = self.s.selectbox('성별을 선택해주세요.', sex, default = "")
+            if sex_choice == '남자' : sex_choice = 1
+            else : sex_choice = 0
+            
+            return age, sex_choice, self.on
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
-        name = self.account_name()
-        name, age, on_off = self.first_choice(name)
-        return name, age, on_off
+        age = self.account_age()
+        age, sex, on_off = self.first_choice(name)
+        return age, sex, on_off
