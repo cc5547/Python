@@ -24,11 +24,10 @@ class Sidebar:
         if name is "":
             return None, self.off
         else : 
-            age_choice = lsit(range(1, 100))
-            # age = self.s.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
-            age = self.s.selectbox('나이를 입력해주세요.', age_choice, , default = "")
+            age = lsit(range(1, 100))
+            age_choice = self.s.selectbox('나이를 입력해주세요.', age, , default = "")
 
-            return name, age, self.on
+            return name, age_choice, self.on
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
