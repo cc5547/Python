@@ -6,3 +6,4 @@ statsmodels
 plotly
 matplotlib
 mlxtend
+xgboost
