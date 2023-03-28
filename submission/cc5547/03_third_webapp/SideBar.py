@@ -21,7 +21,7 @@ class Sidebar:
         else : return 0
 
     # 심장병 유무
-    def heart_sick():
+    def heart_sick(self):
         sick = self.s.radio('심장병이 있습니까?', self.y_n)
         if sick == "예" : return True
         else : return False
