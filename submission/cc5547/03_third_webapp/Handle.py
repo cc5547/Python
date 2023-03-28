@@ -56,11 +56,14 @@ def main():
 
     ment = get_function()
 
-    if blood == 1:
+    if blood >= 1:
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
-    elif age != "": 
-        user_interface(blood, clst, hbit, gender, heart, age)
+
+        if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
+        else : pass
+    else : pass
+        
 
 # 메인 실행
 if __name__ == '__main__':
