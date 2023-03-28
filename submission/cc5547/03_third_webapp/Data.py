@@ -12,10 +12,10 @@ class CreateData:
     def load_df(self):
         try:
             data = joblib.load(self.jobs)
+            return True
         except Exception as e:
             st.error(e)
             return False
-        return data
 
     # 메인에서 호출 한번에 처리할 것 
     def create_df(self) :
