@@ -24,12 +24,12 @@ class Sidebar:
             pass
         else : 
             sex = ['남자', '여자']
-            sex = self.s.selectbox('성별을 선택해주세요.', sex)
+            s_result = self.s.selectbox('성별을 선택해주세요.', sex)
 
-            if sex == '남자' : sex = 1
-            else : sex = 0
+            if s_result == '남자' : s_result = 1
+            else : s_result = 0
 
-        return age, sex
+        return age, s_result
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
