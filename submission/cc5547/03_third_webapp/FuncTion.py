@@ -16,6 +16,7 @@ class Function:
         # 나이, 성별, 심장병, 혈압, 콜레스테롤, 최대심박수
         tf = self.data.predict([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])
         tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])
+        return tf, tf_p
 
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
