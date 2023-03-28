@@ -1,5 +1,5 @@
 import streamlit as st
-from DataFrame import CreateDataFrame
+from Data import CreateData
 from FuncTion import Function
 from SideBar import Sidebar
 
@@ -9,7 +9,7 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
 @st.cache_data
 def get_data():
-    df = CreateDataFrame()  # 객체 생성
+    df = CreateData()  # 객체 생성
     df = df.create_df()
     return df
 
@@ -49,25 +49,14 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    # 객체 return 받기
     df = get_data()
-
     blood, clst, hbit, gender, heart, age = get_sidebar()
-
     ment = get_function()
 
     if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
     else : 
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
-
-    # if (blood and clst and hbit and gender and heart and age) is not None :
-    #     user_interface(blood, clst, hbit, gender, heart, age)
-    # else : 
-    #     img = "https://i.imgur.com/UNw62OL.gif"
-    #     st.image(img, width = 1000)
-        
-        
 
 # 메인 실행
 if __name__ == '__main__':
