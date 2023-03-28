@@ -1,4 +1,5 @@
 import streamlit as st
+import imageio
 import requests
 from PIL import Image
 from io import BytesIO
@@ -57,9 +58,10 @@ def main() :
     if on_off is True :
         user_interface(result)
     else : 
-        response = requests.get('https://i.imgur.com/MsodAa1.gif')
-        img = Image.open(BytesIO(response.content))
-        st.image(img, width=1200)
+        gif_path = 'https://i.imgur.com/MsodAa1.gif'
+        with st.spinner('Loading GIF...'):
+        gif_bytes = imageio.imread(gif_path)
+        st.image(gif_bytes, width=700)
         
         
 
