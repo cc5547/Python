@@ -37,7 +37,7 @@ def user_interface(age, gender, heart, blood, clst, hbit):
         gender = "여자"
 
     if heart == True:
-        blood = "유"
+        heart = "유"
     else:
         heart = "무"
         
