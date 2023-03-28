@@ -57,7 +57,7 @@ def main() :
     if on_off is True :
         user_interface(result)
     else : 
-        response = requests.get('https://i.imgur.com/GoeOLuK.gif')
+        response = requests.get('https://www.google.com/url?sa=i&url=https%3A%2F%2Fhacks.codes%2F%25EA%25B0%2580%25EC%259E%25A5-%25EB%25B9%25A0%25EB%25A5%25B8-gif%25EB%258A%2594-%25EC%25A1%25B4%25EC%259E%25AC%25ED%2595%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%258A%25B5%25EB%258B%2588%25EB%258B%25A4%2F&psig=AOvVaw3JT_ve9HKMMlWlHRJOGl9i&ust=1680052838411000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOi1sde6_f0CFQAAAAAdAAAAABAE')
         img = Image.open(BytesIO(response.content))
         st.image(img, width=1000)
         
