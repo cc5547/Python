@@ -30,34 +30,37 @@ def main() :
     df = get_data()
     result = get_sidebar(df)
     ment = get_function()
-    num = list(range(1,6))
 
     st.title("신도시에서 살아남기............")
     
     # tab, column 생성 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
-    col1, col2 = st.columns([6, 4])
+    # tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
+    # num = list(range(1,6))
     
-    with tab1 : st.write(ment, num[0])
-    with tab2 : st.write(ment, num[1])
-    with tab3 : st.write(ment, num[2])
-    with tab4 : st.write(ment, num[3])
-    with tab5 : st.write(ment, num[4])
+    # with tab1 : st.write(ment, num[0])
+    # with tab2 : st.write(ment, num[1])
+    # with tab3 : st.write(ment, num[2])
+    # with tab4 : st.write(ment, num[3])
+    # with tab5 : st.write(ment, num[4])
 
-    with col1 :
-        # Title
-        st.title("컬럼1")
-        # Header
-        st.header("안녕")
-        # Subheader
-        st.subheader("하이")
-        # Text
-        st.text("여기가 output되는 값 예정")
-        # DF
-        st.write(result)
+    col1, col2 = st.columns([5, 5])
 
-    with col2 :
-        st.write("컬럼2")
+    if result is not None:
+        with col1 :
+            # Title
+            st.title("컬럼1")
+            # Header
+            st.header("안녕")
+            # Subheader
+            st.subheader("하이")
+            # Text
+            st.text("여기가 output되는 값 예정")
+            # DF
+            st.write(result)
+
+        with col2 :
+            st.write("컬럼2")
+    else : st.write("안녕")
         
 
 # 메인 실행
