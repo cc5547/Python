@@ -25,7 +25,8 @@ class Sidebar:
             return None, self.off
         else : 
             age_choice = lsit(range(1, 100))
-            age = self.s.text_input('나이를 입력해주세요.', age_choice, , default = "")
+            # age = self.s.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
+            age = self.s.selectbox('나이를 입력해주세요.', age_choice, , default = "")
 
             return name, age, self.on
 
