@@ -15,8 +15,8 @@ class CreateData:
         except Exception as e:
             return st.error(e)
         return data
-        
+
     # 메인에서 호출 한번에 처리할 것 
     def create_data(self) : 
-        data = dself.load_df()
+        data = self.load_df()
         return data
