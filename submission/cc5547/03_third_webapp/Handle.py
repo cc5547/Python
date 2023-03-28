@@ -60,7 +60,7 @@ def main() :
         user_interface(result)
     else : 
         img = "https://i.imgur.com/GoeOLuK.gif"
-        st.image(img, width=1200)
+        st.image(img, width=1000)
         
         
 
