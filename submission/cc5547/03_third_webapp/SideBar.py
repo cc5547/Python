@@ -19,9 +19,10 @@ class Sidebar:
     def first_choice(self, name):
         if name is None:
             return None, self.off
-        else : return name, self.on = True
+        else : return name, self.on
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
-        result, on_off = self.first_choice(self.account_name())
+        name = self.account_name()
+        result, on_off = self.first_choice(name)
         return result, on_off
