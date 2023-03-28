@@ -59,7 +59,7 @@ def main() :
     else : 
         response = requests.get('https://i.imgur.com/MsodAa1.gif')
         img = Image.open(BytesIO(response.content))
-        st.image(img, width=1200, height = 600)
+        st.image(img, width=1800)
         
         
 
