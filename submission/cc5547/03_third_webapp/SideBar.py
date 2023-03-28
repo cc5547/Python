@@ -47,7 +47,8 @@ class Sidebar:
     def result_sidebar(self):
         age = self.account_age()
         gender = self.gender_choice()
-        blood = self.heart_sick()
+        heart = self.heart_sick()
+        blood = self.blood_pressure()
         clst = self.cholesterol()
         hbit = self.heart_beat()
 
