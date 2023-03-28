@@ -9,13 +9,13 @@ class Sidebar:
         self.on = True
         self.off = False
         self.age = ""
-        self.name
 
     # 셀렉트 박스 생성
     def account_age(self):
         self.s.title('문진표를 작성해 주세요👇')
 
         self.age = self.s.text_input('나이를 입력해 주세요.', self.age)
+
         return self.age
 
     # 셀렉트 박스 선택 결과 처리 
@@ -25,8 +25,10 @@ class Sidebar:
         else : 
             sex = ['남자', '여자']
             sex_choice = self.s.selectbox('성별을 선택해주세요.', sex, default = "")
-            if sex_choice == '남자' : sex_choice = 1
-            else : sex_choice = 0
+            if sex_choice == '남자' : 
+                sex_choice = 1
+            else : 
+                sex_choice = 0
 
             return age, sex_choice, self.on
 
