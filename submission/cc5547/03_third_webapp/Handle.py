@@ -27,7 +27,7 @@ def get_function():
     return ment
 
 
-def user_interface(age, gender, heart, blood, clst, hbit):
+def user_interface(blood, clst, hbit, gender, heart, age):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
     col1, col2 = st.columns([5, 5])
 
@@ -52,14 +52,14 @@ def main():
     # 객체 return 받기
     df = get_data()
 
-    age, gender, heart, blood, clst, hbit = get_sidebar()
+    blood, clst, hbit, gender, heart, age = get_sidebar()
 
     ment = get_function()
 
     if age == "":
         st.write("대기중...........")
     else:
-        user_interface(age, gender, heart, blood, clst, hbit)
+        user_interface(blood, clst, hbit, gender, heart, age)
 
 
 # 메인 실행
