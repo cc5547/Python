@@ -22,11 +22,14 @@ class Function:
     
         
     def into_xgb_model(self):
-        # 나이, 성별, 심장병, 혈압, 콜레스테롤, 최대심박수
-        tf = self.data.predict([[float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)]])
-        tf_p = self.data.predict_proba([[float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)]])
-        # tf_p = (np.array(tf_p)[:,1])
-        return tf, tf_p
+            # 나이, 성별, 심장병, 혈압, 콜레스테롤, 최대심박수
+            if self.blood is not None:
+                tf = self.data.predict([[float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)]])
+                tf_p = self.data.predict_proba([[float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)]])
+                return tf, tf_p
+            # tf_p = (np.array(tf_p)[:,1])
+            else : return False
+        
 
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
