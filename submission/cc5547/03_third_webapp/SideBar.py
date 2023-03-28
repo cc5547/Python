@@ -21,7 +21,7 @@ class Sidebar:
     # 셀렉트 박스 선택 결과 처리 
     def first_choice(self, age):
         if age is "":
-            return None, self.off
+            return None, None, self.off
         else : 
             sex = ['남자', '여자']
             sex_choice = self.s.selectbox('성별을 선택해주세요.', sex)
