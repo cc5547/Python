@@ -16,8 +16,9 @@ class Sidebar:
         return blood
 
     # 콜레스트롤 int 
-    def cholesterol(self) :
-        clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
+    def cholesterol(self, blood) :
+        if blood == 0 : pass
+        else : clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
         return clst
 
     # 심박수 int 
@@ -45,7 +46,7 @@ class Sidebar:
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
         blood = self.blood_pressure()
-        clst = self.cholesterol()
+        clst = self.cholesterol(blood)
         hbit = self.heart_beat()
         gender = self.gender_choice()
         heart = self.heart_sick()
