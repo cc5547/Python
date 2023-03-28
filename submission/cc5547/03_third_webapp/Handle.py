@@ -36,13 +36,9 @@ def user_interface(age, sex):
 
     with col1 :
         # Title
-        st.title(age)
-        # Header
-        st.header("안녕")
-        # Subheader
-        st.subheader(sex)
-        # Text
-        st.text("여기가 output되는 값 예정")
+        st.write(f"나이는 {age}입니다.")
+        st.write(f"성별은 {sex}입니다.")
+        
 
     with col2 :
         st.write("컬럼2")
@@ -57,7 +53,7 @@ def main() :
     
     ment = get_function()
 
-    if age == "" : st.write("대기중")
+    if age == None : st.write("대기중")
     else : user_interface(age, sex)
 
     # if on_off is True :
