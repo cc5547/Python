@@ -25,7 +25,7 @@ class Sidebar:
             return None, self.off
         else : 
             age_choice = lsit(range(1, 100))
-            self.age = self.s.text_input('나이를 입력해주세요.', age_choice, , default = "")
+            age = self.s.text_input('나이를 입력해주세요.', age_choice, , default = "")
 
             return name, age, self.on
 
