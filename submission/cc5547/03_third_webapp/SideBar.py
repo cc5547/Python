@@ -16,10 +16,12 @@ class Sidebar:
         return blood if blood > 1 else None
 
     # 콜레스트롤 int 
-    def cholesterol(self, blood) : return self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1) if blood is not None and blood > 1 else None
+    def cholesterol(self, blood) : 
+        return self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1) if blood is not None and blood > 1 else None
     
     # 심박수 int 
-    def heart_beat(self, clst) : return hbit if clst is not None and clst > 1 else None
+    def heart_beat(self, clst) : 
+        return hbit if clst is not None and clst > 1 else None
 
     # 성별 받기 float
     def gender_choice(self, hbit):
@@ -41,7 +43,7 @@ class Sidebar:
         #     return age
         # else : return ""
         return self.s.text_input('나이를 입력해 주세요.', self.space) if hbit and hbit > 1 else ''
-        
+
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
         blood = self.blood_pressure()
