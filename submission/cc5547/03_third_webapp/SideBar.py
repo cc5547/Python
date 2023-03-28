@@ -33,13 +33,13 @@ class Sidebar:
         return blood
 
     # 콜레스트롤 int 
-    def cholesterol(self) : 
-        clst = self.s.slider('슬라이더를 움직여보세요.', 0, 200, 1)
+    def cholesterol(self) :
+        clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
         return clst
 
     # 심박수 int 
     def heart_beat(self) :
-        hbit = self.s.slider('슬라이더를 움직여보세요.', 0, 200, 1)
+        hbit = self.s.slider('심박수를 입력하세요', 0, 200, 1)
         return hbit
 
 
