@@ -13,7 +13,6 @@ def get_data():
     df = df.create_df()
     return df
 
-
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
 def get_sidebar():
     sb = Sidebar()  # 객체 생성
