@@ -51,7 +51,8 @@ def user_interface(blood, clst, hbit, gender, heart, age, result):
 def main():
     data = get_data()
 
-    st.write(bool(data)
+    st.write(bool(data))
+    
 
 
 
