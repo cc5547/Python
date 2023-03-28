@@ -41,9 +41,9 @@ def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
         
-        if tf == True:
+        if tf == 1:
             st.write("당신 죽어 조심해")
-        elif tf == False:
+        elif tf == 0:
             st.write("당신 죽진 않아")
 
         st.write(f"당신 죽을 확률{tf_p}")
