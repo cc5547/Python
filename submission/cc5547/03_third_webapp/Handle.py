@@ -24,6 +24,24 @@ def get_function():
     ment = fc.ment()
     return ment
 
+def user_interface():
+    col1, col2 = st.columns([5, 5])
+    with col1 :
+        # Title
+        st.title("컬럼1")
+        # Header
+        st.header("안녕")
+        # Subheader
+        st.subheader("하이")
+        # Text
+        st.text("여기가 output되는 값 예정")
+        # DF
+        st.write(result)
+
+    with col2 :
+        st.write("컬럼2")
+
+
 # main 시작점 최대한 간단하게 짜기. 
 def main() :
     # 객체 return 받기
@@ -32,35 +50,9 @@ def main() :
     ment = get_function()
 
     st.title("신도시에서 살아남기............")
-    
-    # tab, column 생성 
-    # tab1, tab2, tab3, tab4, tab5 = st.tabs(["1번탭", "2번탭", "3번탭", "4번탭", "5번탭"])
-    # num = list(range(1,6))
-    
-    # with tab1 : st.write(ment, num[0])
-    # with tab2 : st.write(ment, num[1])
-    # with tab3 : st.write(ment, num[2])
-    # with tab4 : st.write(ment, num[3])
-    # with tab5 : st.write(ment, num[4])
-
-    col1, col2 = st.columns([5, 5])
-
-    if result != None:
-        with col1 :
-            # Title
-            st.title("컬럼1")
-            # Header
-            st.header("안녕")
-            # Subheader
-            st.subheader("하이")
-            # Text
-            st.text("여기가 output되는 값 예정")
-            # DF
-            st.write(result)
-
-        with col2 :
-            st.write("컬럼2")
-    else : st.write("안녕")
+    if result != None :
+        return user_interface(result)
+    else : st.write("None입니다.")
         
 
 # 메인 실행
