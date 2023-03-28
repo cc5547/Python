@@ -24,7 +24,7 @@ class Sidebar:
         if name is "":
             return None, None, self.off
         else : 
-            age = lsit(range(1, 100))
+            age = list(range(1, 100))
             age_choice = self.s.selectbox('나이를 입력해주세요.', age, , default = "")
 
             return name, age_choice, self.on
