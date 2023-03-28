@@ -4,12 +4,10 @@ import pandas as pd
 
 class Sidebar:
     def __init__(self) -> None:
-        # self.on = True
-        # self.off = False
         self.s = st.sidebar
         self.age = ""
         self.gender_c = ['남자', '여자']
-
+    
     # 나이 받기
     def account_age(self):
         self.s.title('문진표를 작성해 주세요👇')
