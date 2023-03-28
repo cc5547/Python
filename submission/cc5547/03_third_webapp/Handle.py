@@ -56,7 +56,7 @@ def main():
 
     ment = get_function()
 
-    if age != "":
+    if age == "":
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
     else : 
