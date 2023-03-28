@@ -25,11 +25,20 @@ class Sidebar:
     
     # 심박수 int 
     def heart_beat(self, clst) : 
-        return hbit if clst is not None and clst > 1 else None
+        if clst is not None and clst > 1 :
+            hbit = self.s.slider('심박수를 입력하세요', 0, 200, 1)
+            return hbit
+        else : return None
+        # return hbit if clst is not None and clst > 1 else None
 
     # 성별 받기 float
     def gender_choice(self, hbit):
-        return 1 if hbit is not None and hbit > 1 and self.s.radio('성별을 선택 해주세요.', self.gender_c) == "남자" else 0 if hbit is not None and hbit > 1 else None
+        if hbit is not None and hbit > 1 :
+            gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
+            if gender == "남자" : return 1
+            else : return 0
+        else : return None
+        # return 1 if hbit is not None and hbit > 1 and self.s.radio('성별을 선택 해주세요.', self.gender_c) == "남자" else 0 if hbit is not None and hbit > 1 else None
 
     # 심장병 유무
     def heart_sick(self, hbit) : 
