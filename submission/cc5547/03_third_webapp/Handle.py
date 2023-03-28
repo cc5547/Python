@@ -59,7 +59,7 @@ def main():
     if age == "":
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
-    else:
+    elif (blood and clst and hbit and gender and heart) is not None and (age != "") : 
         user_interface(blood, clst, hbit, gender, heart, age)
 
 
