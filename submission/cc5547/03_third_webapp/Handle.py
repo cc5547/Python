@@ -46,11 +46,11 @@ def user_interface(result):
 def main() :
     # 객체 return 받기
     df = get_data()
-    result = get_sidebar(df)
+    result, on_off = get_sidebar(df)
     ment = get_function()
 
     st.title("신도시에서 살아남기............")
-    if result != None :
+    if on_off is True :
         return user_interface(result)
     else : st.write("None입니다.")
         
