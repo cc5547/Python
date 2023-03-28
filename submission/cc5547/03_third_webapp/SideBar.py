@@ -9,10 +9,13 @@ class Sidebar:
         self.on = True
         self.off = False
         self.name = ""
+        self.age = 0
+
+
     # 셀렉트 박스 생성
     def account_name(self):
         self.s.title('문진표를 작성해 주세요👇')
-        
+
         self.name = self.s.text_input('이름을 입력해 주세요.', self.name)
         return self.name
 
@@ -20,13 +23,14 @@ class Sidebar:
     def first_choice(self, name):
         if name is "":
             return None, self.off
+        else : 
+            age_choice = lsit(range(1, 100))
+            self.age = self.s.text_input('나이를 입력해주세요.', age_choice, , default = "")
 
-        else : return name, self.on
+            return name, age, self.on
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
         name = self.account_name()
 
-        result, on_off = self.first_choice(name)
-        
-        return result, on_off
+        return name, age, on_off = self.first_choice(name)
