@@ -2,7 +2,7 @@ import streamlit as st
 # import imageio
 # import requests
 # from io import BytesIO
-from PIL import Image
+# from PIL import Image
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
