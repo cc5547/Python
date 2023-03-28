@@ -36,8 +36,8 @@ def user_interface(age, sex):
 
     with col1 :
         # Title
-        st.write(f"나이는 {age}입니다.")
-        st.write(f"성별은 {sex}입니다.")
+        st.write(f"나이는 {age}세 입니다.")
+        st.write(f"성별은 {sex} 입니다.")
         
 
     with col2 :
