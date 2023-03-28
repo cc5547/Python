@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 
 class Function:
-    def __init__(self, data, blood, clst, hbit, gender, heart, age) -> None:
-        self.data = data
+    def __init__(self, blood, clst, hbit, gender, heart, age) -> None:
+        self.data = self
         self.blood = blood
         self.clst = clst
         self.hbit = hbit
