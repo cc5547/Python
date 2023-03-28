@@ -24,7 +24,7 @@ class Sidebar:
             return None, None, self.off
         else : 
             sex = ['남자', '여자']
-            sex_choice = self.s.selectbox('성별을 선택해주세요.', sex, default = "")
+            sex_choice = self.s.selectbox('성별을 선택해주세요.', sex)
             if sex_choice == '남자' : 
                 sex_choice = 1
             else : 
