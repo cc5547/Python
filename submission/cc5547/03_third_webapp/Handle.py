@@ -31,14 +31,12 @@ def get_function():
 
 def user_interface(age, sex):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
-
     col1, col2 = st.columns([5, 5])
 
     with col1 :
         # Title
         st.write(f"나이는 {age}세 입니다.")
         st.write(f"성별은 {sex} 입니다.")
-        
 
     with col2 :
         st.write("컬럼2")
@@ -49,7 +47,7 @@ def main() :
     # 객체 return 받기
     df = get_data()
 
-    age, sex = get_sidebar()
+    age, gender = get_sidebar()
     
     ment = get_function()
 
