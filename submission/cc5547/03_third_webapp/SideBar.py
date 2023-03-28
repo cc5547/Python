@@ -17,9 +17,10 @@ class Sidebar:
 
     # 콜레스트롤 int 
     def cholesterol(self, blood) :
-        if blood == 0 : pass
-        else : clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
-        return clst
+        if blood != 0 : 
+            clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
+            return clst
+        else : return None
 
     # 심박수 int 
     def heart_beat(self, clst) :
