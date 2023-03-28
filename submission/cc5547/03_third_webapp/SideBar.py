@@ -23,8 +23,10 @@ class Sidebar:
     # 심장병 유무
     def heart_sick(self):
         sick = self.s.radio('심장병이 있습니까?', self.y_n)
-        if sick == "예" : return True
-        else : return False
+        if sick == "예" : 
+            return True
+        else : 
+            return False
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
