@@ -14,7 +14,7 @@ def get_data():
     return data
 
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
-def get_sidebar():
+def get_sidebar(data, blood, hbit, gender, heart, age):
     sb = Sidebar()  # 객체 생성
     result = sb.result_sidebar()
     return result
