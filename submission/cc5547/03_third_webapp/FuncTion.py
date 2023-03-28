@@ -5,11 +5,11 @@ import pandas as pd
 class Function:
     def __init__(self, data, blood, clst, hbit, gender, heart, age) -> None:
         self.data = data
-        self.blood = blood.astype(np.float32)
-        self.clst = clst.astype(np.float32)
-        self.hbit = hbit.astype(np.float32)
+        self.blood = blood.astype(np.int64)
+        self.clst = clst.astype(np.int64)
+        self.hbit = hbit.astype(np.int64)
         self.gender = gender.astype(np.float32)
-        self.heart = heart.astype(np.float32)
+        self.heart = heart.astype(np.int64)
         self.age = age.astype(np.float32)
 
         # self.data = data
@@ -24,6 +24,7 @@ class Function:
         # 나이, 성별, 심장병, 혈압, 콜레스테롤, 최대심박수
         tf = self.data.predict([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])
         tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])
+        tf_p = (np.array(tf_p)[:,1])
         return tf, tf_p
 
     def create_model(self):
