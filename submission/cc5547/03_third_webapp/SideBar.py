@@ -18,11 +18,10 @@ class Sidebar:
     # 셀렉트 박스 선택 결과 처리 
     def first_choice(self, name):
         if name is None:
-            return None
-        else : return name
+            return None, self.off
+        else : return name, self.on = True
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
-        result = self.first_choice(self.account_name())
-        self.off
-        return result, self.off
+        result, on_off = self.first_choice(self.account_name())
+        return result, on_off
