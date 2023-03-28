@@ -10,7 +10,7 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 @st.cache_data
 def get_data():
     df = CreateData()  # 객체 생성
-    df = df.create_df()
+    df = df.create_d()
     return df
 
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현

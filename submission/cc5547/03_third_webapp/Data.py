@@ -18,6 +18,6 @@ class CreateData:
             return False
 
     # 메인에서 호출 한번에 처리할 것 
-    def create_df(self) :
+    def create_d(self) :
         data = self.load_df()
         return data
