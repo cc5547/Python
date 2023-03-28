@@ -11,4 +11,5 @@ class Function:
         return self.ment_str
 
     def create_model(self):
-        self.into_xgb_model()
+        result = self.into_xgb_model()
+        return result
