@@ -52,9 +52,10 @@ def main() :
     st.title("신도시에서 살아남기............")
 
     if on_off is False :
-        user_interface(result)
-    else : 
         st.write("None입니다.") 
+    else : 
+        
+        user_interface(result)
         
 
 # 메인 실행
