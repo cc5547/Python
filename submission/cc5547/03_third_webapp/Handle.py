@@ -45,7 +45,7 @@ def main() :
 
     col1, col2 = st.columns([5, 5])
 
-    if result is not None:
+    if result != None:
         with col1 :
             # Title
             st.title("컬럼1")
