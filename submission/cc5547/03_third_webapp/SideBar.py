@@ -17,7 +17,8 @@ class Sidebar:
     # 성별 받기
     def gender_choice(self):
         gender = self.s.selectbox('성별을 선택해주세요.', self.gender_c)
-        return 1 if gender == 1 else 0
+        if gender == "남자" : return 1
+        else : return 0
 
     # 심장병 유무
     def heart_sick():
