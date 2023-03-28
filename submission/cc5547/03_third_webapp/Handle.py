@@ -31,21 +31,17 @@ def user_interface(age, gender, heart, blood, clst, hbit):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
     col1, col2 = st.columns([5, 5])
 
-    if gender == 1:
-        gender = "남자"
-    else:
-        gender = "여자"
-
-    if heart == True:
-        heart = "유"
-    else:
-        heart = "무"
+    gender = "남자" if gender == 1 else "여자"
+    heart = "유" if heart else "무"
         
     with col1:
         # Title
         st.write(f"나이는 {age}세 입니다.")
         st.write(f"성별은 {gender} 입니다.")
         st.write(f"심장질환 유뮤 : {heart}")
+        st.write(f"혈압 : {blood}")
+        st.write(f"콜레스트롤 : {clst}")
+        st.write(f"심박수 : {hbit}")
 
     with col2:
         st.write("컬럼2")
