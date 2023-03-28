@@ -42,9 +42,9 @@ def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
         st.write(f"심박수 : {hbit}")
         
         if tf == 1:
-            st.write("당신 죽어 조심해")
+            st.write(tf)
         elif tf == 0:
-            st.write("당신 죽진 않아")
+            st.write(tf)
 
         st.write(f"당신 죽을 확률{tf_p}")
 
