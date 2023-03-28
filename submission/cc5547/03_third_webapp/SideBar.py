@@ -10,7 +10,7 @@ class Sidebar:
     def account_name(self):
         self.s.title('문진표를 작성해 주세요👇')
         
-        name = self.s.text_input('이름을 입력해 주세요.', value = None)
+        name = self.s.text_input('이름을 입력해 주세요.')
         return name
 
     # 셀렉트 박스 선택 결과 처리 
