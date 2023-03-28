@@ -51,7 +51,7 @@ class Sidebar:
         if hbit is not None and hbit > 1 :
             age = self.s.text_input('나이를 입력해 주세요.', self.space)
             return age
-        else : return None
+        else : return ""
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
