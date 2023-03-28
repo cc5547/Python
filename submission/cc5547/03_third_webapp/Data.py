@@ -6,7 +6,7 @@ import joblib
 class CreateData:
     # df URL
     def __init__(self) -> None:
-        self.jobs = "https://github.com/cc5547/Python/raw/main/submission/cc5547/03_third_webapp/xgb_model%20.joblib"
+        self.jobs = "submission/cc5547/03_third_webapp/xgb_model.joblib"
 
     # read / df 전처리 해줄 거 작성 하기
     def load_df(self):
