@@ -32,8 +32,12 @@ def get_function():
 def user_interface(age, gender, heart):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
     col1, col2 = st.columns([5, 5])
+
     if gender == 1 : gender = "남자" 
     else : gender = "여자"
+
+    if heart == True : heart = "유"
+    else : heart = "무"
     with col1 :
         # Title
         st.write(f"나이는 {age}세 입니다.")
