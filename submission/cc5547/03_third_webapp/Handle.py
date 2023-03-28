@@ -59,7 +59,7 @@ def main() :
     else : 
         # response = requests.get('https://github.com/cc5547/Python/blob/main/submission/cc5547/03_third_webapp/%EA%B3%A0%EC%96%91%EC%9D%B4.gif')
         # img = Image.open(BytesIO(response.content))
-        st.image(https://github.com/cc5547/Python/blob/main/submission/cc5547/03_third_webapp/%EA%B3%A0%EC%96%91%EC%9D%B4.gif, width=1000)
+        st.image("https://github.com/cc5547/Python/blob/main/submission/cc5547/03_third_webapp/%EA%B3%A0%EC%96%91%EC%9D%B4.gif", width=1000)
         
         
 
