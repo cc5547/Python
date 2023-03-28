@@ -25,7 +25,6 @@ def get_function(data, blood, clst, hbit, gender, heart, age):
     result = fc.create_model()
     return result
 
-
 def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
@@ -48,7 +47,7 @@ def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
             st.write("당신 죽진 않아")
 
         st.write(f"당신 죽을 확률{tf_p}")
-        
+
     with col2:
         st.write("컬럼2")
 
