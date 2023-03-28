@@ -11,4 +11,4 @@ class Function:
         return self.data
 
     def create_model(self):
-        into_xgb_model()
+        self.into_xgb_model()
