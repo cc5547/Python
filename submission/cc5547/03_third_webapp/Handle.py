@@ -30,7 +30,7 @@ def get_function():
     return ment
 
 def user_interface(age, sex):
-    st.title("신도시에서 살아남기............")
+    st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
 
     col1, col2 = st.columns([5, 5])
 
