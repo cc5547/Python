@@ -50,9 +50,9 @@ def main() :
     ment = get_function()
 
     st.title("신도시에서 살아남기............")
-    if on_off is True :
-        return user_interface(result)
-    else : st.write("None입니다.")
+    if on_off is False :
+        st.write("None입니다.") 
+    else : user_interface(result)
         
 
 # 메인 실행
