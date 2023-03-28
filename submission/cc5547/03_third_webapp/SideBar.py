@@ -9,7 +9,7 @@ class Sidebar:
         # self.on = True
         # self.off = False
         self.age = ""
-
+        sex = []
     # 나이 받기
     def account_age(self):
         self.s.title('문진표를 작성해 주세요👇')
