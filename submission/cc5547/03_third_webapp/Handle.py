@@ -29,7 +29,7 @@ def get_function():
     ment = fc.ment()
     return ment
 
-def user_interface(age, gender):
+def user_interface(age, gender, heart):
     st.title(":smile:귀하가 입력하신 값들입니다.:smile:")
     col1, col2 = st.columns([5, 5])
     if gender == 1 : gender = "남자" 
@@ -38,6 +38,7 @@ def user_interface(age, gender):
         # Title
         st.write(f"나이는 {age}세 입니다.")
         st.write(f"성별은 {gender} 입니다.")
+        st.write(f"심장질환 유뮤 : {heart}")
 
     with col2 :
         st.write("컬럼2")
@@ -48,12 +49,12 @@ def main() :
     # 객체 return 받기
     df = get_data()
 
-    age, gender = get_sidebar()
+    age, gender, heart = get_sidebar()
     
     ment = get_function()
 
     if age == "" : st.write("대기중...........")
-    else : user_interface(age, gender)
+    else : user_interface(age, gender, heart)
 
     # if on_off is True :
     #     user_interface(name, age)
