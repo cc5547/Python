@@ -31,7 +31,7 @@ class Sidebar:
 
     # 성별 받기 float
     def gender_choice(self, hbit):
-        if hbit != 1:
+        if hbit != None:
             gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
             if gender == "남자" : return 1
             else : return 0
@@ -39,7 +39,7 @@ class Sidebar:
 
     # 심장병 유무
     def heart_sick(self, gender):
-        if gender != (0 or 1):
+        if gender != None:
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
             if heart == "예" : return True 
             else : return False
@@ -47,7 +47,7 @@ class Sidebar:
 
     # 나이 받기 float
     def account_age(self, heart):
-        if heart == (True or False)
+        if heart != None :
             age = self.s.text_input('나이를 입력해 주세요.', self.space)
             return age
         else : return None
