@@ -31,7 +31,7 @@ class Sidebar:
 
     # 성별 받기 float
     def gender_choice(self, hbit):
-        if hbit > 1:
+        if hbit > 1 and not None:
             gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
             if gender == "남자" : return 1
             else : return 0
