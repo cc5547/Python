@@ -26,10 +26,8 @@ class Sidebar:
             sex = ['남자', '여자']
             sex = self.s.selectbox('성별을 선택해주세요.', sex)
 
-            if sex == '남자' : 
-                sex = 1
-            else : 
-                sex = 0
+            if sex == '남자' : sex = 1
+            else : sex = 0
 
         return age, sex
 
