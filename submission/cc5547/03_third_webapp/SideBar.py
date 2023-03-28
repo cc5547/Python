@@ -24,7 +24,7 @@ class Sidebar:
 
     # 심박수 int 
     def heart_beat(self, clst) :
-        if clst != 1:
+        if clst != None:
             hbit = self.s.slider('심박수를 입력하세요', 0, 200, 1)
             return hbit
         else : return None
