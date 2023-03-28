@@ -6,4 +6,4 @@ statsmodels
 plotly
 matplotlib
 
-imageio
+joblib
