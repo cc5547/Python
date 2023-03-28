@@ -57,7 +57,8 @@ def main():
     ment = get_function()
 
     if age == "":
-        st.write("대기중...........")
+        img = "https://i.imgur.com/UNw62OL.gif"
+        st.image(, width = 1000)
     else:
         user_interface(blood, clst, hbit, gender, heart, age)
 
