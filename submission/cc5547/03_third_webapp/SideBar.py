@@ -11,6 +11,7 @@ class Sidebar:
 
     # 혈압 int
     def blood_pressure(self) :
+        self.s.title('문진표를 작성해 주세요👇')
         blood = self.s.slider('혈압을 입력해주세요.', 0, 200, 1)
         return blood
 
@@ -38,7 +39,6 @@ class Sidebar:
 
     # 나이 받기 float
     def account_age(self):
-        self.s.title('문진표를 작성해 주세요👇')
         age = self.s.text_input('나이를 입력해 주세요.', self.space)
         return age
 
