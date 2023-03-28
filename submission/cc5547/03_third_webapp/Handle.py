@@ -1,4 +1,7 @@
 import streamlit as st
+import requests
+from PIL import Image
+from io import BytesIO
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
@@ -54,7 +57,10 @@ def main() :
     if on_off is True :
         user_interface(result)
     else : 
-        st.write("None입니다.")
+        response = requests.get('https://i.imgur.com/GoeOLuK.gif')
+        img = Image.open(BytesIO(response.content))
+        st.image(img, width=1000)
+        
         
 
 # 메인 실행
