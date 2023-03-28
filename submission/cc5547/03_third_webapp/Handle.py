@@ -54,7 +54,9 @@ def user_interface(age, sex):
 def main() :
     # 객체 return 받기
     df = get_data()
+
     age, sex = get_sidebar(df)
+    
     ment = get_function()
 
     user_interface(age, sex)
