@@ -56,11 +56,12 @@ def main():
 
     ment = get_function()
 
-    if age != "":
+    if (blood and clst and hbit and gender and heart and age) is not None :
         user_interface(blood, clst, hbit, gender, heart, age)
     else : 
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
+        
         
 
 # 메인 실행
