@@ -8,7 +8,7 @@ class Function:
         self.ment_str = "여기가 머신러닝 시각화_"
 
     def into_xgb_model(self):
-        return self.data
+        return self.ment_str
 
     def create_model(self):
         self.into_xgb_model()
