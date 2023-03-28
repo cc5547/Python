@@ -28,7 +28,7 @@ def get_function():
     ment = fc.ment()
     return ment
 
-def user_interface(result):
+def user_interface(name, age):
     st.title("신도시에서 살아남기............")
 
     col1, col2 = st.columns([5, 5])
@@ -43,7 +43,7 @@ def user_interface(result):
         # Text
         st.text("여기가 output되는 값 예정")
         # DF
-        st.write(result)
+        st.write(name)
 
     with col2 :
         st.write("컬럼2")
@@ -53,11 +53,11 @@ def user_interface(result):
 def main() :
     # 객체 return 받기
     df = get_data()
-    result, on_off = get_sidebar(df)
+    name, age, on_off = get_sidebar(df)
     ment = get_function()
 
     if on_off is True :
-        user_interface(result)
+        user_interface(name, age)
     else : 
         img = "https://i.imgur.com/GoeOLuK.gif"
         st.image(img, width=1000)
