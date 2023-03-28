@@ -7,7 +7,7 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 
 # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
-@st.cache_data
+# @st.cache_data
 def get_data():
     dt = CreateData()  # 객체 생성
     data = dt.create_data()
