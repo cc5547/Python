@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-
+# 나이 -> 성별 -> 심장병 -> 혈압 -> 콜레스테롤 -> 최대심박수 
 class Sidebar:
     def __init__(self) -> None:
         self.s = st.sidebar
