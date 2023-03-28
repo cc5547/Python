@@ -39,7 +39,7 @@ class Sidebar:
 
     # 심장병 유무
     def heart_sick(self, gender):
-        if gender != None:
+        if gender != None and (0 or 1):
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
             if heart == "예" : return True 
             else : return False
