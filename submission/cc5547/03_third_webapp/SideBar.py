@@ -13,16 +13,15 @@ class Sidebar:
     def blood_pressure(self) :
         self.s.title('문진표를 작성해 주세요👇')
         blood = self.s.slider('혈압을 입력해주세요.', 0, 200, 1)
-        if blood > 1 : return blood
-        else : return None
+        return blood if blood > 1 else None
 
     # 콜레스트롤 int 
     def cholesterol(self, blood) :
-        if blood is not None and blood > 1 : 
-            clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
-            return clst
-        else : return None
-
+        # if blood is not None and blood > 1 : 
+        #     clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1)
+        #     return clst
+        # else : return None
+        return self.s.slider('콜레스트롤을 입력하세요.', 0, 200, 1) if blood is not None and blood > 1 else None
     # 심박수 int 
     def heart_beat(self, clst) :
         if clst is not None and clst > 1 :
