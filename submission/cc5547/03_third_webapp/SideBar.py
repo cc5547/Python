@@ -14,8 +14,8 @@ class Sidebar:
         return name
 
     # 셀렉트 박스 선택 결과 처리 
-    def first_choice(self):
-        name = self
+    def first_choice(self, name):
+        name = name
 
         return name
 
