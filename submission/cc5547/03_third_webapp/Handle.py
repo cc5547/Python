@@ -24,7 +24,7 @@ def get_function():
     ment = fc.ment()
     return ment
 
-def user_interface():
+def user_interface(result):
     col1, col2 = st.columns([5, 5])
     with col1 :
         # Title
