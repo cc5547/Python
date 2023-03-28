@@ -18,7 +18,6 @@ class Sidebar:
         if name is None:
             return None
         else : return name
-        return name
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
