@@ -22,7 +22,7 @@ class Sidebar:
     # 셀렉트 박스 선택 결과 처리 
     def first_choice(self, name):
         if name is "":
-            return None, self.off
+            return None, None, self.off
         else : 
             age = lsit(range(1, 100))
             age_choice = self.s.selectbox('나이를 입력해주세요.', age, , default = "")
