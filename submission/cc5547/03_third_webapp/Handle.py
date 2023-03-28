@@ -23,11 +23,11 @@ def get_sidebar():
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
 def get_function():
     fc = Function()  # 객체 생성
-    ment = fc.ment()
-    return ment
+    result = fc.into_xgb_model()
+    return result
 
 
-def user_interface(blood, clst, hbit, gender, heart, age):
+def user_interface(blood, clst, hbit, gender, heart, age, result):
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
 
@@ -42,7 +42,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
-
+        st.write(result)
     with col2:
         st.write("컬럼2")
 
@@ -50,12 +50,10 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 # main 시작점 최대한 간단하게 짜기.
 def main():
     data = get_data()
-    st.write(data)
-
     blood, clst, hbit, gender, heart, age = get_sidebar()
-    ment = get_function()
+    result = get_function(data, blood, hbit, gender, heart, age)
 
-    if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
+    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, result)
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
