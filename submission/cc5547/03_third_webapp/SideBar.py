@@ -3,11 +3,10 @@ import numpy as np
 import pandas as pd
 
 class Sidebar:
-    def __init__(self, df) -> None:
-        self.df = df
-        self.s = st.sidebar
+    def __init__(self) -> None:
         # self.on = True
         # self.off = False
+        self.s = st.sidebar
         self.age = ""
         self.sex_c = ['남자', '여자']
     # 나이 받기
@@ -19,7 +18,8 @@ class Sidebar:
     def sex_choice(self):
         sex = self.s.selectbox('성별을 선택해주세요.', self.sex_c)
         return 1 if sex == '남자' else 0
-
+    
+    def 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
         age = self.account_age()

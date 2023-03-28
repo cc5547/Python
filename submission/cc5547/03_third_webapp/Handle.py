@@ -18,8 +18,8 @@ def get_data():
     return df
 
 # SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
-def get_sidebar(df):
-    sb = Sidebar(df) # 객체 생성
+def get_sidebar():
+    sb = Sidebar() # 객체 생성
     result = sb.result_sidebar()
     return result
 
@@ -49,7 +49,7 @@ def main() :
     # 객체 return 받기
     df = get_data()
 
-    age, sex = get_sidebar(df)
+    age, sex = get_sidebar()
     
     ment = get_function()
 
