@@ -37,15 +37,16 @@ def user_interface(age, gender, blood, clst, hbit):
     else:
         gender = "여자"
 
-    if heart == True:
-        heart = "유"
+    if blood == True:
+        blood = "유"
     else:
-        heart = "무"
+        blood = "무"
+        
     with col1:
         # Title
         st.write(f"나이는 {age}세 입니다.")
         st.write(f"성별은 {gender} 입니다.")
-        st.write(f"심장질환 유뮤 : {heart}")
+        st.write(f"심장질환 유뮤 : {blood}")
 
     with col2:
         st.write("컬럼2")
