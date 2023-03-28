@@ -8,7 +8,7 @@ class Sidebar:
         self.s = st.sidebar
         # self.on = True
         # self.off = False
-        self.age = None
+        self.age = ""
         self.sex_c = ['남자', '여자']
     # 나이 받기
     def account_age(self):
