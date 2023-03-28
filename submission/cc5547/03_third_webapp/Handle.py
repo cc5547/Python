@@ -25,6 +25,8 @@ def get_function():
     return ment
 
 def user_interface(result):
+
+    st.title("신도시에서 살아남기............")
     col1, col2 = st.columns([5, 5])
     with col1 :
         # Title
@@ -49,13 +51,10 @@ def main() :
     result, on_off = get_sidebar(df)
     ment = get_function()
 
-    st.title("신도시에서 살아남기............")
-
-    if on_off is False :
-        st.write("None입니다.") 
-    else : 
-        
+    if on_off is True :
         user_interface(result)
+    else : 
+        st.write("None입니다.")
         
 
 # 메인 실행
