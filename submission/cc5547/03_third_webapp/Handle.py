@@ -50,7 +50,11 @@ def user_interface(blood, clst, hbit, gender, heart, age, result):
 # main 시작점 최대한 간단하게 짜기.
 def main():
     data = get_data()
-    st.write(data)
+
+    st.write(bool(data)
+
+
+
     blood, clst, hbit, gender, heart, age = get_sidebar()
     result = get_function(data, blood, hbit, gender, heart, age)
 
