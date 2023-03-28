@@ -13,41 +13,41 @@ class Sidebar:
     def blood_pressure(self) :
         self.s.title('문진표를 작성해 주세요👇')
         blood = self.s.slider('혈압을 입력해주세요.', 0, 500, 1)
-        return blood if blood > 1 else False
+        return blood if blood > 1 else None
 
     # 콜레스트롤 int 
     def cholesterol(self, blood) : 
-        if blood is not False and blood > 1 : 
+        if blood is not None and blood > 1 : 
             clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 500, 1)
             return clst
-        else : return False
+        else : return None
     
     # 심박수 int 
     def heart_beat(self, clst) : 
-        if clst is not False and clst > 1 :
+        if clst is not None and clst > 1 :
             hbit = self.s.slider('심박수를 입력하세요', 0, 500, 1)
             return hbit
-        else : return False
+        else : return None
 
     # 성별 받기 float
     def gender_choice(self, hbit):
-        if hbit is not False and hbit > 1 :
+        if hbit is not None and hbit > 1 :
             gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
             if gender == "남자" : return 1
             else : return 0
-        else : return False
+        else : return None
         
     # 심장병 유무
     def heart_sick(self, hbit) : 
-        if hbit is not False and hbit > 1 :
+        if hbit is not None and hbit > 1 :
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
             if heart == "예" : return True 
-            else : return False
-        else : return False
+            else : return None
+        else : return None
 
     # 나이 받기 float
     def account_age(self, hbit):
-        if hbit is not False and hbit > 1 :
+        if hbit is not None and hbit > 1 :
             age = self.s.text_input('나이를 입력해 주세요.', self.space)
             return age
         else : return ""
