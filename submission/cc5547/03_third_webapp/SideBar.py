@@ -31,20 +31,26 @@ class Sidebar:
 
     # 성별 받기 float
     def gender_choice(self, hbit):
-        gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
-        if gender == "남자" : return 1
-        else : return 0
+        if hbit != 1:
+            gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
+            if gender == "남자" : return 1
+            else : return 0
+        else : return None
 
     # 심장병 유무
     def heart_sick(self, gender):
-        heart = self.s.radio('심장병이 있습니까?', self.y_n)
-        if heart == "예" : return True 
-        else : return False
+        if gender != (0 or 1):
+            heart = self.s.radio('심장병이 있습니까?', self.y_n)
+            if heart == "예" : return True 
+            else : return False
+        else : return None
 
     # 나이 받기 float
     def account_age(self, heart):
-        age = self.s.text_input('나이를 입력해 주세요.', self.space)
-        return age
+        if heart == (True or False)
+            age = self.s.text_input('나이를 입력해 주세요.', self.space)
+            return age
+        else : return None
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
