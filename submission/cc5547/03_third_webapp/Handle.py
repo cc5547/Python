@@ -6,6 +6,7 @@ import streamlit as st
 from DataFrame import CreateDataFrame
 from FuncTion import Function
 from SideBar import Sidebar
+
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 
