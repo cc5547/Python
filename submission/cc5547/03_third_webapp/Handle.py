@@ -59,9 +59,8 @@ def main():
     if blood == 1:
         img = "https://i.imgur.com/UNw62OL.gif"
         st.image(img, width = 1000)
-    elif (blood and clst and hbit and gender and heart) is not None and (age != "") : 
+    elif age != "": 
         user_interface(blood, clst, hbit, gender, heart, age)
-
 
 # 메인 실행
 if __name__ == '__main__':

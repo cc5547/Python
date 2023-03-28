@@ -39,12 +39,9 @@ class Sidebar:
 
     # 심장병 유무
     def heart_sick(self, gender):
-        if gender is None :
-            return None
-        else : 
-            heart = self.s.radio('심장병이 있습니까?', self.y_n)
-            if heart == "예" : return True 
-            else : return False
+        heart = self.s.radio('심장병이 있습니까?', self.y_n)
+        if heart == "예" : return True 
+        else : return False
 
     # 나이 받기 float
     def account_age(self, heart):
