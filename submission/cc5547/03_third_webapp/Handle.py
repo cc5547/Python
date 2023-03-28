@@ -62,7 +62,7 @@ def main() :
         
         with st.spinner('Loading GIF...'):
             gif_bytes = imageio.imread(gif_path)
-            st.image(gif_bytes, width=700)
+            st.image(gif_bytes, width=1000)
         
         
 
