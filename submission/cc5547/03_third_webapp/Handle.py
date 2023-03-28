@@ -49,7 +49,8 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    df = get_data()
+    data = get_data()
+    st.write(data)
     blood, clst, hbit, gender, heart, age = get_sidebar()
     ment = get_function()
 
