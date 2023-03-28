@@ -28,17 +28,17 @@ class Sidebar:
         else : return False
 
     # 혈압 int
-    def blood_pressure() :
+    def blood_pressure(self) :
         blood = self.s.slider('혈압을 입력해주세요.', 0, 200, 1)
         return age
 
     # 콜레스트롤 int 
-    def cholesterol() : 
+    def cholesterol(self) : 
         clst = self.s.slider('슬라이더를 움직여보세요.', 0, 200, 1)
         return clst
 
     # 심박수 int 
-    def heart_beat() :
+    def heart_beat(self) :
         hbit = self.s.slider('슬라이더를 움직여보세요.', 0, 200, 1)
         return hbit
 
