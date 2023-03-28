@@ -1,6 +1,6 @@
 import pandas as pd
 import joblib
-
+import streamlit as st
 # @st.cache
 # df 생성
 class CreateData:
@@ -12,7 +12,8 @@ class CreateData:
     def load_df(self):
         try:
             data = joblib.load(self.jobs)
-        except :
+        except Exception as e:
+            st.error(e)
             return False
         return data
 
