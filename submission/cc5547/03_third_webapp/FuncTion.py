@@ -4,7 +4,7 @@ import pandas as pd
 
 class Function:
     def __init__(self, data, blood, clst, hbit, gender, heart, age) -> None:
-        self.data = data
+        self.data = data.astype(np.float32)
         self.blood = blood
         self.clst = clst
         self.hbit = hbit
