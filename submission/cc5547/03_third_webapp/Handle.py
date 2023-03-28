@@ -29,7 +29,7 @@ def get_function():
     ment = fc.ment()
     return ment
 
-def user_interface(name, age):
+def user_interface(age, sex):
     st.title("신도시에서 살아남기............")
 
     col1, col2 = st.columns([5, 5])
@@ -54,14 +54,16 @@ def user_interface(name, age):
 def main() :
     # 객체 return 받기
     df = get_data()
-    name, age, on_off = get_sidebar(df)
+    age, sex = get_sidebar(df)
     ment = get_function()
 
-    if on_off is True :
-        user_interface(name, age)
-    else : 
-        img = "https://i.imgur.com/GoeOLuK.gif"
-        st.image(img, width=1000)
+    user_interface(age, sex)
+
+    # if on_off is True :
+    #     user_interface(name, age)
+    # else : 
+    #     img = "https://i.imgur.com/GoeOLuK.gif"
+    #     st.image(img, width=1000)
         
         
 
