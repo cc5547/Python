@@ -30,7 +30,7 @@ class Sidebar:
     # 혈압 int
     def blood_pressure(self) :
         blood = self.s.slider('혈압을 입력해주세요.', 0, 200, 1)
-        return age
+        return blood
 
     # 콜레스트롤 int 
     def cholesterol(self) : 
