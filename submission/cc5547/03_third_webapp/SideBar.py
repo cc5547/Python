@@ -52,4 +52,4 @@ class Sidebar:
         clst = self.cholesterol()
         hbit = self.heart_beat()
 
-        return age, gender, blood, clst, hbit
+        return age, gender, heart, blood, clst, hbit
