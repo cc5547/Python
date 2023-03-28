@@ -29,9 +29,10 @@ def get_function():
     return ment
 
 def user_interface(result):
-
     st.title("신도시에서 살아남기............")
+
     col1, col2 = st.columns([5, 5])
+
     with col1 :
         # Title
         st.title("컬럼1")
@@ -58,11 +59,8 @@ def main() :
     if on_off is True :
         user_interface(result)
     else : 
-        gif_path = 'https://i.imgur.com/MsodAa1.gif'
-        
-        with st.spinner('Loading GIF...'):
-            gif_bytes = imageio.imread(gif_path)
-            st.image(gif_bytes, width=1000)
+        img = "https://i.imgur.com/GoeOLuK.gif"
+        st.image(img, width=1200)
         
         
 
