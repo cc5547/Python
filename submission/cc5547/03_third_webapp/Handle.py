@@ -33,7 +33,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
     col1, col2 = st.columns([3, 7])
     with col1 :
         gender = "남자" if gender == 1 else "여자"
-        heart = "有" if heart == 1 else "無"
+        heart = "有" if heart == 0 else "無"
         
         st.write(f"## 👇분석 결과👇")
         st.write(f"### 👉 성별 : {gender}")
