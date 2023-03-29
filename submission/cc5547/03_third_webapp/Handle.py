@@ -23,9 +23,9 @@ def get_function(data, blood, clst, hbit, gender, heart, age):
     result = fc.create_model()
     return result
 
-def user_interface(blood, clst, hbit, gender, heart, age): 
+def user_interface(blood, clst, hbit, gender, heart, age) : 
     data = get_data()
-    tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
+    tf, tf_p, graph_1 = get_function(data, blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
@@ -44,7 +44,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"### 👉 심박수 : {hbit}bpm")
     with col2 : 
         tab1, tab2 = st.tabs(['탭_1_그래프_1' , '탭_2_그래프_2'])
-        st.write("구랴프자리")
+        st.pyplot(graph_1)
     st.markdown("---")
     if tf == 1 : st.write("# 분석 결과 👉 <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
     elif tf == 0 : st.write("# 분석 결과 👉 <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
