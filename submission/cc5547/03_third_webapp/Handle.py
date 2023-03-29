@@ -59,6 +59,9 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
+    sb = Sidebar()  # 사이드바 객체 생성
+    age = sb.account_age()
+    
     if age != "" :
         user_interface(get_sidebar())
     else : 
