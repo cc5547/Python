@@ -25,9 +25,9 @@ class Sidebar:
 
     # 성별 받기 float로 후에 형변환
     def gender_choice(self, hbit):
-        if hbit is not None and hbit > 1 :
-            if self.s.radio('성별을 선택 해주세요.', self.gender_c) == "남자" : return 1
-            else : return 0
+        if hbit is not None and hbit > 1 : return 1 if self.s.radio('성별을 선택 해주세요.', self.gender_c) == "남자" else 0
+            # if self.s.radio('성별을 선택 해주세요.', self.gender_c) == "남자" : return 1
+            # else : return 0
         else : return None
         
     # 심장병 유무 int로 후에 형변환
