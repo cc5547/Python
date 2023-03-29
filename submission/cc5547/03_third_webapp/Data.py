@@ -2,9 +2,9 @@ import pandas as pd
 import joblib
 import streamlit as st
 # @st.cache
-# df 생성
+
+# data 생성
 class CreateData:
-    # df URL
     def __init__(self) -> None:
         self.jobs = "submission/cc5547/03_third_webapp/xgb_model.joblib"
 
@@ -13,8 +13,8 @@ class CreateData:
         try:
             data = joblib.load(self.jobs)
             return data
-        except Exception as e:
-            return st.error(e)
+        except Exception as e : return st.error(e)
+        
     # 메인에서 호출 한번에 처리할 것 
     def create_data(self) : 
         data = self.load_df()
