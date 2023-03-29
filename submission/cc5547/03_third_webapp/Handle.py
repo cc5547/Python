@@ -45,6 +45,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
         st.write("버전 : ", joblib.__version__)
+        
         if tf == 1:
             st.write(tf)
         elif tf == 0:

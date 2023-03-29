@@ -5,7 +5,7 @@ import pandas as pd
 class Sidebar:
     def __init__(self) -> None:
         self.s = st.sidebar
-        self.space = ""
+        self.age = ""
         self.gender_c = ['남자', '여자']
         self.y_n = ['예', '아니오']
 
@@ -48,7 +48,7 @@ class Sidebar:
     # 나이 받기 float
     def account_age(self, hbit):
         if hbit is not None and hbit > 1 :
-            age = self.s.text_input('나이를 입력해 주세요.', self.space)
+            age = self.s.text_input('나이를 입력해 주세요.', self.age)
             return age
         else : return ""
 
@@ -59,6 +59,6 @@ class Sidebar:
         hbit = self.heart_beat(clst)
         gender = self.gender_choice(hbit)
         heart = self.heart_sick(hbit)
-        age = self.account_age(hbit)
+        self.age = self.account_age(hbit)
 
-        return blood, clst, hbit, gender, heart, age
+        return blood, clst, hbit, gender, heart, self.age
