@@ -1,15 +1,16 @@
 
 import streamlit as st
-import UI
+from UI import user_interface
 from Handle import Get
 
 # main 시작점
 def main():
     # 사이드바 문진표를 통해 사용자의 정보를 받아온다.
+    ui = user_interface()
     get = Get()
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
 
-    if age != "" : UI.user_interface(blood, clst, hbit, gender, heart, age)
+    if age != "" : ui.user_interface(blood, clst, hbit, gender, heart, age)
     else : st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
     
 # 메인 실행
