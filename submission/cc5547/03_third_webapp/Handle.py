@@ -25,9 +25,15 @@ def get_function(data, blood, clst, hbit, gender, heart, age):
     result = fc.create_model()
     return result
 
-def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
+def user_interface(blood, clst, hbit, gender, heart, age): 
+    # blood, clst, hbit, gender, heart, age
+    data = get_data()
+    tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
+
+
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
+    
 
     gender = "남자" if gender == 1 else "여자"
     heart = "유" if heart else "무"
@@ -53,11 +59,7 @@ def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    data = get_data()
-    blood, clst, hbit, gender, heart, age = get_sidebar()
-    tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
-
-    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p)
+    if age != "" : user_interface(get_sidebar())
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
