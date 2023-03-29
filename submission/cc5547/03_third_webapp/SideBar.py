@@ -41,8 +41,8 @@ class Sidebar:
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 :
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
-            if heart == "예" : return 1 
-            else : return 0
+            if heart == "예" : return 0 
+            else : return 1
         else : return None
 
     # 나이 받기 float
