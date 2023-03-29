@@ -8,9 +8,11 @@ def main():
     get = Get()
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
 
+    # 사이드바에서 마지막 나이를 받을때 ""이 아니라면 UI.user_interface() 실행
     if age != "" : 
         UI.user_interface(blood, clst, hbit, gender, heart, age)
     else : 
+        # ""이라면 톱니바퀴
         st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
     
 # 메인 실행
