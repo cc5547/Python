@@ -18,13 +18,12 @@ class Sidebar:
     # 콜레스트롤 int로 후에 형변환 
     def cholesterol(self, blood) : 
         return self.s.slider('콜레스트롤을 입력하세요.', 0, 500, 1) if blood is not None and blood > 1 else None
-        # if blood is not None and blood > 1 : return self.s.slider('콜레스트롤을 입력하세요.', 0, 500, 1)
-        # else : return None
     
     # 심박수 int로 후에 형변환
     def heart_beat(self, clst) : 
-        if clst is not None and clst > 1 : return self.s.slider('심박수를 입력하세요', 0, 500, 1)
-        else : return None
+        return self.s.slider('심박수를 입력하세요', 0 500, 1) if blood is not None and clst > 1 else None
+        # if clst is not None and clst > 1 : return self.s.slider('심박수를 입력하세요', 0, 500, 1)
+        # else : return None
 
     # 성별 받기 float로 후에 형변환
     def gender_choice(self, hbit):
