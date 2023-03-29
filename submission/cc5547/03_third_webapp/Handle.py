@@ -28,12 +28,12 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
+    st.markdown("---")
     col1, col2 = st.columns([3, 7])   
     with col1 :
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 1 else "無"
-
-        st.markdown("---")
+        
         st.write(f"## 👇분석 결과👇")
         st.write(f"### 성별 : {gender}")
         st.write(f"### 나이 : {age}세")
@@ -41,11 +41,11 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"### 혈압 : {blood}mmHg")
         st.write(f"### 콜레스트롤 : {clst}TC")
         st.write(f"### 심박수 : {hbit}bpm")
-        st.markdown("---")
-        if tf == 1 : st.write("# 분석 결과 -> <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
-        elif tf == 0 : st.write("# 분석 결과 -> <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
-        st.write(f"당신 죽을 확률{tf_p}")
     with col2 : st.write("컬럼2")
+    st.markdown("---")
+    if tf == 1 : st.write("# 분석 결과 -> <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
+    elif tf == 0 : st.write("# 분석 결과 -> <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
+    st.write(f"당신 죽을 확률{tf_p}")
 
 # main 시작점
 def main():
