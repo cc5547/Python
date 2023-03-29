@@ -22,5 +22,4 @@ class Function:
 
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
-
         return tf, tf_p

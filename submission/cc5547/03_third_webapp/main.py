@@ -1,7 +1,6 @@
 
 import streamlit as st
-from Get_Class import Get
-
+from Handle import Get
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 def user_interface(blood, clst, hbit, gender, heart, age) : 
@@ -47,7 +46,7 @@ def main():
 # 메인 실행
 if __name__ == '__main__':
     main()
-    
+
 # 노션 옹되 = https://www.notion.so/82e465017bfe45dd82bbf78b46f24469
 # 노션 쟂인 = https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa
 # @st.cache_data
