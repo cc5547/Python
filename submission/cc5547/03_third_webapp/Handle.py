@@ -15,7 +15,10 @@ class Get:
     def get_sidebar(self) : return self.sb.result_sidebar()
 
     # FuncTion.py의 Function클래스의 return 받아 오기 // 추후 기능부로 수정하기
-    def get_function(self, data, blood, clst, hbit, gender, heart, age):
-        # 머신 러닝 <- 형변환
-        fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성 타입 형변환
+    def get_function(self) : 
+        fc = Function(self.get_data, self.get_data)
         return fc.create_model()
+    # def get_function(self, data, blood, clst, hbit, gender, heart, age):
+    #     # 머신 러닝 <- 형변환
+    #     fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성 타입 형변환
+    #     return fc.create_model()
