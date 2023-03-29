@@ -17,7 +17,7 @@ class Get:
         result = sb.result_sidebar()
         return result
 
-    # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
+    # FuncTion.py의 Function클래스의 return 받아 오기 // 추후 기능부로 수정하기
     def get_function(self, data, blood, clst, hbit, gender, heart, age):
         fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성 타입 형변환
         result = fc.create_model()
