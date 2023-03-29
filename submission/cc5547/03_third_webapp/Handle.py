@@ -32,15 +32,12 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
-    
-
-    # gender = "남자" if gender == 1 else "여자"
-    # heart = "유" if heart else "무"
         
     with col1:
-        # Title
-        st.write(f"나이는 {age}세 입니다.")
-        st.write(f"성별은 {gender} 입니다.")
+        if gender == 1: gender == "남자"
+        else : gender == "여자"
+        st.write(f"## 분석 결과 -> 성별 : {gender} 나이 : {age}세, ")
+        
         st.write(f"심장질환 유뮤 : {heart}")
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
