@@ -41,8 +41,8 @@ class Sidebar:
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 :
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
-            if heart == "예" : return True 
-            else : return None
+            if heart == "예" : return 1 
+            else : return 0
         else : return None
 
     # 나이 받기 float
@@ -50,7 +50,7 @@ class Sidebar:
         if hbit is not None and hbit > 1 :
             age = self.s.text_input('나이를 입력해 주세요.', self.age)
             return age
-        else : return ""
+        else : return self.age
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
     def result_sidebar(self):
@@ -59,6 +59,6 @@ class Sidebar:
         hbit = self.heart_beat(clst)
         gender = self.gender_choice(hbit)
         heart = self.heart_sick(hbit)
-        self.age = self.account_age(hbit)
+        age = self.account_age(hbit)
 
-        return blood, clst, hbit, gender, heart, self.age
+        return blood, clst, hbit, gender, heart, age
