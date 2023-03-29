@@ -21,11 +21,11 @@ class Function:
 
     def create_graph(self, tf_p) :
         probabilities = []
-        for self.clst in range(self.clst, 150, -1):
+        for clst in range(clst, 150, -1):
             probabilities.append(tf_p)
             if tf_p < 0.5:
                 break
-        plt.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
+        plt.plot(range(clst, clst-len(probabilities), -1), probabilities)
         plt.xlabel("Cholesterol")
         plt.ylabel("Probability of Heart Disease")
         plt.title("Probability of Heart Disease by Cholesterol Level")
