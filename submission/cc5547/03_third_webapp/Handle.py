@@ -2,9 +2,7 @@ import streamlit as st
 from Data import CreateData
 from FuncTion import Function
 from SideBar import Sidebar
-import joblib
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
-
 
 # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
 @st.cache_data
@@ -30,25 +28,19 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
     st.title("🦾 입력한 정보로 분석한 결과 입니다.")
-    col1, col2 = st.columns([8, 2])
-        
+    col1, col2 = st.columns([8, 2])   
     with col1:
-        if gender == 1: 
-            gender = "남자"
-        else : 
-            gender ="여자"
+        if gender == 1:gender = "남자"
+        else : gender ="여자"
 
-        st.write(f"## 분석 결과 -> 성별 : {gender} 나이 : {age}세, ")
-        st.write(f"심장질환 유뮤 : {heart}")
+        st.write(f"## 분석 결과👇")
+        st.write(f"### 성별 : {gender} 나이 : {age}세, ")
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
-        st.write("버전 : ", joblib.__version__)
         
-        if tf == 1:
-            st.write(tf)
-        elif tf == 0:
-            st.write(tf)
+        if tf == 1 : st.write("고혈압")
+        elif tf == 0 : st.write("정상")
 
         st.write(f"당신 죽을 확률{tf_p}")
 
@@ -62,8 +54,9 @@ def main():
     if age != "" :
         user_interface(blood, clst, hbit, gender, heart, age)
     else : 
-        img = "https://i.imgur.com/ktulthH.gif"
-        st.image(img, width = 1000)
+        st.markdown("[![Foo](https://i.imgur.com/ktulthH.gif)](https://map.naver.com/)")
+        # img = "https://i.imgur.com/ktulthH.gif"
+        # st.image(img, width = 1000)
 
 # 메인 실행
 if __name__ == '__main__':
