@@ -33,12 +33,12 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         if gender == 1:gender = "남자"
         else : gender ="여자"
         st.markdown("---")
-            st.write(f"## 👇분석 결과👇")
-            st.write(f"### 성별 : {gender}")
-            st.write(f"### 나이 : {age}세")
-            st.write(f"### 혈압 : {blood}mmHg")
-            st.write(f"### 콜레스트롤 : {clst}TC")
-            st.write(f"### 심박수 : {hbit}bpm")
+        st.write(f"## 👇분석 결과👇")
+        st.write(f"### 성별 : {gender}")
+        st.write(f"### 나이 : {age}세")
+        st.write(f"### 혈압 : {blood}mmHg")
+        st.write(f"### 콜레스트롤 : {clst}TC")
+        st.write(f"### 심박수 : {hbit}bpm")
         st.markdown("---")
         if tf == 1 : st.write("# 분석 결과 -> <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
         elif tf == 0 : st.write("# 분석 결과 -> <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
