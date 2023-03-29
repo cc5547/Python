@@ -18,7 +18,10 @@ def get_sidebar():
     sb = Sidebar()  # 객체 생성
     result = sb.result_sidebar()
     return result
-
+def get_age():
+    sb = Sidebar()
+    age = sb.account_age()
+    return age
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
 def get_function(data, blood, clst, hbit, gender, heart, age):
     fc = Function(data, blood, clst, hbit, gender, heart, age)  # 객체 생성
@@ -59,9 +62,8 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    sb = Sidebar()  # 사이드바 객체 생성
-    age = sb.account_age()
-    
+    age = get_age()
+
     if age != "" :
         user_interface(get_sidebar())
     else : 
