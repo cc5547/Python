@@ -46,15 +46,17 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         if tf == 1 : st.write("# 분석 결과 👉 <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
         elif tf == 0 : st.write("# 분석 결과 👉 <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
         st.write(f"# 결과에 실망하지 마세요😭 확률을 알려드립니다 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}")
-    st.markdown("---")
+        st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
     
-
 # main 시작점
 def main():
     # 사이드바 문진표를 통해 사용자의 정보를 받아온다.
     blood, clst, hbit, gender, heart, age = get_sidebar()
+
     if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
     else : st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
+if st.button("마무리"):
+            st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
 # 메인 실행
 if __name__ == '__main__':
     main()
