@@ -1,6 +1,7 @@
 import streamlit as st
 import UI
 from Handle import Get
+img_url = '<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>'
 
 # main 시작점
 def main():
@@ -13,7 +14,7 @@ def main():
         UI.user_interface(blood, clst, hbit, gender, heart, age)
     else : 
         # ""이라면 톱니바퀴
-        st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
+        st.markdown(img_url, unsafe_allow_html=True)
     
 # 메인 실행
 if __name__ == '__main__':
