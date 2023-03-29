@@ -18,13 +18,15 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 0 else "無"
         
-        st.write(f"## 👇분석 결과👇")
-        st.write(f"### 👉 성별 : {gender}")
-        st.write(f"### 👉 나이 : {age}세")
-        st.write(f"### 👉 심장병(有, 無) : {heart}")
-        st.write(f"### 👉 혈압 : {blood}mmHg")
-        st.write(f"### 👉 콜레스트롤 : {clst}TC")
-        st.write(f"### 👉 심박수 : {hbit}bpm")
+        st.write(f"""
+            ## 👇분석 결과👇
+            ### 👉 성별 : {gender}
+            ### 👉 나이 : {age}세
+            ### 👉 심장병(有, 無) : {heart}
+            ### 👉 혈압 : {blood}mmHg
+            ### 👉 콜레스트롤 : {clst}TC
+            ### 👉 심박수 : {hbit}bpm
+        """)
     with col2 : 
         if tf == 0 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
         elif tf == 1 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
