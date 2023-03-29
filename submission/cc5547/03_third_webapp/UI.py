@@ -6,9 +6,9 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 def user_interface(blood, clst, hbit, gender, heart, age) : 
     if st.button("") : st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
     
-    get = Get()
+    # get = Get()
     
-    tf, tf_p = get.get_function(get.get_data(), blood, clst, hbit, gender, heart, age)
+    tf, tf_p = Get.get_function(Get.get_data(), blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
@@ -32,7 +32,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         if tf == 0 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
         elif tf == 1 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
         else : pass
-        
+
         st.write(f"""
             ## 결과에 실망하지 마세요😭
             ### 👇확률을 알려드립니다👇
