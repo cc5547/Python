@@ -41,20 +41,17 @@ class Sidebar:
     # 심장병 유무 int로 후에 형변환
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 :
-            heart = self.s.radio('심장병이 있습니까?', self.y_n)
-            if heart == "예" : return 0 
+            if self.s.radio('심장병이 있습니까?', self.y_n) == "예" : return 0 
             else : return 1
         else : return None
 
     # 나이 받기 float로 후에 형변환
     def account_age(self, hbit):
-        if hbit is not None and hbit > 1 :
-            age = self.s.text_input('나이를 입력해 주세요.', self.age)
-            return age
+        if hbit is not None and hbit > 1 : return self.s.text_input('나이를 입력해 주세요.', self.age)
         else : return self.age
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 handle에서 이 함수를 호출함.
-    def result_sidebar(self):
+    def result_sidebar(self) :
         blood = self.blood_pressure()
         clst = self.cholesterol(blood)
         hbit = self.heart_beat(clst)
