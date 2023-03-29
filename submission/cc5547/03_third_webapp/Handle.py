@@ -20,9 +20,8 @@ def get_sidebar():
     return result
 
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
-# float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)
 def get_function(data, blood, clst, hbit, gender, heart, age):
-    fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성
+    fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성 타입 형변환
     result = fc.create_model()
     return result
 
@@ -34,10 +33,12 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     col1, col2 = st.columns([5, 5])
         
     with col1:
-        if gender == 1: gender == "남자"
-        else : gender == "여자"
+        if gender == 1: 
+            gender == "남자"
+        else : 
+            gender == "여자"
+
         st.write(f"## 분석 결과 -> 성별 : {gender} 나이 : {age}세, ")
-        
         st.write(f"심장질환 유뮤 : {heart}")
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
