@@ -29,8 +29,8 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     data = get_data()
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
-    st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
-    col1, col2 = st.columns([5, 5])
+    st.title("입력한 정보로 분석한 결과 입니다.🦾")
+    col1, col2 = st.columns([8, 2])
         
     with col1:
         if gender == 1: 
