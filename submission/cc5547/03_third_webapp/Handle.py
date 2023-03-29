@@ -28,7 +28,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
-    col1, col2 = st.columns([8, 2])   
+    col1, col2 = st.columns([3, 7])   
     with col1 :
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 1 else "無"
