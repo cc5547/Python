@@ -6,7 +6,7 @@ st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 def user_interface(blood, clst, hbit, gender, heart, age) : 
     if st.button("") : st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
     
-    get = Get(get.get_data(), blood, clst, hbit, gender, heart, age)
+    get = Get()
     
     tf, tf_p = get.get_function(get.get_data(), blood, clst, hbit, gender, heart, age)
 
