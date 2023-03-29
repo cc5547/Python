@@ -19,11 +19,6 @@ def get_sidebar():
     result = sb.result_sidebar()
     return result
 
-def get_age():
-    g_age = Sidebar()
-    age = g_age.account_age()
-    return age
-
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
 def get_function(data, blood, clst, hbit, gender, heart, age):
     fc = Function(data, blood, clst, hbit, gender, heart, age)  # 객체 생성
@@ -31,10 +26,8 @@ def get_function(data, blood, clst, hbit, gender, heart, age):
     return result
 
 def user_interface(blood, clst, hbit, gender, heart, age): 
-    # blood, clst, hbit, gender, heart, age
     data = get_data()
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
-
 
     st.title(":smile: 입력한 정보로 분석한 결과 입니다. :smile:")
     col1, col2 = st.columns([5, 5])
@@ -64,10 +57,10 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    age = get_age()
+    blood, clst, hbit, gender, heart, age = get_sidebar()
 
     if age != "" :
-        user_interface(get_sidebar())
+        user_interface(blood, clst, hbit, gender, heart, age)
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
