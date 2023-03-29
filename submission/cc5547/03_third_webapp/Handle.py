@@ -54,7 +54,8 @@ def main():
     if age != "" :
         user_interface(blood, clst, hbit, gender, heart, age)
     else : 
-        st.markdown('<a href="https://map.naver.com/"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
+        
         # st.markdown("[![Foo](https://i.imgur.com/ktulthH.gif)](https://map.naver.com/)")
         # img = "https://i.imgur.com/ktulthH.gif"
         # st.image(img, width = 1000)
