@@ -59,7 +59,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
 
 # main 시작점 최대한 간단하게 짜기.
 def main():
-    if age != "" : 
+    if age != "" :
         user_interface(get_sidebar())
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
