@@ -40,11 +40,12 @@ class Sidebar:
 
     # 후에 유지보수시 한번에 return 하는 용으로 만듬 handle에서 이 함수를 호출함.
     def result_sidebar(self) :
-        blood = self.blood_pressure()
-        clst = self.cholesterol(blood)
-        hbit = self.heart_beat(clst)
-        gender = self.gender_choice(hbit)
-        heart = self.heart_sick(hbit)
-        self.age = self.account_age(hbit)
+        # blood = self.blood_pressure()
+        # clst = self.cholesterol(blood)
+        # hbit = self.heart_beat(clst)
+        # gender = self.gender_choice(hbit)
+        # heart = self.heart_sick(hbit)
+        # self.age = self.account_age(hbit)
 
-        return blood, clst, hbit, gender, heart, self.age
+        # return blood, clst, hbit, gender, heart, self.age
+        return self.account_age(self.heart_sick(self.gender_choice(self.heart_beat(self.cholesterol(self.blood_pressure())))))
