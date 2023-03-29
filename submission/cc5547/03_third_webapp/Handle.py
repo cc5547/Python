@@ -55,8 +55,6 @@ def main():
 
     if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
     else : st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
-if st.button("마무리"):
-            st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
 # 메인 실행
 if __name__ == '__main__':
     main()
