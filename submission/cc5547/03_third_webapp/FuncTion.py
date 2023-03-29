@@ -30,7 +30,7 @@ class Function:
         plt.ylabel("Probability of Heart Disease")
         plt.title("Probability of Heart Disease by Cholesterol Level")
 
-        return plt.show()
+        return plt
 
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
