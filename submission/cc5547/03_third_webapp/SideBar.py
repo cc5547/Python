@@ -50,8 +50,8 @@ class Sidebar:
     def account_age(self, hbit):
         if hbit is not None and hbit > 1 :
             age = self.s.text_input('나이를 입력해 주세요.', self.age)
-            if type(age) != type(int):
-                self.account_age(hbit)
+            if age != self.age:
+                if type(age) != type(int) : self.account_age(hbit)
             return age
         else : return self.age
 
