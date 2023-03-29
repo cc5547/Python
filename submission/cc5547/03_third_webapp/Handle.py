@@ -45,7 +45,9 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
     with col2 : 
         if tf == 0 : st.write("# 분석 결과 👉 <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
         elif tf == 1 : st.write("# 분석 결과 👉 <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
-        st.write(f"# 결과에 실망하지 마세요😭 확률을 알려드립니다 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}")
+        st.write("# 결과에 실망하지 마세요😭")
+        st.write("# 👇확률을 알려드립니다 👇")
+        st.write("{', '.join([f'{p*100:.4f}%' for p in tf_p])}")
     
 # main 시작점
 def main():
