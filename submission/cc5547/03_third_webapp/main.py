@@ -1,31 +1,17 @@
+
 import streamlit as st
-from Data import CreateData
-from FuncTion import Function
-from SideBar import Sidebar
+from Get_Class import Get
+
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
-# DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
-# @st.cache_data
-def get_data():
-    dt = CreateData()  # 객체 생성
-    data = dt.create_data()
-    return data
-
-# SideBar.py의 Sidebar 클래스의 sidebar()를 통해 사이드바 생성 및 기능 구현
-def get_sidebar():
-    sb = Sidebar()  # 객체 생성
-    result = sb.result_sidebar()
-    return result
-
-# FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
-def get_function(data, blood, clst, hbit, gender, heart, age):
-    fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성 타입 형변환
-    result = fc.create_model()
-    return result
-
 def user_interface(blood, clst, hbit, gender, heart, age) : 
-    data = get_data()
-    tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
+    if st.button("") : st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
+    
+    get = Get()
+    
+    data = get.get_data()
+    
+    tf, tf_p = get.get_function(data, blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
@@ -52,14 +38,16 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
 # main 시작점
 def main():
     # 사이드바 문진표를 통해 사용자의 정보를 받아온다.
-    blood, clst, hbit, gender, heart, age = get_sidebar()
+    get = Get()
+    blood, clst, hbit, gender, heart, age = get.get_sidebar()
 
     if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
     else : st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
-    # 노션 옹되 = https://www.notion.so/82e465017bfe45dd82bbf78b46f24469
-    # 노션 쟂인 = https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa
-if st.button(""):
-            st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
+    
 # 메인 실행
 if __name__ == '__main__':
     main()
+    
+# 노션 옹되 = https://www.notion.so/82e465017bfe45dd82bbf78b46f24469
+# 노션 쟂인 = https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa
+# @st.cache_data
