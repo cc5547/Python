@@ -31,16 +31,21 @@ class Function:
         # plt.title("Probability of Heart Disease by Cholesterol Level")
 
         # return plt
-        plt.xlabel("Cholesterol")
-        plt.ylabel("Probability of Heart Disease")
-        plt.title("Probability of Heart Disease by Cholesterol Level")
+        probabilities = []
+        clst_val = self.clst
+        for i in range(clst_val, 150, -1):
+            probabilities.append(tf_p)
+            if tf_p < 0.5:
+                break
+            clst_val -= 1
 
-        while tf_p >= 0.5 and self.clst <= 150:
-            plt.plot(self.clst, tf_p, 'bo')
-            self.clst += 1
-            tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
-
-        return plt
+        fig, ax = plt.subplots()
+        ax.plot(range(self.clst, self.clst - len(probabilities), -1), probabilities)
+        ax.set_xlabel("Cholesterol")
+        ax.set_ylabel("Probability of Heart Disease")
+        ax.set_title("Probability of Heart Disease by Cholesterol Level")
+        
+        return fig
 
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
