@@ -27,13 +27,13 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     data = get_data()
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
-    st.title("입력한 정보로 분석한 결과 입니다.🦾")
+    st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     col1, col2 = st.columns([8, 2])   
     with col1:
         if gender == 1:gender = "남자"
         else : gender ="여자"
         st.markdown("---")
-        st.write(f"## 분석 결과👇")
+        st.write(f"## 👇분석 결과👇")
         st.write(f"### 성별 : {gender}")
         st.write(f"### 나이 : {age}세")
         st.write(f"### 혈압 : {blood}mmHg")
