@@ -9,10 +9,12 @@ class Get : # test
         self.sb = Sidebar()
         
     # joblib불러오기
-    def get_data(self) : return self.dt.create_data()
+    def get_data(self) : 
+        return self.dt.create_data()
 
     # SideBar.py의 Sidebar 클래스의 result_sidebar()를 통해 사이드바의 모든 입력값 return 받기
-    def get_sidebar(self) : return self.sb.result_sidebar()
+    def get_sidebar(self) : 
+        return self.sb.result_sidebar()
 
     # FuncTion.py의 Function클래스의 return 받아 오기 // 추후 기능부로 수정하기
     def get_function(self, data, blood, clst, hbit, gender, heart, age):
