@@ -5,7 +5,7 @@ from SideBar import Sidebar
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 # DataFrame.py의 CreateDataFrame 클래스의 create_df()에서 데이터프레임 생성
-@st.cache_data
+# @st.cache_data
 def get_data():
     dt = CreateData()  # 객체 생성
     data = dt.create_data()
@@ -41,7 +41,8 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"### 혈압 : {blood}mmHg")
         st.write(f"### 콜레스트롤 : {clst}TC")
         st.write(f"### 심박수 : {hbit}bpm")
-    with col2 : st.write("컬럼2")
+    with col2 : 
+        wt.write()
     st.markdown("---")
     if tf == 1 : st.write("# 분석 결과 -> <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
     elif tf == 0 : st.write("# 분석 결과 -> <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
