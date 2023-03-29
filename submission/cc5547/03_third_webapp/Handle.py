@@ -30,7 +30,6 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
     col1, col2 = st.columns([3, 7])
-    tab1, tab2 = st.tabs(['탭_1_그래프_1' , '탭_2_그래프_2'])   
     
     with col1 :
         gender = "남자" if gender == 1 else "여자"
@@ -44,7 +43,8 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"### 👉 콜레스트롤 : {clst}TC")
         st.write(f"### 👉 심박수 : {hbit}bpm")
     with col2 : 
-       st.line_chart(tf)
+        tab1, tab2 = st.tabs(['탭_1_그래프_1' , '탭_2_그래프_2'])
+        st.line_chart(tf)
     st.markdown("---")
     if tf == 1 : st.write("# 분석 결과 👉 <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
     elif tf == 0 : st.write("# 분석 결과 👉 <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
