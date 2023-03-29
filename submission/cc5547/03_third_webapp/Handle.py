@@ -4,7 +4,7 @@ from FuncTion import Function
 
 # Data, FuncTion, SideBar Class 들의 return 값들을 다 받아 오는 클래스 
 class Get:
-    def __init__(self, data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age)) -> None:
+    def __init__(self, data, blood, clst, hbit, gender, heart, age) -> None:
         self.dt = CreateData()
         self.sb = Sidebar()
         self.fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))
