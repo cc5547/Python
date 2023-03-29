@@ -21,7 +21,7 @@ class Function:
 
     def create_graph(self, tf_p) :
         probabilities = []
-        for col_val in range(col, 150, -1):
+        for col in range(col, 150, -1):
             probabilities.append(tf_p)
             if tf_p < 0.5:
                 break
