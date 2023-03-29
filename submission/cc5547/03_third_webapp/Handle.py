@@ -62,7 +62,7 @@ def main():
     if age != "" :
         user_interface(blood, clst, hbit, gender, heart, age)
     else : 
-        img = "https://i.imgur.com/rDN49gl.gif"
+        img = "https://i.imgur.com/ktulthH.gif"
         st.image(img, width = 1000)
 
 # 메인 실행
