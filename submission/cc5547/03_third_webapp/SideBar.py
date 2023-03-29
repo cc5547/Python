@@ -37,7 +37,7 @@ class Sidebar:
             else : return 0
         else : return None
         
-    # 심장병 유무
+    # 심장병 유무 int
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 :
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
