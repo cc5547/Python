@@ -31,8 +31,6 @@ class Sidebar:
     # 심장병 유무 int로 후에 형변환
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 : return 0 if self.s.radio('심장병이 있습니까?', self.y_n) == "예" else 1
-            # if self.s.radio('심장병이 있습니까?', self.y_n) == "예" : return 0 
-            # else : return 1
         else : return None
 
     # 나이 받기 float로 후에 형변환
