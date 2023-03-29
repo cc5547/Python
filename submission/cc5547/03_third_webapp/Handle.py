@@ -34,9 +34,9 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         
     with col1:
         if gender == 1: 
-            gender == "남자"
+            gender = "남자"
         else : 
-            gender == "여자"
+            gender ="여자"
 
         st.write(f"## 분석 결과 -> 성별 : {gender} 나이 : {age}세, ")
         st.write(f"심장질환 유뮤 : {heart}")
