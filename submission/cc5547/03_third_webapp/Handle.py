@@ -2,7 +2,7 @@ import streamlit as st
 from Data import CreateData
 from FuncTion import Function
 from SideBar import Sidebar
-
+import joblib
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 
@@ -40,7 +40,7 @@ def user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p):
         st.write(f"혈압 : {blood}")
         st.write(f"콜레스트롤 : {clst}")
         st.write(f"심박수 : {hbit}")
-        
+        st.write("버전 : ", joblib.__version__)
         if tf == 1:
             st.write(tf)
         elif tf == 0:
@@ -57,7 +57,7 @@ def main():
     blood, clst, hbit, gender, heart, age = get_sidebar()
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
-    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p)
+    if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
