@@ -32,34 +32,31 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     with col1:
         if gender == 1:gender = "남자"
         else : gender ="여자"
-
         st.write(f"## 분석 결과👇")
-        st.write(f"### 성별 : {gender} 나이 : {age}세, ")
-        st.write(f"혈압 : {blood}")
-        st.write(f"콜레스트롤 : {clst}")
-        st.write(f"심박수 : {hbit}")
+        st.write(f"### 성별 : {gender}")
+        st.write(f"### 나이 : {age}세")
+        st.write(f"### 혈압 : {blood}세")
+        st.write(f"### 콜레스트롤 : {clst}세")
+        st.write(f"### 심박수 : {hbit}세")
+        if tf == 1 : 
+            st.write("# 분석 결과 <span style='color:red'>고혈압</span> 입니다.")
+            # st.write("# 고혈압 분석 결과 고혈압 입니다.")
+        elif tf == 0 : 
+            st.write("# 분석 결과 <span style='color:red'>정상</span> 입니다.")
         
-        if tf == 1 : st.write("고혈압")
-        elif tf == 0 : st.write("정상")
 
         st.write(f"당신 죽을 확률{tf_p}")
 
     with col2:
         st.write("컬럼2")
 
-# main 시작점 최대한 간단하게 짜기.
+# main 시작점
 def main():
+    # 사이드바 문진표를 통해 사용자의 정보를 받아온다.
     blood, clst, hbit, gender, heart, age = get_sidebar()
 
-    if age != "" :
-        user_interface(blood, clst, hbit, gender, heart, age)
-    else : 
-        st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
-        
-        # st.markdown("[![Foo](https://i.imgur.com/ktulthH.gif)](https://map.naver.com/)")
-        # img = "https://i.imgur.com/ktulthH.gif"
-        # st.image(img, width = 1000)
-
+    if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
+    else : st.markdown('<a href="https://www.notion.so/82e465017bfe45dd82bbf78b46f24469"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
 # 메인 실행
 if __name__ == '__main__':
     main()
