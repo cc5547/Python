@@ -6,6 +6,7 @@ from SideBar import Sidebar
 class Get:
     def __init__(self) -> None:
         pass
+        
     # joblib불러오기
     def get_data(self):
         dt = CreateData()  # 객체 생성
