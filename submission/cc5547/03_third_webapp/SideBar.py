@@ -59,6 +59,6 @@ class Sidebar:
         hbit = self.heart_beat(clst)
         gender = self.gender_choice(hbit)
         heart = self.heart_sick(hbit)
-        age = self.account_age(hbit)
+        self.age = self.account_age(hbit)
 
-        return blood, clst, hbit, gender, heart, age
+        return blood, clst, hbit, gender, heart, self.age
