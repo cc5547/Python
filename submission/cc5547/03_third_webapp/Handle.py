@@ -2,6 +2,7 @@ from Data import CreateData
 from FuncTion import Function
 from SideBar import Sidebar
 
+# Data, FuncTion, SideBar Class 들의 return 값들을 다 받아 오는 클래스 
 class Get:
     def __init__(self) -> None:
         pass
