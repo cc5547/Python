@@ -57,7 +57,7 @@ def main():
     blood, clst, hbit, gender, heart, age = get_sidebar()
     tf, tf_p = get_function(data, blood, clst, hbit, gender, heart, age)
 
-    if age != "" : user_interface(blood, clst, hbit, gender, heart, age)
+    if age != "" : user_interface(blood, clst, hbit, gender, heart, age, tf, tf_p)
     else : 
         img = "https://i.imgur.com/rDN49gl.gif"
         st.image(img, width = 1000)
