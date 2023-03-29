@@ -51,7 +51,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
     if tf == 1 : st.write("# 분석 결과 -> <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
     elif tf == 0 : st.write("# 분석 결과 -> <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
     # st.write(f"# 당신 죽을 확률{tf_p}")
-    st.write(f"# 당신 죽을 확률 {', '.join(str(p) for p in tf_p).04f * 100}")
+    st.write(f"# 당신 죽을 확률 {', '.join(str(p) for p in tf_p)04f * 100}")
 
 # main 시작점
 def main():
