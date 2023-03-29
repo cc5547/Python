@@ -9,7 +9,7 @@ def main():
 
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
 
-    if age != "" : UI.user_interface(blood, clst, hbit, gender, heart, age)
+    if age != "" : UI.user_interface(get.get_sidebar())
     else : st.markdown(img_url, unsafe_allow_html=True)
     
 # 메인 실행
