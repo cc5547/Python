@@ -20,8 +20,9 @@ def get_sidebar():
     return result
 
 # FuncTion.py의 Function클래스의 ment 받아 오기 // 추후 기능부로 수정하기
+# float(self.age), float(self.gender), int(self.heart), int(self.blood), int(self.clst), int(self.hbit)
 def get_function(data, blood, clst, hbit, gender, heart, age):
-    fc = Function(data, blood, clst, hbit, gender, heart, age)  # 객체 생성
+    fc = Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age))  # 객체 생성
     result = fc.create_model()
     return result
 
