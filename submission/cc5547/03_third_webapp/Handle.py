@@ -44,10 +44,7 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         st.write(f"### 👉 콜레스트롤 : {clst}TC")
         st.write(f"### 👉 심박수 : {hbit}bpm")
     with col2 : 
-        with tab1 :
-            pass
-        with tab2 :
-            pass
+       st.line_chart(tf)
     st.markdown("---")
     if tf == 1 : st.write("# 분석 결과 👉 <span style='color:red'>고혈압</span> 입니다.", unsafe_allow_html=True)
     elif tf == 0 : st.write("# 분석 결과 👉 <span style='color:blue'>정상</span> 입니다.", unsafe_allow_html=True)
