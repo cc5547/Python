@@ -37,12 +37,12 @@ def user_interface(blood, clst, hbit, gender, heart, age):
         heart = "有" if heart == 1 else "無"
         
         st.write(f"## 👇분석 결과👇")
-        st.write(f"### 👉성별 : {gender}")
-        st.write(f"### 👉나이 : {age}세")
-        st.write(f"### 👉심장병(有, 無) : {heart}")
-        st.write(f"### 👉혈압 : {blood}mmHg")
-        st.write(f"### 👉콜레스트롤 : {clst}TC")
-        st.write(f"### 👉심박수 : {hbit}bpm")
+        st.write(f"### 👉 성별 : {gender}")
+        st.write(f"### 👉 나이 : {age}세")
+        st.write(f"### 👉 심장병(有, 無) : {heart}")
+        st.write(f"### 👉 혈압 : {blood}mmHg")
+        st.write(f"### 👉 콜레스트롤 : {clst}TC")
+        st.write(f"### 👉 심박수 : {hbit}bpm")
     with col2 : 
         with tab1 :
             pass
