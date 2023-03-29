@@ -4,6 +4,7 @@ from Handle import Get
 
 # main 시작점
 def main():
+
     # 사이드바 문진표를 통해 사용자의 정보를 받아온다.
     get = Get()
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
