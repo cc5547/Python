@@ -5,11 +5,11 @@ import streamlit as st
 
 # data 생성
 class CreateData:
-    def __init__(self) -> None:
+    def __init__(self) -> None :
         self.jobs = "submission/cc5547/03_third_webapp/xgb_model.joblib"
 
     # read 전처리 해줄 거 작성 하기
-    def load_df(self):
+    def load_df(self) :
         try : return joblib.load(self.jobs)
         except Exception as e : return st.error(e)
         
