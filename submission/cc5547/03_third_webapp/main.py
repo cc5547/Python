@@ -10,7 +10,9 @@ def main():
     get = Get()
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
 
-    if age != "" : ui.user_interface(blood, clst, hbit, gender, heart, age)
+    if age != "" : 
+        age = int(age)
+        ui.user_interface(blood, clst, hbit, gender, heart, age)
     else : st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>', unsafe_allow_html=True)
     
 # 메인 실행
