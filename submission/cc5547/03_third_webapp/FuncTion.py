@@ -20,15 +20,25 @@ class Function:
         return tf, tf_p
 
     def create_graph(self, tf_p) :
-        probabilities = []
-        for self.clst in range(self.clst, 150, -1):
-            probabilities.append(tf_p)
-            if tf_p < 0.5:
-                break
-        plt.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
+        # probabilities = []
+        # for self.clst in range(self.clst, 150, -1):
+        #     probabilities.append(tf_p)
+        #     if tf_p < 0.5:
+        #         break
+        # plt.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
+        # plt.xlabel("Cholesterol")
+        # plt.ylabel("Probability of Heart Disease")
+        # plt.title("Probability of Heart Disease by Cholesterol Level")
+
+        # return plt
         plt.xlabel("Cholesterol")
         plt.ylabel("Probability of Heart Disease")
         plt.title("Probability of Heart Disease by Cholesterol Level")
+
+        while tf_p >= 0.5 and self.clst <= 150:
+            plt.plot(self.clst, tf_p, 'bo')
+            self.clst += 1
+            tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
 
         return plt
 
