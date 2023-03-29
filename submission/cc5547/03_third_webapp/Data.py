@@ -10,9 +10,7 @@ class CreateData:
 
     # read 전처리 해줄 거 작성 하기
     def load_df(self):
-        try : 
-            data = joblib.load(self.jobs)
-            return data
+        try : return joblib.load(self.jobs)
         except Exception as e : return st.error(e)
         
     # handle에서 호출 / 한번에 처리할 것 
