@@ -10,27 +10,27 @@ class Sidebar:
         self.gender_c = ['남자', '여자']
         self.y_n = ['예', '아니오']
 
-    # 혈압 int
+    # 혈압 int로 후에 형변환
     def blood_pressure(self) :
         self.s.title('문진표를 작성해 주세요👇')
         blood = self.s.slider('혈압을 입력해주세요.', 0, 500, 1)
         return blood if blood > 1 else None
 
-    # 콜레스트롤 int 
+    # 콜레스트롤 int로 후에 형변환 
     def cholesterol(self, blood) : 
         if blood is not None and blood > 1 : 
             clst = self.s.slider('콜레스트롤을 입력하세요.', 0, 500, 1)
             return clst
         else : return None
     
-    # 심박수 int 
+    # 심박수 int로 후에 형변환
     def heart_beat(self, clst) : 
         if clst is not None and clst > 1 :
             hbit = self.s.slider('심박수를 입력하세요', 0, 500, 1)
             return hbit
         else : return None
 
-    # 성별 받기 float
+    # 성별 받기 float로 후에 형변환
     def gender_choice(self, hbit):
         if hbit is not None and hbit > 1 :
             gender = self.s.radio('성별을 선택 해주세요.', self.gender_c)
@@ -38,7 +38,7 @@ class Sidebar:
             else : return 0
         else : return None
         
-    # 심장병 유무 int
+    # 심장병 유무 int로 후에 형변환
     def heart_sick(self, hbit) : 
         if hbit is not None and hbit > 1 :
             heart = self.s.radio('심장병이 있습니까?', self.y_n)
@@ -46,14 +46,14 @@ class Sidebar:
             else : return 1
         else : return None
 
-    # 나이 받기 float
+    # 나이 받기 float로 후에 형변환
     def account_age(self, hbit):
         if hbit is not None and hbit > 1 :
             age = self.s.text_input('나이를 입력해 주세요.', self.age)
             return age
         else : return self.age
 
-    # 후에 유지보수시 한번에 return 하는 용으로 만듬 main에서 이 함수를 호출함.
+    # 후에 유지보수시 한번에 return 하는 용으로 만듬 handle에서 이 함수를 호출함.
     def result_sidebar(self):
         blood = self.blood_pressure()
         clst = self.cholesterol(blood)

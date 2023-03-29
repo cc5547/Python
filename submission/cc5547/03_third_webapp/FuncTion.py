@@ -20,6 +20,7 @@ class Function:
         # tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
         return tf, tf_p
 
+    # handle에서 밑 함수를 통하여 클래스 내부 함수를 한번에 다 호출
     def create_model(self):
         tf, tf_p = self.into_xgb_model()
         return tf, tf_p
