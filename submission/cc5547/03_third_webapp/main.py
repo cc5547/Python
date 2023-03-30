@@ -8,6 +8,7 @@ def main():
     get = Get()
 
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
+    
     if age != "" :
         UI.user_interface(blood, clst, hbit, gender, heart, age)  
     else : 
