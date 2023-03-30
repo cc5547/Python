@@ -1,14 +1,12 @@
 import streamlit as st
-from Handle import Get
+import Get
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 # 사용자가 보는 화면
 def user_interface(blood, clst, hbit, gender, heart, age) : 
     if st.button("") : st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 1000)
     
-    get = Get()
-    
-    tf, tf_p, graph = get.get_function(get.get_data(), blood, clst, hbit, gender, heart, age)
+    tf, tf_p, graph = Get.get_function(Get.get_data(), blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")

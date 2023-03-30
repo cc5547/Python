@@ -1,13 +1,11 @@
 import streamlit as st
 import UI
-from Handle import Get
+import Get
 img_url = '<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1200></a>'
 
 # main 시작점
 def main():
-    get = Get()
-
-    blood, clst, hbit, gender, heart, age = get.get_sidebar()
+    blood, clst, hbit, gender, heart, age = Get.get_sidebar()
     
     if age != "" :
         UI.user_interface(blood, clst, hbit, gender, heart, age)  
