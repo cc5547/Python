@@ -32,7 +32,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         """)
     
     with col2 : 
-        pass
+        st.pyplot(graph)
         
     st.write(f"""
         ## 결과에 실망하지 마세요😭
