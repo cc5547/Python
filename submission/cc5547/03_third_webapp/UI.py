@@ -37,7 +37,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         st.write(f"""
         ## 결과에 실망하지 마세요😭
         ### 👉확률을 알려드립니다 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
-    """)  
+        """)  
     with col2 : 
         st.pyplot(graph)
         
