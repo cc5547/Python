@@ -26,7 +26,7 @@ class Function:
         
         probabilities = []
 
-        for i in range(i, 150, -1):
+        for self.clst in range(self.clst, 150, -1):
             prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
             # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:,0]
             probabilities.append(prob)
