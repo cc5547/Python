@@ -22,7 +22,7 @@ class Function:
 
     def create_graph(self) :
         # jobs = load("project2/xgb_model.joblib")
-        prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
+        # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
         
         probabilities = []
 
