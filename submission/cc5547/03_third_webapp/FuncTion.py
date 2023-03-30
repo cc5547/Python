@@ -40,14 +40,6 @@ class Function:
         ax.set_ylabel("Probability of Heart Disease")
         ax.set_title("Probability of Heart Disease by Cholesterol Level")
 
-        # 레이아웃 설정
-        fig.update_layout(
-            title='응시자 및 합격자',
-            xaxis_title='시험 분류',
-            yaxis_title='인원수',
-            plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-            width=1000,
-            height=700,)
         return fig
 
     # handle에서 밑 함수를 통하여 클래스 내부 함수를 한번에 다 호출
