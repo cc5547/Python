@@ -1,7 +1,7 @@
 import streamlit as st
 import UI
 from Handle import Get
-img_url = '<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a>'
+img_url = '<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1200></a>'
 
 # main 시작점
 def main():
