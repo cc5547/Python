@@ -36,6 +36,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
         ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
     with col2 : 
+        pass
         
         
 
