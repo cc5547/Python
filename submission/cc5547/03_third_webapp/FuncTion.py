@@ -26,7 +26,7 @@ class Function:
         
         probabilities = []
 
-        for col_val in range(self.clst, 150, -1):
+        for i in range(self.clst, 150, -1):
             prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
             probabilities.append(prob)
             if prob < 0.5:
