@@ -13,7 +13,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
 
-    col1, col2 = st.columns([3, 7])
+    col1, col2 = st.columns([4, 6])
     with col1 :
         if tf == 0 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
         elif tf == 1 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
