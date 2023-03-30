@@ -20,6 +20,26 @@ class Function:
         # tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
         return tf, tf_p
 
+    def create_graph(self) :
+        # jobs = load("project2/xgb_model.joblib")
+        prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
+        
+        probabilities = []
+
+        for col_val in range(self.clst, 150, -1):
+            prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
+            probabilities.append(prob)
+            if prob < 0.5:
+                break
+        fig, ax = plt.subplots()
+        ax.plot(range(col, col-len(probabilities), -1), probabilities)
+        ax.set_xlabel("Cholesterol")
+        ax.set_ylabel("Probability of Heart Disease")
+        ax.set_title("Probability of Heart Disease by Cholesterol Level")
+        return fig
+
     # handle에서 밑 함수를 통하여 클래스 내부 함수를 한번에 다 호출
     def result_model(self) : 
-        return self.create_model()
+        tf, tf_p = self.create_model()
+        graph = self.create_graph()
+        return tf, tf_p, graph

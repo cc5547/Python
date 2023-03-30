@@ -8,7 +8,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
     
     get = Get()
     
-    tf, tf_p = get.get_function(get.get_data(), blood, clst, hbit, gender, heart, age)
+    tf, tf_p, graph = get.get_function(get.get_data(), blood, clst, hbit, gender, heart, age)
 
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
     st.markdown("---")
