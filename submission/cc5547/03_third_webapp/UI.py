@@ -23,7 +23,7 @@ def user_interface(blood, clst, hbit, gender, heart, age) :
                                 # 😊 <span style='color:blue'>정상</span> 😊입니다. """, unsafe_allow_html=True)
         else : pass
         gender = "남자" if gender == 1 else "여자"
-        heart = "有" if heart == 0 else "無"
+        heart = "有" if heart == 1 else "無"
         
         st.write(f"""
             ## 👇분석 결과👇
