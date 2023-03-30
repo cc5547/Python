@@ -32,7 +32,7 @@ class Function:
             if prob < 0.5:
                 break
         fig, ax = plt.subplots()
-        ax.plot(range(col, col-len(probabilities), -1), probabilities)
+        ax.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
         ax.set_xlabel("Cholesterol")
         ax.set_ylabel("Probability of Heart Disease")
         ax.set_title("Probability of Heart Disease by Cholesterol Level")
