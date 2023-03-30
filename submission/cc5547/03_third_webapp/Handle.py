@@ -16,5 +16,5 @@ class Get : # test
         return self.sb.result_sidebar()
 
     def get_function(self, data, blood, clst, hbit, gender, heart, age) :
-        # return Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age)).result_model()
-        return FuncTion(data, blood, clst, hbit, gender, heart, age).result_model()
+        return Function(data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age)).result_model()
+        # return FuncTion(data, blood, clst, hbit, gender, heart, age).result_model()
