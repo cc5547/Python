@@ -8,8 +8,10 @@ def main():
     get = Get()
 
     blood, clst, hbit, gender, heart, age = get.get_sidebar()
-
-    UI.user_interface(blood, clst, hbit, gender, heart, age) if age != "" else st.markdown(img_url, unsafe_allow_html=True)
+    if age != "" :
+        UI.user_interface(blood, clst, hbit, gender, heart, age)  
+    else : 
+        st.markdown(img_url, unsafe_allow_html=True)
     
 # 메인 실행
 if __name__ == '__main__':
