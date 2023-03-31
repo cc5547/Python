@@ -54,7 +54,7 @@ def main():
     # 그래프 만들기 --------------------------------------------------------------
     probabilities = []
     for clst in range(clst, 150, -1): 
-        probabilities.append(data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0])
+        probabilities.append(tf_p)
         if tf_p < 0.5 : 
             break
 
@@ -82,8 +82,7 @@ def main():
         else : pass
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 1 else "無"
-        if age is not type(int) : 
-            age = int(age)  
+        if age is not type(int) : age = int(age)  
         else : pass
         st.write(f"""
                 ## 👇분석 결과👇
