@@ -29,7 +29,7 @@ def main():
     if heart == yes_no[0] : heart = 1  
     else : heart = 0
 
-    age = sb.text_input('나이를 입력해 주세요.')
+    age = sb.text_input('나이를 입력해 주세요.', 0)
     # 사이드바 내용 끝점 ---------------------------------------------------------
 
 
