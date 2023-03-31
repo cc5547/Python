@@ -54,7 +54,7 @@ def main():
     # 그래프 만들기 --------------------------------------------------------------
     probabilities = []
     for clst in range(clst, 150, -1): 
-        probabilities.append(tf_p)
+        probabilities.append(data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0])
         if tf_p < 0.5 : 
             break
 
