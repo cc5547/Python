@@ -75,13 +75,13 @@ def main():
         total += i
         count += 1
         data.append(total/count)
-    fig, ax = plt.subplots() 
     
-    ax.plot(range(clst, clst-len(total/count), -1), total/count)
-    ax.set_xlabel("Cholesterol")
-    ax.set_ylabel("Probability of Heart Disease")
-    ax.set_title("Probability of Heart Disease by Cholesterol Level")
-    
+    plt.plot(range(1, 101), data)
+    plt.axhline(y=150, color='r', linestyle='--')
+    plt.xlabel('Number of items')
+    plt.ylabel('Average cost')
+    plt.title('Average cost per item for different numbers of items')
+
     # 그래프 만들기 --------------------------------------------------------------
 
 
@@ -112,7 +112,7 @@ def main():
                 ## 결과에 실망하지 마세요😭
                 ### 👉확률을 알려드립니다 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])} """)
 
-    with col2 : st.pyplot(fig)
+    with col2 : st.pyplot(plt)
     # 사용자 UI 끝 -------------------------------------------------------------
 
 # 메인 실행
