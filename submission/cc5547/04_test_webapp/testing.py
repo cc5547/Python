@@ -81,7 +81,7 @@ def main():
     ax.set_xlabel("Cholesterol")
     ax.set_ylabel("Probability of Heart Disease")
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
-    fig가 그래프를 담고 있음
+    
     # 그래프 만들기 --------------------------------------------------------------
 
 
