@@ -18,7 +18,7 @@ class Function:
     def create_model(self):
         # 나이, 성별, 심장병, 혈압, 콜레스테롤, 최대심박수
         tf = self.data.predict([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])
-        tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:,0]
+        tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 0]
         # tf_p = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
         return tf, tf_p
 
@@ -26,7 +26,7 @@ class Function:
         probabilities = []
         for self.clst in range(self.clst, 150, -1):
             # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
-            prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:,0]
+            prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 0]
             probabilities.append(prob)
             if prob < 0.5 : break
 
