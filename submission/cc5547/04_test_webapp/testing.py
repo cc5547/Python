@@ -35,21 +35,22 @@ def main():
     data = joblib.load("submission/cc5547/03_third_webapp/xgb_model.joblib")
     tf = data.predict([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])
     tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
-    # tf_p = self.data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:, 1]
+    # tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:, 1]
     # 잡립 끌어오고 계산까지 끝 점 -------------------------------------------------
 
 
     # 그래프 만들기 --------------------------------------------------------------
     probabilities = []
-    for clst in range(clst, 150, -1):
-        # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
-        prob = sdata.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
+    for clst in range(clst, 150, -1): 
+        prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
+        # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
         probabilities.append(prob)
-        if prob < 0.5 : break
+        if prob < 0.5 : 
+            break
 
     fig, ax = plt.subplots() 
     
-    ax.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
+    ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
     ax.set_xlabel("Cholesterol")
     ax.set_ylabel("Probability of Heart Disease")
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
