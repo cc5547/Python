@@ -81,6 +81,7 @@ def main():
     plt.xlabel('Number of items')
     plt.ylabel('Average cost')
     plt.title('Average cost per item for different numbers of items')
+    plot_clst_vs_total(1.5)
 
     # 그래프 만들기 --------------------------------------------------------------
 
