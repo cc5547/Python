@@ -77,7 +77,7 @@ def main():
         data.append(total/count)
     fig, ax = plt.subplots() 
     
-    ax.plot(range(clst, clst-len(total/count), -1), probabilities)
+    ax.plot(range(clst, clst-len(total/count), -1), total/count)
     ax.set_xlabel("Cholesterol")
     ax.set_ylabel("Probability of Heart Disease")
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
