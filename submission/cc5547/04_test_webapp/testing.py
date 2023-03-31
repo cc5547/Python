@@ -52,21 +52,35 @@ def main():
 
 
     # 그래프 만들기 --------------------------------------------------------------
-    probabilities = []
-    for clst in range(clst, len(clst), -1): 
-        prob = tf_p
-        # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
-        # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
-        probabilities.append(prob)
-        if prob < 0.5 : 
-            break
+    # probabilities = []
+    # for clst in range(clst, 150, -1): 
+    #     prob = tf_p
+    #     # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
+    #     # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
+    #     probabilities.append(prob)
+    #     if prob < 0.5 : 
+    #         break
 
-    fig, ax = plt.subplots() 
+    # fig, ax = plt.subplots() 
     
-    ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
-    ax.set_xlabel("Cholesterol")
-    ax.set_ylabel("Probability of Heart Disease")
-    ax.set_title("Probability of Heart Disease by Cholesterol Level")
+    # ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
+    # ax.set_xlabel("Cholesterol")
+    # ax.set_ylabel("Probability of Heart Disease")
+    # ax.set_title("Probability of Heart Disease by Cholesterol Level")
+    total = 0
+    count = 0
+    data = []
+    for i in range(1, 101):
+        total += (100-i)*clst
+        total += i
+        count += 1
+        data.append(total/count)
+    fig = plt.subplots()
+    plt.plot(range(1, 101), data)
+    plt.axhline(y=150, color='r', linestyle='--')
+    plt.xlabel('Number of items')
+    plt.ylabel('Average cost')
+    plt.title('Average cost per item for different numbers of items')
     # fig가 그래프를 담고 있음
     # 그래프 만들기 --------------------------------------------------------------
 
