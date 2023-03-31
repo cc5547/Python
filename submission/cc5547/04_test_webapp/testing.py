@@ -41,18 +41,19 @@ def main():
 
     # 그래프 만들기 --------------------------------------------------------------
     probabilities = []
-    for self.clst in range(self.clst, 150, -1):
+    for clst in range(clst, 150, -1):
         # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
-        prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:,0]
+        prob = sdata.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
         probabilities.append(prob)
         if prob < 0.5 : break
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots() 
     
     ax.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
     ax.set_xlabel("Cholesterol")
     ax.set_ylabel("Probability of Heart Disease")
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
+    # fig가 그래프를 담고 있음
     # 그래프 만들기 --------------------------------------------------------------
 
 
