@@ -30,15 +30,13 @@ def main():
     else : heart = 0
 
     age = sb.text_input('나이를 입력해 주세요.')
-    if type(age) != float : age = float(age)
-    else : pass
     # 사이드바 내용 끝점 ---------------------------------------------------------
 
 
     # 잡립 끌어오고 계산까지 시작 점 -----------------------------------------------
     data = joblib.load("submission/cc5547/03_third_webapp/xgb_model.joblib")
-    tf = data.predict([[age, gender, heart, blood, clst, hbit]])
-    tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
+    tf = data.predict([[float(age), gender, heart, blood, clst, hbit]])
+    tf_p = data.predict_proba([[float(age), gender, heart, blood, clst, hbit]])[:,0]
     # tf = data.predict([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])
     # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 0]
     # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
