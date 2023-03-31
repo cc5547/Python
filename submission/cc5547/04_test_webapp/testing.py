@@ -1,4 +1,11 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
+import joblib
+import matplotlib.pyplot as plt
+import plotly.express as px
+import plotly.graph_objects as go
+
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 # main 시작점
@@ -9,18 +16,20 @@ def main():
     yes_no = ['예', '아니요']
 
     sb.title('문진표를 작성해 주세요👇')
-
-    blood = sb.slider('혈압을 입력해주세요.', 90, 200, 1)
-    clst = sb.slider('콜레스트롤을 입력하세요.', 120, 564, 1)
-    hbit = sb.slider('심박수를 입력하세요', 70, 202, 1)
-    gender = sb.radio('성별을 선택 해주세요.', gender_choice)
-    heart = sb.radio('심장병이 있습니까?', yes_no)
-    age = sb.text_input('나이를 입력해 주세요.')
+    # data, int(blood), int(clst), int(hbit), float(gender), int(heart), float(age)
+    int(blood) = sb.slider('혈압을 입력해주세요.', 90, 200, 1)
+    int(clst) = sb.slider('콜레스트롤을 입력하세요.', 120, 564, 1)
+    int(hbit) = sb.slider('심박수를 입력하세요', 70, 202, 1)
+    float(gender) = sb.radio('성별을 선택 해주세요.', gender_choice)
+    int(heart) = sb.radio('심장병이 있습니까?', yes_no)
+    float(age) = sb.text_input('나이를 입력해 주세요.')
     # 사이드바 내용 끝점
 
 
     # 잡립 끌어오고 계산까지 시작점
-    # 내용
+    data = joblib.load("submission/cc5547/03_third_webapp/xgb_model.joblib")
+    tf = data.predict([[age, gender, heart, blood, clst, hbit]])
+    tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
     # 잡립 끌어오고 계산까지 끝점
 
 
