@@ -43,8 +43,8 @@ def main():
 
     data = joblib.load("submission/cc5547/03_third_webapp/xgb_model.joblib")
     tf = data.predict([[age, gender, heart, blood, clst, hbit]])
-    # tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,1]
-    tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
+    tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,1]
+    # tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
     # tf = data.predict([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])
     # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 0]
     # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
@@ -52,36 +52,21 @@ def main():
 
 
     # 그래프 만들기 --------------------------------------------------------------
-    # probabilities = []
-    # for clst in range(clst, 150, -1): 
-    #     prob = tf_p
-    #     # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
-    #     # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
-    #     probabilities.append(prob)
-    #     if prob < 0.5 : 
-    #         break
+    probabilities = []
+    for clst in range(clst, 150, -1): 
+        prob = tf_p
+        # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
+        # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
+        probabilities.append(prob)
+        if prob < 0.5 : 
+            break
 
-    # fig, ax = plt.subplots() 
+    fig, ax = plt.subplots() 
     
-    # ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
-    # ax.set_xlabel("Cholesterol")
-    # ax.set_ylabel("Probability of Heart Disease")
-    # ax.set_title("Probability of Heart Disease by Cholesterol Level")
-    total = 0
-    count = 0
-    data = []
-    for i in range(1, 101):
-        total += (100-i)*clst
-        total += i
-        count += 1
-        data.append(total/count)
-    
-    plt.plot(range(1, 101), data)
-    plt.axhline(y=150, color='r', linestyle='--')
-    plt.xlabel('Number of items')
-    plt.ylabel('Average cost')
-    plt.title('Average cost per item for different numbers of items')
-    plot_clst_vs_total(1.5)
+    ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
+    ax.set_xlabel("Cholesterol")
+    ax.set_ylabel("Probability of Heart Disease")
+    ax.set_title("Probability of Heart Disease by Cholesterol Level")
 
     # 그래프 만들기 --------------------------------------------------------------
 
@@ -113,7 +98,7 @@ def main():
                 ## 결과에 실망하지 마세요😭
                 ### 👉확률을 알려드립니다 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])} """)
 
-    with col2 : st.pyplot(plt)
+    with col2 : st.pyplot(fig)
     # 사용자 UI 끝 -------------------------------------------------------------
 
 # 메인 실행
