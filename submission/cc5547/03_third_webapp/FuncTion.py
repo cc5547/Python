@@ -23,17 +23,15 @@ class Function:
         return tf, tf_p
 
     def create_graph(self) :
-        # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
-        
         probabilities = []
-
         for self.clst in range(self.clst, 150, -1):
             # prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:, 1]
             prob = self.data.predict_proba([[self.age, self.gender, self.heart, self.blood, self.clst, self.hbit]])[:,0]
             probabilities.append(prob)
-            if prob < 0.5:
-                break
+            if prob < 0.5 : break
+
         fig, ax = plt.subplots()
+        
         ax.plot(range(self.clst, self.clst-len(probabilities), -1), probabilities)
         ax.set_xlabel("Cholesterol")
         ax.set_ylabel("Probability of Heart Disease")
