@@ -82,7 +82,8 @@ def main():
         else : pass
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 1 else "無"
-        if age != type(int) : age = int(age)  
+        if age != type(int) : 
+            age = int(age)  
         else : pass
 
         st.write(f"""
