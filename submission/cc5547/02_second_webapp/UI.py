@@ -2,7 +2,7 @@ import streamlit as st
 from SideBar import Sidebar
 from Data import Create
 from Graph import PlotlyGraph
-st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
+st.set_page_config(page_title="큐넷원망", layout="wide")
 
 def user_interface():
     df, df_g1, df_g2 = Create().get_data()
