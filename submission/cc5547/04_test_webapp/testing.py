@@ -53,7 +53,7 @@ def main():
 
     # 그래프 만들기 --------------------------------------------------------------
     probabilities = []
-    for clst in range(clst, 150, -1): 
+    for clst in range(clst, len(clst), -1): 
         prob = tf_p
         # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:,0]
         # prob = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
