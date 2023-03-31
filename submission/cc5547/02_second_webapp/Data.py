@@ -6,13 +6,12 @@ class Create:
         self.df_URL_g1 = "submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
         self.df_URL_g2 = "submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_2.csv"
 
-    def create_df(self) :
+    def create_data(self) :
         df = pd.read_csv(self.df_URL).iloc[:, 1:]
         df.index += 1
         df_g1 = pd.read_csv(self.df_URL_g1)
         df_g2 = pd.read_csv(self.df_URL_g2)
-
         return df, df_g1, df_g2
 
     def get_data(self) :
-        return self.create_df()
+        return self.create_data()
