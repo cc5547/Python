@@ -75,13 +75,13 @@ def main():
         total += i
         count += 1
         data.append(total/count)
-    # fig, ax = plt.subplots() 
+    fig, ax = plt.subplots() 
     
-    # ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
-    # ax.set_xlabel("Cholesterol")
-    # ax.set_ylabel("Probability of Heart Disease")
-    # ax.set_title("Probability of Heart Disease by Cholesterol Level")
-    # fig가 그래프를 담고 있음
+    ax.plot(range(clst, clst-len(probabilities), -1), probabilities)
+    ax.set_xlabel("Cholesterol")
+    ax.set_ylabel("Probability of Heart Disease")
+    ax.set_title("Probability of Heart Disease by Cholesterol Level")
+    fig가 그래프를 담고 있음
     # 그래프 만들기 --------------------------------------------------------------
 
 
