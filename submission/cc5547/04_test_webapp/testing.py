@@ -82,11 +82,11 @@ def main():
         else : pass
         gender = "남자" if gender == 1 else "여자"
         heart = "有" if heart == 1 else "無"
-        
+        age = int(age) if age is not type(int) else pass
         st.write(f"""
                 ## 👇분석 결과👇
                 ### 👉 성별 : {gender}
-                ### 👉 나이 : {int(age)}세
+                ### 👉 나이 : {age}세
                 ### 👉 심장병(有, 無) : {heart}
                 ### 👉 혈압 : {blood}mmHg
                 ### 👉 콜레스트롤 : {clst}TC
