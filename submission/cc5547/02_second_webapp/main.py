@@ -6,9 +6,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
-
-
-
+import UI
 # 그래프 생성
 def create_graph(df_g1, df_g2):
   fig = go.Figure()
@@ -53,11 +51,6 @@ def create_graph(df_g1, df_g2):
   else : pass
 
   return fig
-
-# main 시작점
-def main() : 
-  pass
   
-
-if __name__ == '__main__':
-  main()
+def main() : UI.user_interface()
+if __name__ == '__main__': main()
