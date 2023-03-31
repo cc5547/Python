@@ -34,11 +34,18 @@ def main():
 
 
     # 잡립 끌어오고 계산까지 시작 점 -----------------------------------------------
+    age = float(age) if age else None
+    gender = float(gender) if gender else None
+    heart = int(heart) if heart else None
+    blood = int(blood) if blood else None
+    clst = int(clst) if clst else None
+    hbit = int(hbit) if hbit else None
+
     data = joblib.load("submission/cc5547/03_third_webapp/xgb_model.joblib")
-    # tf = data.predict([[age, gender, heart, blood, clst, hbit]])
-    # tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
-    tf = data.predict([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])
-    tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 0]
+    tf = data.predict([[age, gender, heart, blood, clst, hbit]])
+    tf_p = data.predict_proba([[age, gender, heart, blood, clst, hbit]])[:,0]
+    # tf = data.predict([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])
+    # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 0]
     # tf_p = data.predict_proba([[float(age), float(gender), int(heart), int(blood), int(clst), int(hbit)]])[:, 1]
     # 잡립 끌어오고 계산까지 끝 점 -------------------------------------------------
 
