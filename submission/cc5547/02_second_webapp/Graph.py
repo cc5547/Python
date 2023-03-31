@@ -13,7 +13,8 @@ class PlotlyGraph:
             colors = px.colors.qualitative.Set3[:len(self.df_g1.columns)-1]
             for i, col in enumerate(self.df_g1.columns[1:]) :
                 self.fig.add_trace(go.Bar(x=self.df_g1['Unnamed: 0'], y=self.df_g1[col], name=col, marker_color=colors[i]))
-                
+            self.fig.add_trace(go.Scatter(x=new_x_values, y=new_y_values, name='New', mode='lines', line_color='red'))
+
             self.fig.update_layout(
                 title='필기시험 합격률',
                 xaxis_title='시험 분류',
