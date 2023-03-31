@@ -12,7 +12,7 @@ class PlotlyGraph:
             self.df_g1.iloc[:, 1:] = self.df_g1.iloc[:, 1:].apply(lambda x: x.str.rstrip('%')).astype(float)
             colors = px.colors.qualitative.Set3[:len(self.df_g1.columns)-1]
             for i, col in enumerate(self.df_g1.columns[1:]) :
-                self.fig.add_trace(go.Bar(x=self.df_g1[''], y=self.df_g1[col], name=col, marker_color=colors[i]))
+                self.fig.add_trace(go.Bar(x=self.df_g1['Unnamed: 0'], y=self.df_g1[col], name=col, marker_color=colors[i]))
                 
             self.fig.update_layout(
                 title='필기시험 합격률',
@@ -22,7 +22,7 @@ class PlotlyGraph:
                 plot_bgcolor='#e2f3ea', # 차트 배경색 지정
                 width=1000,
                 height=700,)
-
+                
         elif self.df_g2 is not None :
             self.df_g2 = self.df_g2.drop(self.df_g2.columns[1], axis=1)
             years = self.df_g2.columns[1:]

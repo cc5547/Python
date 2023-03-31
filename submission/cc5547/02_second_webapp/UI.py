@@ -18,3 +18,4 @@ def user_interface():
     tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
     with tab1 : st.plotly_chart(PlotlyGraph(df_g1, None).get_graph())
     with tab2 : st.plotly_chart(PlotlyGraph(None, df_g2).get_graph())
+    
