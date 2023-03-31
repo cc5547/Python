@@ -30,7 +30,6 @@ def main():
     else : heart = 0
 
     age = sb.text_input('나이를 입력해 주세요.')
-    age = float(age) if age is not None else None
     # 사이드바 내용 끝점 ---------------------------------------------------------
 
 
