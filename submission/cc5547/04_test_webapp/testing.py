@@ -22,7 +22,7 @@ def main():
     hbit = sb.slider('심박수를 입력하세요', 70, 202, 1)
 
     gender = sb.radio('성별을 선택 해주세요.', gender_choice)
-    if gender == gender_choice[0] : gender = 1  
+    if gender == gender_choice[0] : gender = 1
     else : gender = 0
 
     heart = sb.radio('심장병이 있습니까?', yes_no)
