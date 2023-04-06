@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
+st.set_page_config(page_title="DL", layout="wide")
 
 def user_interface():
     st.title("뼈대 작업 중...")
