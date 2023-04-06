@@ -5,10 +5,10 @@ def user_interface():
     containers = [st.container() for i in range(3)]
 
     with containers[0]:
-        st.image("https://i.imgur.com/fvRG1Tj.gif", width = 1000)
+        st.title("뼈대 작업 중...")
         
     with containers[1]:
         st.image("https://i.imgur.com/idnsDBs.gif", width = 1000)
 
     with containers[2]:
-        st.title("뼈대 작업 중...")
+        st.image("https://i.imgur.com/fvRG1Tj.gif", width = 1000)
