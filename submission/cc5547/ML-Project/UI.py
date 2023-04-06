@@ -2,7 +2,6 @@ import streamlit as st
 st.set_page_config(page_title="마싯는 머신러닝", layout="wide")
 
 def user_interface():
-<<<<<<< HEAD
     containers = [st.container() for i in range(3)]
     with containers[0]:
         st.title("뼈대 작업 중...")
