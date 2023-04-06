@@ -8,7 +8,7 @@ def user_interface():
         st.title("뼈대 작업 중...")
         
     with containers[1]:
-        st.image("https://i.imgur.com/idnsDBs.gif", width = 1000)
+        st.image("https://i.imgur.com/idnsDBs.gif", width = 500)
 
     with containers[2]:
-        st.image("https://i.imgur.com/fvRG1Tj.gif", width = 1000)
+        st.image("https://i.imgur.com/fvRG1Tj.gif", width = 500)
