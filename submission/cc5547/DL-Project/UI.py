@@ -8,6 +8,8 @@ def user_interface():
     containers = [st.container() for i in range(container_count)]
     image = ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
 
-    for i in range(container_count):
-        with containers[i]:
-            st.image(image[i], width = 500)
+    [st.image(image, width=500) for image in (image_list := [image for image in image_urls])]
+    
+    # for i in range(container_count):
+    #     with containers[i]:
+    #         st.image(image[i], width = 500)
