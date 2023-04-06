@@ -5,10 +5,10 @@ def user_interface():
     st.title("뼈대 작업 중...")
     col1, col2 = st.columns([8, 2])
     with col1 :
-        st.image("https://i.imgur.com/idnsDBs.gif", width = 500)
-    with col2 :
         st.image("https://i.imgur.com/fvRG1Tj.gif", width = 500)
-        
+    with col2 :
+        st.image("https://i.imgur.com/idnsDBs.gif", width = 500)
+
     # containers = [st.container() for i in range(3)]
 
     # with containers[0]:
