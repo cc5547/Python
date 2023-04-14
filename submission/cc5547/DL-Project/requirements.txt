@@ -1,9 +1,0 @@
-streamlit
-pandas
-numpy
-
-statsmodels
-plotly
-matplotlib
-mlxtend
-xgboost
