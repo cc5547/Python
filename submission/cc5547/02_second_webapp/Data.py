@@ -16,11 +16,9 @@ class Create:
             df_g1 = pd.read_csv(self.path[1])
             df_g2 = pd.read_csv(self.path[2])
             df.index += 1
+            return df, df_g1, df_g2
 
         except Exception as e : 
             return st.error(e)
 
-        return df, df_g1, df_g2
-
-    def get_data(self) :
-        return self.create_data()
+    def get_data(self) : return self.df, self.df_g1, self.df_g2
